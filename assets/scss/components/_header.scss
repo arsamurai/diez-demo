@@ -1,0 +1,46 @@
+.header {
+  padding-top: 44px;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  left: 0;
+  &__inner {
+    @include flex(space-between, center);
+  }
+  &-order--mobile {
+    display: block;
+  }
+  &-order--desktop {
+    display: none;
+  }
+  &-order__btn {
+    font-size: 12px;
+    line-height: 20px;
+    font-family: $GigaSans, sans-serif;
+    padding: 14px 20px;
+    border: $border;
+    border-radius: $border-radius;
+    background-color: transparent;
+    color: white;
+    transition: $transition;
+    &:hover {
+      background-color: $white;
+      color: black;
+    }
+  }
+
+  @include desktop-sm {
+    padding-top: 24px;
+    &-order--mobile {
+      display: none;
+    }
+    &-order--desktop {
+      display: block;
+    }
+    &-order__btn {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}

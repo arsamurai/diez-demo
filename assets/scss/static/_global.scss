@@ -1,0 +1,139 @@
+html {
+	position: relative;
+	height: 100%;
+}
+
+body {
+	width: 100%;
+	font-size: 14px;
+	line-height: 14px;
+	font-family: $PTSansNarrow_Regular, sans-serif;
+	color: $white;
+	background-color: $black;
+	overflow-x: hidden;
+	word-break: break-word;
+	@include table {
+		font-size: 19px;
+		line-height: 22px;
+	}
+	@include desktop {
+		font-size: 24px;
+		line-height: 29px;
+	}
+}
+
+h2,
+h3,
+h4 {
+	font-family: $PTSansNarrow_Bold, sans-serif;
+}
+
+h2 {
+	font-size: 29px;
+	line-height: 30px;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+	@include table {
+		font-size: 59px;
+		line-height: 69px;
+		letter-spacing: 9px;
+	}
+	@include desktop {
+		font-size: 89px;
+		line-height: 94px;
+		letter-spacing: 13px;
+	}
+}
+
+h3 {
+	font-size: 29px;
+	line-height: 30px;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+	@include table {
+		font-size: 48px;
+		line-height: 51px;
+		letter-spacing: 7px;
+	}
+	@include desktop {
+		font-size: 67px;
+		line-height: 71px;
+		letter-spacing: 10px;
+	}
+}
+
+a {
+	color: $white;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+section {
+	position: relative;
+	overflow: visible;
+}
+
+.container {
+	max-width: $container;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 20px;
+
+	@include desktop {
+		padding: 0 32px;
+	}
+}
+
+img {
+	object-fit: cover;
+}
+
+button {
+	cursor: pointer;
+}
+
+.form {
+	&-field {
+		margin-bottom: 12px;
+		color: $yellow;
+	}
+	&-label {
+		letter-spacing: 4px;
+		padding-left: 4px;
+	}
+	&-input {
+		margin-top: 4px;
+		width: 100%;
+		padding: 10px;
+		border-radius: 21px;
+		border: 1px solid $yellow;
+		letter-spacing: 2px;
+	}
+}
+
+.icon {
+	@include size(32px, 32px, 50%);
+	@include flex();
+	background-color: rgba(153, 50, 194, 1);
+	svg {
+		width: 16px;
+		height: 16px;
+	}
+}
+
+.logo {
+	width: 97px;
+	height: 42px;
+	svg {
+		width: 97px;
+		height: 42px;
+	}
+	@include desktop-sm {
+		width: 168px;
+		height: 64px;
+		svg {
+			width: 168px;
+			height: 64px;
+		}
+	}
+}

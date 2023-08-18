@@ -1,0 +1,34 @@
+.footer {
+	padding-bottom: 30px;
+	&__social-list {
+		@include flex();
+	}
+	&__social-item {
+		width: fit-content;
+		margin: 0 6px;
+	}
+	&__contacts {
+		max-width: 232px;
+		width: 100%;
+		margin: 30px auto 50px;
+	}
+	&__contact {
+		width: fit-content;
+		margin-bottom: 19px;
+		a {
+			@include flex(flex-start);
+			span {
+				margin-left: 12px;
+			}
+		}
+	}
+	&__copy {
+		text-align: center;
+	}
+	&__contact a,
+	&__copy {
+		font-family: $GigaSans, sans-serif;
+		font-size: 16px;
+		line-height: 20px;
+	}
+}

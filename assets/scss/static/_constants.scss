@@ -1,0 +1,30 @@
+// Sizes
+$container: 1280px;
+$xxl-min: 1400px;
+$xl-min: 1200px;
+$lg-min: 992px;
+$md-min: 768px;
+$sm-min: 576px;
+
+// Colors
+$white: #FFFFFF;
+$black: #000000;
+$yellow: #FFD352;
+$blue: #0088CC;
+
+// Fonts
+$PTSansNarrow_Regular: 'PTSansNarrow Regular';
+$PTSansNarrow_Bold: 'PTSansNarrow Bold';
+$Montserrat: 'Montserrat';
+$GigaSans: 'Giga Sans';
+
+// Gradients
+$gradient: linear-gradient(175deg, rgba(255,211,82,1) 0%, rgba(239,66,85,1) 25%, rgba(153,50,194,1) 75%, rgba(76,95,201,1) 100%);
+
+// Borders
+$border: 1px solid $white;
+$border-radius: 38px;
+
+// Transition
+$transition: all ease-in-out .3s;
+$show: cubic-bezier(0, .55, .45, 1);

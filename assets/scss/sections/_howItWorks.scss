@@ -1,0 +1,30 @@
+#howItWorks {
+	padding: 70px 0;
+	background-image: $gradient;
+	.howItWorks__subtitle {
+		font-size: 12px;
+		line-height: 15px;
+		letter-spacing: 4px;
+		margin-bottom: 53px;
+	}
+	.howItWorks__title, .howItWorks__subtitle{
+		text-align: center;
+	}
+	.howItWorks__list {
+		margin-top: 44px;
+	}
+	.howItWorks__item {
+		@include flex(space-between);
+		&:not(:first-child) {
+			margin-top: 33px;
+		}
+	}
+	.howItWorks__item-img, .howItWorks__item-img img {
+		min-width: 103px;
+		height: 103px;
+	}
+	.howItWorks__item-title {
+		padding-left: 31px;
+		letter-spacing: 4px;
+	}
+}

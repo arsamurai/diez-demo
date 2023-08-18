@@ -1,0 +1,152 @@
+.modal {
+	position: fixed;
+	z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+	transform: scale(0);
+	transition: $transition;
+	backdrop-filter: blur(8px);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: $gradient;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 25px;
+	&.active {
+    opacity: 1;
+    pointer-events: all;
+    overflow: visible;
+		transform: scale(1);
+	}
+  &__cap {
+    @include flex(space-between);
+    padding: 15px 0 25px;
+  }
+	&__close {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		width: 29px;
+		height: 32px;
+		cursor: pointer;
+		span {
+			width: 100%;
+			height: 2px;
+			background-color: $yellow;
+			transition: $transition;
+		}
+		span:first-child {
+			transform: translateY(15px) rotate(45deg);
+		}
+		span:nth-child(2) {
+			transform: translateX(100%);
+			opacity: 0;
+		}
+		span:last-child {
+			transform: translateY(-15px) rotate(-45deg);
+		}
+	}
+  &__content {
+    @include flex();
+    min-height: calc(70%);
+    flex-direction: column;
+  }
+}
+
+.order-modal {
+  &__form {
+    margin-bottom: 32px;
+  }
+  &__btn {
+    letter-spacing: 6px;
+		width: 100%;
+    color: $black;
+		background-color: $yellow;
+		text-align: center;
+		padding: 14px 0;
+		margin-bottom: 27px;
+    position: relative;
+	}
+  &__btn-line {
+    position: absolute;
+  }
+  &__btn-line--left {
+    left: 0;
+    top: 17px;
+  }
+  &__btn-line--right {
+    right: 0;
+    top: -47px;
+  }
+  &__more {
+    position: relative;
+    text-align: center;
+    font-size: 17px;
+    line-height: 16px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 98%;
+      height: 1px;
+      background-color: $white;
+    }
+  }
+}
+
+.work-modal {
+  &__title {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+  &__top {
+    width: 100%;
+    @include flex(space-between);
+  }
+  &__eyes {
+    display: flex;
+    padding-left: 10px;
+  }
+  &__eye {
+    width: 50px;
+    height: 30px;
+  }
+  &__eye:first-child {
+    margin-right: 10px;
+  }
+  &__video {
+    width: 100%;
+    min-height: 240px;
+    margin: 43px 67px;
+  }
+  &__bottom {
+    position: relative;
+    @include flex(space-between, flex-start);
+  }
+  &__desc {
+    letter-spacing: 2px;
+  }
+  &__nav {
+    @include flex();
+  }
+  &__arrow {
+		@include flex();
+		width: 61px;
+		height: 61px;
+		background-color: $black;
+	}
+  &__arrow--prev {
+    margin-right: 15px;
+    transform: rotate(180deg);
+  }
+}
