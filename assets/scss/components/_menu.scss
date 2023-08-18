@@ -77,8 +77,9 @@
 
   @include desktop-sm {
     width: fit-content;
-    height: auto;
+    height: fit-content;
     position: static;
+    z-index: 1;
     background-color: transparent;
     transform: translateX(0);
     backdrop-filter: blur(0px);

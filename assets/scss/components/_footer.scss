@@ -1,18 +1,18 @@
-.footer {
+#footer {
 	padding-bottom: 30px;
-	&__social-list {
+	.footer__social-list {
 		@include flex();
 	}
-	&__social-item {
+	.footer__social-item {
 		width: fit-content;
 		margin: 0 6px;
 	}
-	&__contacts {
+	.footer__contacts {
 		max-width: 232px;
 		width: 100%;
 		margin: 30px auto 50px;
 	}
-	&__contact {
+	.footer__contact {
 		width: fit-content;
 		margin-bottom: 19px;
 		a {
@@ -22,11 +22,11 @@
 			}
 		}
 	}
-	&__copy {
+	.footer__copy {
 		text-align: center;
 	}
-	&__contact a,
-	&__copy {
+	.footer__contact a,
+	.footer__copy {
 		font-family: $GigaSans, sans-serif;
 		font-size: 16px;
 		line-height: 20px;
