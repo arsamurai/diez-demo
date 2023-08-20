@@ -169,15 +169,27 @@ addEventListener('scroll', () => {
 
 // Eyes move on cursor
 addEventListener('mousemove', (event) => {
-	const eyeLeft = document.querySelector('[data-eye-left]');
-	const eyeLeftValues = eyeLeft.getBoundingClientRect();
-	const eyeRight = document.querySelector('[data-eye-right]');
-	const eyeRightValues = eyeRight.getBoundingClientRect();
-	const top = eyeLeftValues.top + eyeLeftValues.height / 2;
-	const left = eyeLeftValues.left + eyeLeftValues.width / 2;
-	const eyesDistance = (eyeRightValues.left + eyeRightValues.width / 2) - left;
-	const x = event.x - left;
-	const y = event.y - top;
+
+	const eyeLeft1 = document.querySelector('[data-eye-left-1]');
+	const eyeRight1 = document.querySelector('[data-eye-right-1]');
+	const eyeLeft2 = document.querySelector('[data-eye-left-2]');
+	const eyeRight2 = document.querySelector('[data-eye-right-2]');
+
+	const moveEye = (event, eyeLeft, eyeRight) => {
+		const eyeLeftValues = eyeLeft.getBoundingClientRect();
+		const eyeRightValues = eyeRight.getBoundingClientRect();
+		const top = eyeLeftValues.top + eyeLeftValues.height / 2;
+		const left = eyeLeftValues.left + eyeLeftValues.width / 2;
+		const eyesDistance = (eyeRightValues.left + eyeRightValues.width / 2) - left;
+		const x = event.x - left;
+		const y = event.y - top;
+
+		const eyeLeftRotation = 57.2958 * arcctg(x, y);
+		const eyeRightRotation = 57.2958 * arcctg(x - eyesDistance , y);
+	
+		eyeLeft.style.transform = 'rotate(' + eyeLeftRotation + 'deg)';
+		eyeRight.style.transform = 'rotate(' + eyeRightRotation + 'deg)';
+	}
 
 	const arcctg = (x, y) => {
 		if(x > 0 && y > 0) return Math.PI / 2 - Math.atan(x / y);
@@ -186,9 +198,7 @@ addEventListener('mousemove', (event) => {
 		if(x > 0 && y < 0) return 3 * Math.PI / 2 + Math.abs(Math.atan(x / y));
 	}
 
-	const eyeLeftRotation = 57.2958 * arcctg(x, y);
-	const eyeRightRotation = 57.2958 * arcctg(x - eyesDistance , y);
+	moveEye(event, eyeLeft1, eyeRight1);
+	moveEye(event, eyeLeft2, eyeRight2);
 
-	eyeLeft.style.transform = 'rotate(' + eyeLeftRotation + 'deg)';
-	eyeRight.style.transform = 'rotate(' + eyeRightRotation + 'deg)';
 });
