@@ -1,9 +1,5 @@
-@keyframes previewLineDraw {
-  0% {
-    stroke-dashoffset: 17000;
-    stroke-dasharray: 17000;
-  }
-  100% {
+@keyframes animLine {
+  to {
     stroke-dashoffset: 0;
   }
 }

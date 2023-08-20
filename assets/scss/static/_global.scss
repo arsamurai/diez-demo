@@ -7,6 +7,7 @@ body {
 	width: 100%;
 	font-size: 14px;
 	line-height: 14px;
+	letter-spacing: 4px;
 	font-family: $PTSansNarrow_Regular, sans-serif;
 	color: $white;
 	background-color: $black;
@@ -31,7 +32,6 @@ h4 {
 h2 {
 	font-size: 29px;
 	line-height: 30px;
-	letter-spacing: 4px;
 	text-transform: uppercase;
 	@include table {
 		font-size: 59px;
@@ -48,7 +48,6 @@ h2 {
 h3 {
 	font-size: 29px;
 	line-height: 30px;
-	letter-spacing: 4px;
 	text-transform: uppercase;
 	@include table {
 		font-size: 48px;
@@ -98,7 +97,6 @@ button {
 		color: $yellow;
 	}
 	&-label {
-		letter-spacing: 4px;
 		padding-left: 4px;
 	}
 	&-input {

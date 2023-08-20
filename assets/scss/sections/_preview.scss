@@ -36,6 +36,33 @@
     width: 125px;
     height: 60px;
   }
+  .preview__eye-wrapper {
+    position: relative;
+    width: 125px;
+    height: 60px;
+    .white {
+      position: absolute;
+      @include size(52px, 52px, 50%);
+      top: 4px;
+      left: 37px;
+      background-color: $white;
+    }
+    .black {
+      position: absolute;
+      @include size(45px, 45px, 50%);
+      top: 4px;
+      left: 7px;
+      background-color: $black;
+    }
+    .glare {
+      position: absolute;
+      @include size(22px, 22px, 50%);
+      top: 9px;
+      right: 32px;
+      background-color: $white;
+      z-index: 3;
+    }
+  }
   .preview__eye:first-child {
     margin-right: 43px;
   }
@@ -65,9 +92,8 @@
       height: 127px;
       stroke-dashoffset: 17000;
       stroke-dasharray: 17000;
-      transition: stroke-dashoffset linear 10s;
       &.animate {
-        stroke-dashoffset: 0 !important;
+        animation: animLine 10s linear forwards;
       }
     }
   }
@@ -90,7 +116,6 @@
       padding: 0;
     }
   }
-
   @include table {
     .preview__video {
       height: calc(100vh - 139px);
@@ -153,7 +178,6 @@
       }
     }
   }
-
   @media screen and (max-width: 375px) {
     .preview-order__btn {
       letter-spacing: 2px;

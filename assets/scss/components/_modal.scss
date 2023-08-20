@@ -74,6 +74,10 @@
 	}
   &__btn-line {
     position: absolute;
+    svg {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+    }
   }
   &__btn-line--left {
     left: 0;
@@ -100,13 +104,24 @@
       background-color: $white;
     }
   }
+  &.active {
+    .order-modal__btn-line--left {
+      svg {
+        animation: animLine 2s linear 1.7s forwards;
+      }
+    }
+    .order-modal__btn-line--right {
+      svg {
+        animation: animLine 2s linear .5s forwards;
+      }
+    }
+  }
 }
 
 .work-modal {
   &__title {
     font-size: 16px;
     line-height: 20px;
-    letter-spacing: 4px;
     text-transform: uppercase;
   }
   &__top {

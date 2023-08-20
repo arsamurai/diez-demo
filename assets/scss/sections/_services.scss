@@ -19,7 +19,6 @@
     max-width: 267px;
     margin: 0 auto;
     width: 100%;
-    letter-spacing: 4px;
   }
   .services__block-item {
     position: relative;
@@ -42,9 +41,8 @@
 		svg {
 			stroke-dashoffset: 1700;
       stroke-dasharray: 1700;
-      transition: stroke-dashoffset linear 3s;
       &.animate {
-        stroke-dashoffset: 0 !important;
+				animation: animLine 3s linear forwards;
       }
 		}
 	}
@@ -68,7 +66,6 @@
 	}
 	.services__main-text {
 		max-width: 346px;
-		letter-spacing: 4px;
 		width: 100%;
 		margin: 0 auto;
 		font-family: "PTSansNarrow_Bold", sans-serif;

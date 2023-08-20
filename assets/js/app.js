@@ -85,7 +85,9 @@ addEventListener('load', async () => {
 	const works = document.querySelectorAll('[data-work-item]');
 	const workModal = document.querySelector('[data-work-modal]');
 	const workModalVideo = document.querySelector('[data-work-modal-video]');
-	const workModalVideoSource = document.querySelector('[data-work-modal-video-source]');
+	const workModalVideoSource = document.querySelector(
+		'[data-work-modal-video-source]'
+	);
 	const workModalTitle = document.querySelector('[data-work-modal-title]');
 	const workModalDesc = document.querySelector('[data-work-modal-desc]');
 	const workModalPrev = document.querySelector('[data-work-modal-prev]');
@@ -163,4 +165,30 @@ addEventListener('scroll', () => {
 	animateSvg('[data-services-svg--1]', w_top, w_height);
 	animateSvg('[data-services-svg--2]', w_top, w_height);
 	animateSvg('[data-order-svg]', w_top, w_height);
+});
+
+// Eyes move on cursor
+addEventListener('mousemove', (event) => {
+	const eyeLeft = document.querySelector('[data-eye-left]');
+	const eyeLeftValues = eyeLeft.getBoundingClientRect();
+	const eyeRight = document.querySelector('[data-eye-right]');
+	const eyeRightValues = eyeRight.getBoundingClientRect();
+	const top = eyeLeftValues.top + eyeLeftValues.height / 2;
+	const left = eyeLeftValues.left + eyeLeftValues.width / 2;
+	const eyesDistance = (eyeRightValues.left + eyeRightValues.width / 2) - left;
+	const x = event.x - left;
+	const y = event.y - top;
+
+	const arcctg = (x, y) => {
+		if(x > 0 && y > 0) return Math.PI / 2 - Math.atan(x / y);
+		if(x < 0 && y > 0) return Math.PI / 2 - Math.atan(x / y);
+		if(x < 0 && y < 0) return Math.PI + Math.atan(y / x);
+		if(x > 0 && y < 0) return 3 * Math.PI / 2 + Math.abs(Math.atan(x / y));
+	}
+
+	const eyeLeftRotation = 57.2958 * arcctg(x, y);
+	const eyeRightRotation = 57.2958 * arcctg(x - eyesDistance , y);
+
+	eyeLeft.style.transform = 'rotate(' + eyeLeftRotation + 'deg)';
+	eyeRight.style.transform = 'rotate(' + eyeRightRotation + 'deg)';
 });
