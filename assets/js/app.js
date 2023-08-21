@@ -11,6 +11,25 @@ const animateSvg = (selector, w_top, w_height) => {
 };
 
 addEventListener('load', async () => {
+	// Active header
+	const header = document.querySelector('[data-header]');
+
+	const setHeaderActive = (entries) => {
+		entries.forEach((entry) => {
+			if (!entry.isIntersecting) {
+				header.classList.add('active');
+			} else {
+				header.classList.remove('active');
+			}
+		});
+	};
+
+	let observer = new IntersectionObserver(setHeaderActive, {
+		rootMargin: '0px',
+		threshold: 0,
+	});
+	observer.observe(document.querySelector('[data-header-anchor]'));
+
 	// Navigation
 	const logoBtn = document.querySelector('[data-logo-btn]');
 	const burger = document.querySelector('[data-burger-btn]');
@@ -19,7 +38,7 @@ addEventListener('load', async () => {
 	const body = document.body;
 
 	const goTo = (sectionId) => {
-		const top = document.getElementById(sectionId)?.offsetTop - 88;
+		const top = document.getElementById(sectionId)?.offsetTop - 25;
 		window.scrollTo({
 			top,
 			behavior: 'smooth',
@@ -141,6 +160,14 @@ addEventListener('load', async () => {
 		});
 	});
 
+	// Phone input
+	const phoneInput = document.querySelector('[data-phone-input]');
+
+	phoneInput.addEventListener('input', function () {
+		const cleanedValue = this.value.replace(/\D/g, '');
+			this.value = cleanedValue;
+	});
+
 	// Animation on scroll
 	let w_top = window.scrollY || window.pageYOffset;
 	let w_height = window.innerHeight;
@@ -148,6 +175,8 @@ addEventListener('load', async () => {
 	animateSvg('[data-preview-svg]', w_top, w_height);
 	animateSvg('[data-services-svg--1]', w_top, w_height);
 	animateSvg('[data-services-svg--2]', w_top, w_height);
+	animateSvg('[data-services-svg--3]', w_top, w_height);
+	animateSvg('[data-services-svg--4]', w_top, w_height);
 	animateSvg('[data-order-svg]', w_top, w_height);
 });
 
@@ -164,12 +193,13 @@ addEventListener('scroll', () => {
 	animateSvg('[data-preview-svg]', w_top, w_height);
 	animateSvg('[data-services-svg--1]', w_top, w_height);
 	animateSvg('[data-services-svg--2]', w_top, w_height);
+	animateSvg('[data-services-svg--3]', w_top, w_height);
+	animateSvg('[data-services-svg--4]', w_top, w_height);
 	animateSvg('[data-order-svg]', w_top, w_height);
 });
 
 // Eyes move on cursor
 addEventListener('mousemove', (event) => {
-
 	const eyeLeft1 = document.querySelector('[data-eye-left-1]');
 	const eyeRight1 = document.querySelector('[data-eye-right-1]');
 	const eyeLeft2 = document.querySelector('[data-eye-left-2]');
@@ -180,25 +210,24 @@ addEventListener('mousemove', (event) => {
 		const eyeRightValues = eyeRight.getBoundingClientRect();
 		const top = eyeLeftValues.top + eyeLeftValues.height / 2;
 		const left = eyeLeftValues.left + eyeLeftValues.width / 2;
-		const eyesDistance = (eyeRightValues.left + eyeRightValues.width / 2) - left;
+		const eyesDistance = eyeRightValues.left + eyeRightValues.width / 2 - left;
 		const x = event.x - left;
 		const y = event.y - top;
 
 		const eyeLeftRotation = 57.2958 * arcctg(x, y);
-		const eyeRightRotation = 57.2958 * arcctg(x - eyesDistance , y);
-	
+		const eyeRightRotation = 57.2958 * arcctg(x - eyesDistance, y);
+
 		eyeLeft.style.transform = 'rotate(' + eyeLeftRotation + 'deg)';
 		eyeRight.style.transform = 'rotate(' + eyeRightRotation + 'deg)';
-	}
+	};
 
 	const arcctg = (x, y) => {
-		if(x > 0 && y > 0) return Math.PI / 2 - Math.atan(x / y);
-		if(x < 0 && y > 0) return Math.PI / 2 - Math.atan(x / y);
-		if(x < 0 && y < 0) return Math.PI + Math.atan(y / x);
-		if(x > 0 && y < 0) return 3 * Math.PI / 2 + Math.abs(Math.atan(x / y));
-	}
+		if (x > 0 && y > 0) return Math.PI / 2 - Math.atan(x / y);
+		if (x < 0 && y > 0) return Math.PI / 2 - Math.atan(x / y);
+		if (x < 0 && y < 0) return Math.PI + Math.atan(y / x);
+		if (x > 0 && y < 0) return (3 * Math.PI) / 2 + Math.abs(Math.atan(x / y));
+	};
 
 	moveEye(event, eyeLeft1, eyeRight1);
 	moveEye(event, eyeLeft2, eyeRight2);
-
 });

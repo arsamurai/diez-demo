@@ -25,4 +25,53 @@
 	.howItWorks__item-title {
 		padding-left: 31px;
 	}
+
+	@include table {
+		padding: 100px 0 156px;
+		.howItWorks__subtitle {
+			font-size: 16px;
+			line-height: 20px;
+			margin-bottom: 73px;
+		}
+		.howItWorks__list {
+			margin-top: 74px;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 35px;
+		}
+		.howItWorks__item:not(:first-child) {
+			margin-top: 0;
+		}
+		.howItWorks__item {
+			margin-bottom: 30px;
+		}
+		.howItWorks__item-img, .howItWorks__item-img img {
+			min-width: 138px;
+			height: 138px;
+		}
+	}
+
+	@include desktop {
+		padding: 130px 0 242px;
+		.howItWorks__subtitle {
+			font-size: 20px;
+			line-height: 25px;
+			margin-bottom: 93px;
+		}
+		.howItWorks__list {
+			margin-top: 102px;
+			gap: 90px;
+		}
+		.howItWorks__item {
+			margin-bottom: 0;
+		}
+		.howItWorks__item-img, .howItWorks__item-img img {
+			min-width: 172px;
+			height: 172px;
+		}
+		.howItWorks__item-title {
+			max-width: 377px;
+			width: 100%;
+		}
+	}
 }

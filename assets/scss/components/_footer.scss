@@ -33,4 +33,22 @@
 		line-height: 20px;
 		letter-spacing: 0;
 	}
+
+	@include desktop-sm {
+		padding-bottom: 49px;
+		.footer__inner {
+			@include flex(space-between)
+		}
+		.footer__contacts {
+			margin: 0;
+			max-width: fit-content;
+		}
+		.footer__contact {
+			display: inline-block;
+			margin: 0;
+		}
+		.footer__contact:first-child {
+			margin-right: 32px;
+		}
+	}
 }

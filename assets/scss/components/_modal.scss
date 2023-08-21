@@ -20,7 +20,6 @@
 	&.active {
     opacity: 1;
     pointer-events: all;
-    overflow: visible;
 		transform: scale(1);
 	}
   &__cap {
@@ -55,6 +54,17 @@
     @include flex();
     min-height: calc(70%);
     flex-direction: column;
+    padding: 20px 0;
+  }
+  @include table {
+    &__content {
+      min-height: calc(75%);
+    }
+  }
+  @include desktop {
+    &__content {
+      min-height: calc(80%);
+    }
   }
 }
 
@@ -82,10 +92,18 @@
   &__btn-line--left {
     left: 0;
     top: 17px;
+    svg {
+      width: 51px;
+      height: 42px;
+    }
   }
   &__btn-line--right {
     right: 0;
     top: -47px;
+    svg {
+      width: 195px;
+      height: 131px;
+    }
   }
   &__more {
     position: relative;
@@ -116,6 +134,49 @@
       }
     }
   }
+
+  @include table {
+    &__form {
+      margin-bottom: 72px;
+    }
+    &__btn-line--left {
+      top: 24px;
+      svg {
+        width: 100px;
+        height: 57px;
+      }
+    }
+    &__btn-line--right {
+      top: -60px;
+      svg {
+        width: 250px;
+        height: 168px;
+      }
+    }
+    &__more {
+      font-size: 19px;
+    }
+  }
+  
+  @include desktop {
+    &__form {
+      margin-bottom: 92px;
+    }
+    &__btn-line--left svg {
+        width: 135px;
+        height: 77px;
+    }
+    &__btn-line--right {
+      top: -66px;
+      svg {
+        width: 280px;
+        height: 185px;
+      }
+    }
+    &__more {
+      font-size: 21px;
+    }
+  }
 }
 
 .work-modal {
@@ -136,12 +197,9 @@
     width: 50px;
     height: 30px;
   }
-  &__eye:first-child {
-    margin-right: 10px;
-  }
   &__eye-wrapper {
     position: relative;
-    width: 75px;
+    width: 50px;
     height: 30px;
     .white {
       position: absolute;
@@ -161,15 +219,26 @@
       position: absolute;
       @include size(9px, 9px, 50%);
       top: 6px;
-      right: 40px;
+      right: 15px;
       background-color: $white;
       z-index: 3;
     }
   }
-  &__video {
-    width: 100%;
-    min-height: 240px;
+  &__eye-wrapper:first-child {
+    margin-right: 15px;
+  }
+  &__video-wrapper {
+    position: relative;
     margin: 43px 67px;
+    max-width: 1216px;
+    min-height: 240px;
+    max-height: 690px;
+    width: 100%;
+    height: 100%;
+  }
+  &__video {
+    width: inherit;
+    height: inherit;
   }
   &__bottom {
     position: relative;
@@ -186,9 +255,125 @@
 		width: 61px;
 		height: 61px;
 		background-color: $black;
+    cursor: pointer;
+    svg {
+      width: 34px;
+      height: 8px;
+    }
 	}
   &__arrow--prev {
     margin-right: 15px;
     transform: rotate(180deg);
+  }
+  &__line {
+    position: absolute;
+    top: -90px;
+    right: 85px;
+    z-index: -1;
+    svg {
+      width: 354px;
+      height: 248px;
+    }
+  }
+
+  @include table {
+    &__title {
+      font-size: 35px;
+      line-height: 38px;
+      letter-spacing: 6px;
+    }
+    &__eye {
+      width: 75px;
+      height: 38px;
+    }
+    &__eye-wrapper {
+      width: 75px;
+      height: 38px;
+      .white {
+        @include size(30px, 30px, 50%);
+        left: 22px;
+      }
+      .black {
+        @include size(26.7px, 26.7px, 50%);
+      }
+      .glare {
+        @include size(14px, 14px, 50%);
+        right: 24px;
+      }
+    }
+    &__eye-wrapper:first-child {
+      margin-right: 20px;
+    }
+    &__arrow {
+      width: 91px;
+      height: 91px;
+      svg {
+        width: 50px;
+        height: 12px;
+      }
+    }
+    &__arrow--prev {
+      margin-right: 23px;
+    }
+    &__line {
+      right: 155px;
+      svg {
+        width: 354px;
+        height: 248px;
+      }
+    }
+  }
+
+  @include desktop {
+    &__title {
+      font-size: 53px;
+      line-height: 56px;
+      letter-spacing: 8px;
+    }
+    &__eye {
+      width: 98px;
+      height: 47px;
+    }
+    &__eye-wrapper {
+      width: 98px;
+      height: 47px;
+      .white {
+        @include size(39px, 39px, 50%);
+        top: 4px;
+        left: 28px;
+      }
+      .black {
+        @include size(35.3px, 35.3px, 50%);
+        top: 2px;
+        left: 4px;
+      }
+      .glare {
+        @include size(18px, 18px, 50%);
+        top: 5px;
+        right: 30px;
+      }
+    }
+    &__eye-wrapper:first-child {
+      margin-right: 25px;
+    }
+    &__arrow {
+      width: 121px;
+      height: 121px;
+      svg {
+        width: 67px;
+        height: 15px;
+      }
+    }
+    &__arrow--prev {
+      margin-right: 29px;
+    }
+    &__line {
+      top: -125px;
+      right: 225px;
+      svg {
+        width: 454px;
+        height: 348px;
+      }
+    }
   }
 }

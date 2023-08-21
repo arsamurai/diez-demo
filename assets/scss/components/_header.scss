@@ -1,10 +1,30 @@
 #header {
   padding-top: 44px;
-  position: fixed;
+  position: absolute;
   z-index: 999;
   top: 0;
   right: 0;
   left: 0;
+  &::before {
+    display: none;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    backdrop-filter: blur(4px);
+    background-color: rgba($black, .3);
+  }
+  &.active {
+    position: fixed;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    &::before {
+      display: block;
+    }
+  }
   .header__inner {
     @include flex(space-between, center);
   }
@@ -32,6 +52,7 @@
 
   @include desktop-sm {
     padding-top: 24px;
+    padding-bottom: 24px;
     .header-order--mobile {
       display: none;
     }
