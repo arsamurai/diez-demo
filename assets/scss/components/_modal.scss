@@ -229,9 +229,8 @@
   }
   &__video-wrapper {
     position: relative;
-    margin: 43px 67px;
+    margin: 23px 47px;
     max-width: 1216px;
-    min-height: 240px;
     max-height: 690px;
     width: 100%;
     height: 100%;
@@ -249,6 +248,7 @@
   }
   &__nav {
     @include flex();
+    padding-left: 10px;
   }
   &__arrow {
 		@include flex();
@@ -266,14 +266,9 @@
     transform: rotate(180deg);
   }
   &__line {
+    display: none;
     position: absolute;
-    top: -90px;
-    right: 85px;
     z-index: -1;
-    svg {
-      width: 354px;
-      height: 248px;
-    }
   }
 
   @include table {
@@ -304,6 +299,9 @@
     &__eye-wrapper:first-child {
       margin-right: 20px;
     }
+    &__video-wrapper {
+      margin: 33px 57px;
+    }
     &__arrow {
       width: 91px;
       height: 91px;
@@ -316,6 +314,8 @@
       margin-right: 23px;
     }
     &__line {
+      display: block;
+      top: -90px;
       right: 155px;
       svg {
         width: 354px;
@@ -355,6 +355,9 @@
     }
     &__eye-wrapper:first-child {
       margin-right: 25px;
+    }
+    &__video-wrapper {
+      margin: 43px 67px;
     }
     &__arrow {
       width: 121px;
