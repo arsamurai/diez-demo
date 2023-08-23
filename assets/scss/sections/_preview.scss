@@ -80,6 +80,11 @@
       text-transform: uppercase;
       border-radius: $border-radius;
       background-color: $yellow;
+      transform: scale(1);
+      transition: $transition;
+    }
+    &__btn:hover {
+      transform: scale(1.05);
     }
   }
   .preview__line {

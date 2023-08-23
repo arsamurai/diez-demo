@@ -124,6 +124,7 @@ meter {
 html {
   position: relative;
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -1082,6 +1083,11 @@ body [data-aos-duration="10000"][data-aos].aos-animate,
   text-transform: uppercase;
   border-radius: 38px;
   background-color: #FFD352;
+  transform: scale(1);
+  transition: all ease-in-out 0.3s;
+}
+#preview .preview-order__btn:hover {
+  transform: scale(1.05);
 }
 #preview .preview__line {
   position: absolute;
