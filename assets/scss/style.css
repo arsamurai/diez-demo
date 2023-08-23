@@ -29,6 +29,22 @@
     stroke-dashoffset: 0;
   }
 }
+@keyframes eyesBlink1 {
+  0%, 90% {
+    fill: #FFFFFF;
+  }
+  95% {
+    fill: #000000;
+  }
+}
+@keyframes eyesBlink2 {
+  0%, 90% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+}
 /* RWD @media query setting */
 /***
     The new CSS reset - version 1.7.3 (last updated 7.8.2022)
@@ -718,6 +734,9 @@ body [data-aos-duration="10000"][data-aos].aos-animate,
   width: 50px;
   height: 30px;
 }
+.work-modal__eye path {
+  animation: eyesBlink1 4.5s infinite;
+}
 .work-modal__eye-wrapper {
   position: relative;
   width: 50px;
@@ -750,6 +769,9 @@ body [data-aos-duration="10000"][data-aos].aos-animate,
   right: 15px;
   background-color: #FFFFFF;
   z-index: 3;
+}
+.work-modal__eye-wrapper .white, .work-modal__eye-wrapper .black, .work-modal__eye-wrapper .glare {
+  animation: eyesBlink2 4.5s infinite;
 }
 .work-modal__eye-wrapper:first-child {
   margin-right: 15px;
@@ -1032,6 +1054,9 @@ body [data-aos-duration="10000"][data-aos].aos-animate,
   width: 125px;
   height: 60px;
 }
+#preview .preview__eye path {
+  animation: eyesBlink1 4.5s infinite;
+}
 #preview .preview__eye-wrapper {
   position: relative;
   width: 125px;
@@ -1064,6 +1089,9 @@ body [data-aos-duration="10000"][data-aos].aos-animate,
   right: 32px;
   background-color: #FFFFFF;
   z-index: 3;
+}
+#preview .preview__eye-wrapper .white, #preview .preview__eye-wrapper .black, #preview .preview__eye-wrapper .glare {
+  animation: eyesBlink2 4.5s infinite;
 }
 #preview .preview__eye-wrapper:first-child {
   margin-right: 32px;

@@ -3,3 +3,21 @@
     stroke-dashoffset: 0;
   }
 }
+
+@keyframes eyesBlink1 {
+  0%, 90% {
+    fill: $white;
+  }
+  95% {
+    fill: $black;
+  }
+}
+
+@keyframes eyesBlink2 {
+  0%, 90% {
+    opacity: 1;
+  }
+  95%  {
+    opacity: 0;
+  }
+}

@@ -196,6 +196,9 @@
   &__eye {
     width: 50px;
     height: 30px;
+    path {
+      animation: eyesBlink1 4.5s infinite;
+    }
   }
   &__eye-wrapper {
     position: relative;
@@ -222,6 +225,9 @@
       right: 15px;
       background-color: $white;
       z-index: 3;
+    }
+    .white, .black, .glare {
+      animation: eyesBlink2 4.5s infinite;
     }
   }
   &__eye-wrapper:first-child {
