@@ -197,7 +197,7 @@
     width: 50px;
     height: 30px;
     path {
-      animation: eyesBlink1 4.5s infinite;
+      animation: eyesBlink1 3.5s infinite;
     }
   }
   &__eye-wrapper {
@@ -227,7 +227,7 @@
       z-index: 3;
     }
     .white, .black, .glare {
-      animation: eyesBlink2 4.5s infinite;
+      animation: eyesBlink2 3.5s infinite;
     }
   }
   &__eye-wrapper:first-child {

@@ -735,7 +735,7 @@ body [data-aos-duration="10000"][data-aos].aos-animate,
   height: 30px;
 }
 .work-modal__eye path {
-  animation: eyesBlink1 4.5s infinite;
+  animation: eyesBlink1 3.5s infinite;
 }
 .work-modal__eye-wrapper {
   position: relative;
@@ -771,7 +771,7 @@ body [data-aos-duration="10000"][data-aos].aos-animate,
   z-index: 3;
 }
 .work-modal__eye-wrapper .white, .work-modal__eye-wrapper .black, .work-modal__eye-wrapper .glare {
-  animation: eyesBlink2 4.5s infinite;
+  animation: eyesBlink2 3.5s infinite;
 }
 .work-modal__eye-wrapper:first-child {
   margin-right: 15px;
@@ -1055,7 +1055,7 @@ body [data-aos-duration="10000"][data-aos].aos-animate,
   height: 60px;
 }
 #preview .preview__eye path {
-  animation: eyesBlink1 4.5s infinite;
+  animation: eyesBlink1 3.5s infinite;
 }
 #preview .preview__eye-wrapper {
   position: relative;
@@ -1091,7 +1091,7 @@ body [data-aos-duration="10000"][data-aos].aos-animate,
   z-index: 3;
 }
 #preview .preview__eye-wrapper .white, #preview .preview__eye-wrapper .black, #preview .preview__eye-wrapper .glare {
-  animation: eyesBlink2 4.5s infinite;
+  animation: eyesBlink2 3.5s infinite;
 }
 #preview .preview__eye-wrapper:first-child {
   margin-right: 32px;
