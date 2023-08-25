@@ -31,7 +31,6 @@ addEventListener('load', async () => {
 	observer.observe(document.querySelector('[data-header-anchor]'));
 
 	// Navigation
-	const logoBtn = document.querySelector('[data-logo-btn]');
 	const burger = document.querySelector('[data-burger-btn]');
 	const menu = document.querySelector('[data-menu]');
 	const scrollLinks = document.querySelectorAll('[data-scroll-to]');
@@ -64,10 +63,6 @@ addEventListener('load', async () => {
 		burger?.classList[action]('active');
 		menu?.classList[action]('active');
 	};
-
-	logoBtn.addEventListener('click', () => {
-		window.scrollTo({ top: 0, behavior: 'smooth' });
-	});
 
 	burger.addEventListener('click', ({ currentTarget }) => {
 		const isActiveMenu = currentTarget.classList.contains('active');
