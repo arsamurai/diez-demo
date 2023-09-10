@@ -1,0 +1,18 @@
+mixin link(href, name)
+  a(href=href)&attributes(attributes)=name
+
+mixin image(name, alt)
+  img(src=require(`../../assets/images/new-smm/${name}`), alt=alt)&attributes(attributes)
+
+mixin imageBrand(name, alt)
+  img(src=require(`../../assets/images/brand/${name}`), alt=alt)&attributes(attributes)
+
+mixin imageMain(name, alt)
+  img(src=require(`../../assets/images/${name}`), alt=alt)&attributes(attributes)
+
+mixin projectTag(title)
+  .project-tag&attributes(attributes)!=title
+
+mixin itemNumber(number)
+  span.item-number&attributes(attributes) (#{number})
+

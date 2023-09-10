@@ -1,0 +1,4 @@
+mixin learningListItem(idx, text)
+  .learning__list-item&attributes(attributes)
+    +itemNumber(idx < 9 ? '0' + idx : idx).learning__item-count
+    .learning__item-text=text

@@ -1,0 +1,94 @@
+.question__list-item {
+	border: 1px solid #C6C6C6 !important;
+	border-radius: 20px !important;
+	width: 100%;
+	overflow: hidden;
+	color: $black;
+
+	.question-count {
+		color: currentColor;
+		font-size: 16px;
+	}
+
+	.accordion-button {
+		transition: $transition;
+		padding: 29px 17px;
+		align-items: flex-start;
+
+		&:after {
+			display: none;
+		}
+
+		.accordion-title {
+			font-size: 24px;
+			line-height: 24px;
+			flex: 0 0 85%;
+		}
+
+		.arrow-icon {
+			transition: inherit;
+			position: absolute;
+			right: 17px;
+			bottom: 29px;
+			width: 16px;
+			margin-left: auto;
+			transform: rotate(-45deg);
+			transform-origin: left;
+			svg path {
+				fill: currentColor;
+			}
+		}
+	}
+
+	.accordion-collapse {
+		transition: $transition;
+		.accordion-body {
+			padding: 0 17px 29px;
+			width: 95%;
+		}
+		.accordion-body {
+			font-family: $M_Medium;
+			font-size: 16px;
+			line-height: 20px;
+		}
+	}
+
+	.accordion-button:not(.collapsed) {
+		background-color: $orange;
+		color: $white;
+
+		.arrow-icon {
+			transform: rotate(45deg);
+		}
+	}
+
+	.accordion-collapse {
+		background-color: $orange;
+		color: $white;
+	}
+
+	@include desktop-sm {
+		.accordion-button {
+			padding: 39px 41px;
+			.accordion-title {
+				font-size: 40px;
+				line-height: 40px;
+			}
+
+			.arrow-icon {
+				position: unset;
+				width: 26px;
+			}
+		}
+
+		.accordion-collapse {
+			.accordion-body {
+				padding: 0 73px 47px;
+			}
+			.accordion-body {
+				font-size: 20px;
+				line-height: 24px;
+			}
+		}
+	}
+}

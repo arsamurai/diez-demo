@@ -1,0 +1,14 @@
+.reserve-modal(data-modal='reserve')
+  .reserve-modal__container.container
+    form.reserve-modal__form.reserve__form#reserve-form-smm(action='#')
+      h2.reserve__form_title запис на курс
+      .reserve__form_fields
+        input(required name='name' placeholder="ім'я")
+        input(required name='email' placeholder='пошта')
+        input(required name='social' placeholder='@instagram')
+      button.reserve__form_submit(type='submit')
+        span забронювати зараз
+        +arrowIcon
+    .reserve-modal__brand
+      +newSmmIcon
+      +nIcon

@@ -1,0 +1,6 @@
+mixin programResult(result)
+	.program-result&attributes(attributes) 
+		p.program-result__title результат
+		ul.program-result__list
+			each item in result
+				li.program-result__item= item

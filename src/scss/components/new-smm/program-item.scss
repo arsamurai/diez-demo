@@ -1,0 +1,137 @@
+.program__item {
+	position: relative;
+	border-bottom: 1px solid $black;
+
+	&:first-child {
+		border-top: 1px solid $black !important;
+	}
+	&:last-child {
+		border-bottom: 1px solid $black !important;
+	}
+
+	.accordion-header button {
+		display: flex;
+		align-items: flex-start;
+		gap: 25px;
+		padding: 16px 0;
+		color: $black;
+		background-color: unset;
+		box-shadow: unset;
+
+		.program__item_title {
+			margin: 0;
+			flex: 1 1 50%;
+			font-size: 24px;
+			line-height: 24px;
+		}
+
+		&:after {
+			background-image: url("../assets/images/new-smm/arrow_black.svg");
+			background-size: 14px;
+			transform-origin: center;
+			margin-top: auto;
+		}
+
+		&:not(.collapsed):after {
+			transform: rotate(-90deg);
+		}
+	}
+
+	.program__item_text {
+			font-family: $M_Medium;
+			font-size: 16px;
+			line-height: 35px;
+
+		.bold {
+			font-family: $M_SemiBold;
+			font-weight: 800 !important;
+		}
+
+		.section {
+			font-family: $M_SemiBold;
+			font-size: 22px;
+			line-height: 40px;
+			font-weight: 800;
+		}
+
+		.lesson {
+			font-family: $M_SemiBold;
+			font-size: 20px;
+			line-height: 35px;
+			font-weight: 800;
+		}
+	}
+
+	.program__item-result--desktop {
+		display: none;
+	}
+}
+
+@include desktop-sm {
+	.program__item {
+
+		.accordion-header button {
+			gap: 30px;
+			padding: 32px 0;
+
+			.program__item_title {
+				font-size: 64px;
+				line-height: 60px;
+			}
+		}
+
+		.program__item_text {
+			padding-top: 0;
+			font-size: 20px;
+			line-height: 40px;
+		}
+
+		.section {
+			font-family: $M_SemiBold;
+			font-size: 30px;
+			line-height: 50px;
+			font-weight: 800;
+		}
+
+		.lesson {
+			font-family: $M_SemiBold;
+			font-size: 22px;
+			line-height: 40px;
+			font-weight: 800;
+		}
+	}
+}
+
+@include desktop {
+	.program__item {
+		padding: 19px 0 77px;
+		.program__item-inner {
+			@include flex(flex-start, flex-start);
+		}
+		.accordion-header {
+			width: 55%;
+			padding-right: 67px;
+		}
+		.accordion-header button {
+			&::after {
+				display: none;
+			}
+			.program__item_title {
+				max-width: 500px;
+				width: 100%;
+				margin-left: auto;
+			}
+		}
+		.program__item_text {
+			margin-top: 60px;
+			max-width: 500px;
+			width: 100%;
+		}
+		.program__item-result--mobile {
+			display: none;
+		}
+		.program__item-result--desktop {
+			display: block;
+		}
+	}
+}

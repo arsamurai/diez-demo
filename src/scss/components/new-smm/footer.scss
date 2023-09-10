@@ -1,0 +1,77 @@
+.new-smm__footer {
+	background-color: $black;
+	color: $white;
+}
+
+.micore-link {
+	font-size: 16px;
+	text-align: center;
+	&.footer__container {
+		padding-bottom: 20px;
+	
+		@include table {
+			padding-bottom: 40px;
+		}
+	}
+}
+
+.footer__container {
+	padding-top: 43px;
+
+	@include table {
+		padding-top: 56px;
+	}
+}
+
+.footer__content {
+	display: grid;
+	grid-template-columns: 1fr;
+	align-items: center;
+	font-size: 20px;
+	line-height: 22px;
+	letter-spacing: -0.02em;
+	grid-gap: 30px;
+
+	.confidentiality {
+		text-align: center;
+	}
+
+	.logo {
+		color: $orange;
+		text-align: center;
+		order: -1;
+
+		.logo-icon {
+			width: 24px;
+			margin: 0 auto 30px;
+			svg path {
+				fill: $orange;
+			}
+		}
+	}
+
+	.contacts {
+		text-align: center;
+		@extend %flexColumn;
+		margin: 0 auto;
+	}
+
+	@include table {
+		text-align: center;
+		justify-content: center;
+		grid-template-columns: repeat(3, 1fr);
+
+		.confidentiality {
+			text-align: left;
+		}
+
+		.logo {
+			order: unset;
+		}
+
+		.contacts {
+			text-align: left;
+			margin-left: auto;
+		}
+	}
+}

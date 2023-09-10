@@ -1,0 +1,17 @@
+.item-number {
+	font-size: 12px;
+	line-height: 12px;
+	text-align: center;
+	color: #E95200;
+	font-family: $M_Medium;
+
+	@include table {
+		font-size: 16px;
+		line-height: 16px;
+	}
+
+	@include desktop {
+		font-size: 20px;
+		line-height: 20px;
+	}
+}

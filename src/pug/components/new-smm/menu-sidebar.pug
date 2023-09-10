@@ -1,0 +1,21 @@
+-
+  var links = [
+    {title: 'про курс', href: '#about'},
+    {title: 'для кого', href: '#forWhom'},
+    {title: 'як проходить', href: '#howGoing'},
+    {title: 'програма', href: '#program'},
+    {title: 'спікери', href: '#speakers'},
+    {title: 'результат', href: '#result'},
+    {title: 'відгуки', href: '#reviews'},
+    {title: 'тарифи', href: '#tariffs'},
+    {title: 'питання', href: '#question'},
+  ]
+
+.menu__sidebar(data-modal='menu')
+  .menu__sidebar_wrapper
+    .menu__container
+      .menu__pages
+        each link in links
+          .menu__pages_item(data-scroll-to=link.href)
+            span=link.title
+            +image('arrow.svg', `open ${link.title}`).page-arrow

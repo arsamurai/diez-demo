@@ -1,0 +1,8 @@
+mixin speakerCard(image, name, status, text)
+  .speaker__card&attributes(attributes)
+    .speaker__photo
+      +image(image, name)(class=name==="Тимофій Філатов" && 'filatov')
+    .speaker__info
+      h3.speaker__info-name=name
+      span.speaker__info-status=status
+      p.speaker__info-description!=text

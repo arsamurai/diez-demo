@@ -1,0 +1,16 @@
+mixin programItem(number, title, text, result)
+  .program__item.accordion-item&attributes(attributes)
+    .program__item-inner
+      h2(class='accordion-header' id='heading' + number)
+        button.accordion-button.collapsed(data-accordion-button data-bs-target="#collapse" + number aria-expanded="true" aria-controls="collapse" + number)
+          +itemNumber(number < 10 ? '0' + number : number).program__item_count
+          h3.program__item_title=title
+      .accordion-collapse.collapse.show(data-accordion-body id="collapse" + number aria-labelledby="heading" + number data-bs-parent="#programAccordion")
+        .program__item_text.accordion-body
+          p!=text
+          if result && result.length > 0
+            .program__item-result--mobile
+              +programResult(result)
+    if result && result.length > 0
+      .program__item-result--desktop
+        +programResult(result)

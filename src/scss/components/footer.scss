@@ -1,0 +1,29 @@
+.main__footer {
+	display: none;
+	background-color: $orange;
+	position: static;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	padding-bottom: 18px;
+  .confidentiality {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.05em;
+    color: rgba(0, 0, 0, 0.33);
+  }
+
+	@media screen and (min-width: 992px) {
+		display: block;
+	}
+
+	@media screen and (min-width: 1042px) {
+		background-color: transparent;
+		position: fixed;
+	}
+
+	@media screen and (min-width: 1450px) {
+		padding-bottom: 38px;	
+	}
+}

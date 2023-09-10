@@ -1,0 +1,38 @@
+.scrolling-bar {
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 44px;
+	display: flex;
+	overflow: hidden;
+	position: absolute;
+
+	.text {
+		white-space: nowrap;
+	}
+
+	&.slash-separation {
+		.text:after {
+			content: '\00a0 / \00a0';
+		}
+	}
+
+	&.n-separation {
+		.text:after {
+			content: '\00a0 Ⓗ \00a0';
+		}
+	}
+
+	&__text-wrap {
+		height: 100%;
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		will-change: transform;
+		animation: scrollText 50s linear infinite -50s;
+
+		&:nth-child(2) {
+			animation: scrollTextNext 50s linear infinite -25s;
+		}
+	}
+}

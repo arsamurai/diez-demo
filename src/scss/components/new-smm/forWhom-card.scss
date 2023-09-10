@@ -1,0 +1,43 @@
+.forWhom__card {
+	text-align: center;
+
+	.forWhom__title {
+		font-size: 40px;
+		line-height: 44px;
+	}
+
+	.forWhom__desc {
+		font-size: 20px;
+		line-height: 24px;
+		margin: 24px auto 50px;
+	}
+
+	.forWhom__link {
+		font-size: 24px;
+		line-height: 18px;
+		font-weight: 700;
+		letter-spacing: -0.015em;
+		text-decoration: underline;
+		color: $orange;
+		height: 35px;
+	}
+
+	@include desktop-sm {
+
+		.forWhom__title {
+			font-size: 64px;
+			line-height: 60px;
+		}
+
+		.forWhom__desc {
+			max-width: 334px;
+			line-height: 30px;
+			margin: 32px auto 50px;
+		}
+
+		.forWhom__link {
+			font-size: 24px;
+			line-height: 18px;
+		}
+	}
+}

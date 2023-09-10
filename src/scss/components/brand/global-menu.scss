@@ -1,0 +1,128 @@
+.global-menu {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 998;
+  position: fixed;
+  visibility: hidden;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  justify-content: center;
+  transform: translate(0, -100%);
+  transition: all 0.7s ease-in-out;
+
+  &.open {
+    visibility: visible;
+    transform: translate(0, 0);
+  }
+
+  .btn-row {
+    bottom: 40px;
+    position: absolute;
+  }
+
+  &__links-list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__links-item {
+    margin-bottom: 55px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    color: #000;
+    font-size: 32px;
+    font-weight: 500;
+    transition: all 0.4s ease-in-out;
+  }
+
+	&.brand-global-menu {
+		background-color: #000;
+		justify-content: initial;
+		cursor: auto;
+		button, div, a {
+			cursor: auto;
+		}
+		@media screen and (min-width: 450px) {
+			cursor: none;
+			button, div, a {
+				cursor: none;
+			}
+		}
+		.global-menu__links-list {
+			position: absolute;
+			top: 18%;
+		}
+		.global-menu__link {
+			font-family: 'Graphik LCG';
+			font-weight: 500;
+			font-size: 24px;
+			line-height: 24px;
+			color: #fff;
+			&:hover {
+				color: $brand-green;
+			}
+		}
+		.global-menu__links-item {
+			margin-bottom: 34px;
+			@media screen and (min-height: 620px) {
+				margin-bottom: 44px;
+			}
+		}
+		.active-smm-zero {
+      .global-menu__link {
+        color: $brand-red;
+
+        &:hover {
+          color: $brand-red;
+        }
+      }
+    }
+		.btn-row {
+			bottom: 8%;
+			@media screen and (min-height: 690px) {
+				bottom: 15%;
+			}
+		}
+		.custom-btn {
+			margin-top: 4px;
+			text-transform: uppercase;
+      font-family: "Helios Ext C", sans-serif;
+      width: 258px;
+      height: 60px;
+      border-radius: 0;
+      border: 2px solid $brand-green;
+      &:before {
+        border-radius: 0;
+        background-color: $brand-green;
+      }
+      span {
+				margin-top: 4px;
+				font-size: 14px;
+				line-height: 17px;
+        padding-right: 9px;
+        color: $brand-green;
+      }
+
+      &:hover {
+        &:before {
+          width: 100%;
+        }
+        span {
+          color: #000;
+        }
+        svg path {
+          fill: #000;
+        }
+      }
+    }
+	}
+}

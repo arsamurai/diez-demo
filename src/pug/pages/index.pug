@@ -1,0 +1,31 @@
+extends ../layouts/layout
+
+include ../helpers/_mixins
+include ../helpers/_icons
+
+block vars
+	- var page = 'main'
+
+append content
+	include ../components/main-preloader
+	main#main
+		section.main-page-section
+			.main__courses
+				.main__course.new-smm
+					.course-container(data-aos="fade-up-20" data-aos-delay=`3200`)
+						.main__title
+							h1 наші курси:
+						+nIcon(data-aos="dashed-n-icon" data-aos-delay='3200').main__course-icon
+						h2.main__course-title новий smm
+						.main__course-info
+							p.main__course-desc просунутий курс <br /> з маркетингу в соцмережах, <br /> розроблений на основі нових <br /> воєнних реалій ринку
+							a.main__course-btn(href="/new-smm.html")
+								span докладніше
+				.main__course.brand
+					.course-container(data-aos="fade-up-20" data-aos-delay=`3200`)
+						+crown.main__course-icon
+						h2.main__course-title особистий брéнд
+						.main__course-info
+							p.main__course-desc авторський курс <br /> з розвитку <br /> особистого бренду <br /> digital-спеціаліста
+							a.main__course-btn(href="/personal-brand.html")
+								span зараз не активний

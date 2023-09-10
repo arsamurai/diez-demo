@@ -1,0 +1,9 @@
+mixin instaProblem(avatar, name, problem)
+  .problem__wrapper&attributes(attributes)
+    .problem__header
+      +image(avatar, name).problem__header_avatar
+      span.problem__header_name=name
+    .problem__desk
+      p.problem__desk_text=problem
+    .problem__footer
+      +image('arrow.svg', '↗').problem__footer_arrow

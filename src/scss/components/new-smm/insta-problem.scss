@@ -1,0 +1,63 @@
+.problem__wrapper {
+	width: 241px;
+	border-radius: 37px;
+	background: $gray;
+	overflow: hidden;
+
+
+	.problem__header {
+		@include flex(flex-start, center);
+		gap: 16px;
+		padding: 18px 13px 0;
+
+		&_avatar {
+			@include size(40px, 40px, 50%);
+		}
+
+		&_name {
+			font-size: 16px;
+		}
+	}
+	.problem__desk {
+		padding: 18px;
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	.problem__footer {
+		width: 100%;
+		padding: 18px 21px;
+		background-color: $darkGray;
+		@include flex(flex-end, center);
+
+		&_arrow {
+			transform: rotate(-45deg);
+			@include size(17px);
+		}
+	}
+
+	@include lg-desktop {
+		width: 377px;
+		.problem__header {
+			padding: 26px 44px 0;
+		}
+
+		.problem__desk {
+			padding: 33px 44px 41px;
+			font-size: 24px;
+			line-height: 24px;
+		}
+
+		.problem__footer {
+			padding: 28px 44px;
+
+			&_arrow {
+				@include size(30px);
+			}
+		}
+	}
+
+	@include lg-desktop {
+
+	}
+}

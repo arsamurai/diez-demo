@@ -1,0 +1,12 @@
+.project-tag {
+	font-size: 14px;
+	line-height: 14px;
+	color: $orange;
+	font-family: $M-SemiBold;
+	letter-spacing: 1px;
+
+	@include table {
+		font-size: 20px;
+		line-height: 20px;
+	}
+}
