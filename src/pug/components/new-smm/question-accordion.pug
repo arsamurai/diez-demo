@@ -1,9 +1,0 @@
-mixin questionAccordion(number, title, text)
-  .question__list-item.accordion-item&attributes(attributes)
-    h2(class='accordion-header' id='question' + number)
-      button.accordion-button.collapsed(type='button' data-bs-toggle="collapse" data-bs-target="#questionCollapse" + number aria-expanded="true" aria-controls="questionCollapse" + number)
-        +itemNumber(number < 9 ? '0' + number : number).question-count
-        h3.accordion-title=title
-        +arrowIcon
-    .accordion-collapse.collapse(id="questionCollapse" + number aria-labelledby="question" + number data-bs-parent="#questionAccordion")
-      p.accordion-body!=text

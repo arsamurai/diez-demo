@@ -1,4 +1,0 @@
-mixin chatMessage(avatar, message, owner)
-  .chat-message&attributes(attributes)(class=!!owner && 'owner')
-    +image(avatar).chat-message_avatar
-    p.chat-message_text!=message
