@@ -42,7 +42,7 @@ var swipers = {
       modules: [swiper_esm/* EffectCoverflow */.lI, swiper_esm/* Autoplay */.pt],
       coverflowEffect: {
         scale: 0.8,
-        stretch: 260,
+        stretch: 160,
         depth: 50,
         rotate: 0,
         slideShadows: false,
@@ -52,6 +52,18 @@ var swipers = {
         992: {
           slidesPerView: 2,
           direction: 'horizontal'
+        },
+        1500: {
+          slidesPerView: 2,
+          direction: 'horizontal',
+          coverflowEffect: {
+            scale: 0.8,
+            stretch: 260,
+            depth: 50,
+            rotate: 0,
+            slideShadows: false,
+            modifier: 1
+          }
         }
       }
     });
@@ -680,4 +692,4 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /******/ var __webpack_exports__ = __webpack_require__.O();
 /******/ }
 ]);
-//# sourceMappingURL=main.cd20bb79128a02a6d9fe.js.map
+//# sourceMappingURL=main.0a5d3c968c72b92e2388.js.map
