@@ -7,12 +7,13 @@
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
+  pt: function() { return /* reexport */ Autoplay; },
   lI: function() { return /* reexport */ EffectCoverflow; },
   tl: function() { return /* reexport */ Pagination; },
   ZP: function() { return /* reexport */ core; }
 });
 
-// UNUSED EXPORTS: A11y, Autoplay, Controller, EffectCards, EffectCreative, EffectCube, EffectFade, EffectFlip, FreeMode, Grid, HashNavigation, History, Keyboard, Lazy, Manipulation, Mousewheel, Navigation, Parallax, Scrollbar, Swiper, Thumbs, Virtual, Zoom
+// UNUSED EXPORTS: A11y, Controller, EffectCards, EffectCreative, EffectCube, EffectFade, EffectFlip, FreeMode, Grid, HashNavigation, History, Keyboard, Lazy, Manipulation, Mousewheel, Navigation, Parallax, Scrollbar, Swiper, Thumbs, Virtual, Zoom
 
 ;// CONCATENATED MODULE: ./node_modules/ssr-window/ssr-window.esm.js
 /**
@@ -9441,7 +9442,7 @@ function Autoplay({
     }
 
     clearTimeout(timeout);
-    timeout = nextTick(() => {
+    timeout = utils_nextTick(() => {
       let autoplayResult;
 
       if (swiper.params.autoplay.reverseDirection) {
@@ -9518,7 +9519,7 @@ function Autoplay({
   }
 
   function onVisibilityChange() {
-    const document = getDocument();
+    const document = ssr_window_esm_getDocument();
 
     if (document.visibilityState === 'hidden' && swiper.autoplay.running) {
       pause();
@@ -9583,7 +9584,7 @@ function Autoplay({
   on('init', () => {
     if (swiper.params.autoplay.enabled) {
       start();
-      const document = getDocument();
+      const document = ssr_window_esm_getDocument();
       document.addEventListener('visibilitychange', onVisibilityChange);
       attachMouseEvents();
     }
@@ -9618,7 +9619,7 @@ function Autoplay({
       stop();
     }
 
-    const document = getDocument();
+    const document = ssr_window_esm_getDocument();
     document.removeEventListener('visibilitychange', onVisibilityChange);
   });
   Object.assign(swiper.autoplay, {
@@ -10929,4 +10930,4 @@ function EffectCards({
 /***/ })
 
 }]);
-//# sourceMappingURL=vendors.b33932c9dbeb60f48f05.js.map
+//# sourceMappingURL=vendors.33c8f1027082c584566d.js.map

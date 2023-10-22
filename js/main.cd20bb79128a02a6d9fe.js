@@ -26,6 +26,7 @@ var swiper_esm = __webpack_require__(665);
 
 
 
+
 var swipers = {
   downloadImagesSwiper: function downloadImagesSwiper() {
     return new swiper_esm/* default */.ZP('.download-images__swiper', {
@@ -36,12 +37,12 @@ var swipers = {
       autoplay: {
         delay: 4000
       },
-      direction: 'vertical',
-      modules: [swiper_esm/* EffectCoverflow */.lI],
       effect: 'coverflow',
+      direction: 'vertical',
+      modules: [swiper_esm/* EffectCoverflow */.lI, swiper_esm/* Autoplay */.pt],
       coverflowEffect: {
         scale: 0.8,
-        stretch: -20,
+        stretch: 260,
         depth: 50,
         rotate: 0,
         slideShadows: false,
@@ -49,11 +50,8 @@ var swipers = {
       },
       breakpoints: {
         992: {
-          coverflowEffect: {
-            stretch: 260
-          },
-          direction: 'horizontal',
-          slidesPerView: 2
+          slidesPerView: 2,
+          direction: 'horizontal'
         }
       }
     });
@@ -682,4 +680,4 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /******/ var __webpack_exports__ = __webpack_require__.O();
 /******/ }
 ]);
-//# sourceMappingURL=main.b0932679289f215e4a06.js.map
+//# sourceMappingURL=main.cd20bb79128a02a6d9fe.js.map
