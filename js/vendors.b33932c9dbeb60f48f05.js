@@ -1,18 +1,18 @@
 "use strict";
 (self["webpackChunkfutornoi_pug_starter"] = self["webpackChunkfutornoi_pug_starter"] || []).push([[216],{
 
-/***/ 26:
+/***/ 665:
 /***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  xW: function() { return /* reexport */ EffectFade; },
-  W_: function() { return /* reexport */ Navigation; },
+  lI: function() { return /* reexport */ EffectCoverflow; },
+  tl: function() { return /* reexport */ Pagination; },
   ZP: function() { return /* reexport */ core; }
 });
 
-// UNUSED EXPORTS: A11y, Autoplay, Controller, EffectCards, EffectCoverflow, EffectCreative, EffectCube, EffectFlip, FreeMode, Grid, HashNavigation, History, Keyboard, Lazy, Manipulation, Mousewheel, Pagination, Parallax, Scrollbar, Swiper, Thumbs, Virtual, Zoom
+// UNUSED EXPORTS: A11y, Autoplay, Controller, EffectCards, EffectCreative, EffectCube, EffectFade, EffectFlip, FreeMode, Grid, HashNavigation, History, Keyboard, Lazy, Manipulation, Mousewheel, Navigation, Parallax, Scrollbar, Swiper, Thumbs, Virtual, Zoom
 
 ;// CONCATENATED MODULE: ./node_modules/ssr-window/ssr-window.esm.js
 /**
@@ -6556,7 +6556,7 @@ function Navigation({
     let $el;
 
     if (el) {
-      $el = dom(el);
+      $el = $(el);
 
       if (swiper.params.uniqueNavElements && typeof el === 'string' && $el.length > 1 && swiper.$el.find(el).length === 1) {
         $el = swiper.$el.find(el);
@@ -6606,7 +6606,7 @@ function Navigation({
 
   function init() {
     const params = swiper.params.navigation;
-    swiper.params.navigation = create_element_if_not_defined_createElementIfNotDefined(swiper, swiper.originalParams.navigation, swiper.params.navigation, {
+    swiper.params.navigation = createElementIfNotDefined(swiper, swiper.originalParams.navigation, swiper.params.navigation, {
       nextEl: 'swiper-button-next',
       prevEl: 'swiper-button-prev'
     });
@@ -6688,7 +6688,7 @@ function Navigation({
     } = swiper.navigation;
     const targetEl = e.target;
 
-    if (swiper.params.navigation.hideOnClick && !dom(targetEl).is($prevEl) && !dom(targetEl).is($nextEl)) {
+    if (swiper.params.navigation.hideOnClick && !$(targetEl).is($prevEl) && !$(targetEl).is($nextEl)) {
       if (swiper.pagination && swiper.params.pagination && swiper.params.pagination.clickable && (swiper.pagination.el === targetEl || swiper.pagination.el.contains(targetEl))) return;
       let isHidden;
 
@@ -6732,6 +6732,11 @@ function Navigation({
     init,
     destroy
   });
+}
+;// CONCATENATED MODULE: ./node_modules/swiper/shared/classes-to-selector.js
+function classes_to_selector_classesToSelector(classes = '') {
+  return `.${classes.trim().replace(/([\.:!\/])/g, '\\$1') // eslint-disable-line
+  .replace(/ /g, '.')}`;
 }
 ;// CONCATENATED MODULE: ./node_modules/swiper/modules/pagination/pagination.js
 
@@ -6851,7 +6856,7 @@ function Pagination({
 
       if ($el.length > 1) {
         bullets.each(bullet => {
-          const $bullet = $(bullet);
+          const $bullet = dom(bullet);
           const bulletIndex = $bullet.index();
 
           if (bulletIndex === current) {
@@ -6912,8 +6917,8 @@ function Pagination({
     }
 
     if (params.type === 'fraction') {
-      $el.find(classesToSelector(params.currentClass)).text(params.formatFractionCurrent(current + 1));
-      $el.find(classesToSelector(params.totalClass)).text(params.formatFractionTotal(total));
+      $el.find(classes_to_selector_classesToSelector(params.currentClass)).text(params.formatFractionCurrent(current + 1));
+      $el.find(classes_to_selector_classesToSelector(params.totalClass)).text(params.formatFractionTotal(total));
     }
 
     if (params.type === 'progressbar') {
@@ -6935,7 +6940,7 @@ function Pagination({
         scaleY = scale;
       }
 
-      $el.find(classesToSelector(params.progressbarFillClass)).transform(`translate3d(0,0,0) scaleX(${scaleX}) scaleY(${scaleY})`).transition(swiper.params.speed);
+      $el.find(classes_to_selector_classesToSelector(params.progressbarFillClass)).transform(`translate3d(0,0,0) scaleX(${scaleX}) scaleY(${scaleY})`).transition(swiper.params.speed);
     }
 
     if (params.type === 'custom' && params.renderCustom) {
@@ -6974,7 +6979,7 @@ function Pagination({
       }
 
       $el.html(paginationHTML);
-      swiper.pagination.bullets = $el.find(classesToSelector(params.bulletClass));
+      swiper.pagination.bullets = $el.find(classes_to_selector_classesToSelector(params.bulletClass));
     }
 
     if (params.type === 'fraction') {
@@ -7003,12 +7008,12 @@ function Pagination({
   }
 
   function init() {
-    swiper.params.pagination = createElementIfNotDefined(swiper, swiper.originalParams.pagination, swiper.params.pagination, {
+    swiper.params.pagination = create_element_if_not_defined_createElementIfNotDefined(swiper, swiper.originalParams.pagination, swiper.params.pagination, {
       el: 'swiper-pagination'
     });
     const params = swiper.params.pagination;
     if (!params.el) return;
-    let $el = $(params.el);
+    let $el = dom(params.el);
     if ($el.length === 0) return;
 
     if (swiper.params.uniqueNavElements && typeof params.el === 'string' && $el.length > 1) {
@@ -7016,7 +7021,7 @@ function Pagination({
 
       if ($el.length > 1) {
         $el = $el.filter(el => {
-          if ($(el).parents('.swiper')[0] !== swiper.el) return false;
+          if (dom(el).parents('.swiper')[0] !== swiper.el) return false;
           return true;
         });
       }
@@ -7043,9 +7048,9 @@ function Pagination({
     }
 
     if (params.clickable) {
-      $el.on('click', classesToSelector(params.bulletClass), function onClick(e) {
+      $el.on('click', classes_to_selector_classesToSelector(params.bulletClass), function onClick(e) {
         e.preventDefault();
-        let index = $(this).index() * swiper.params.slidesPerGroup;
+        let index = dom(this).index() * swiper.params.slidesPerGroup;
         if (swiper.params.loop) index += swiper.loopedSlides;
         swiper.slideTo(index);
       });
@@ -7071,7 +7076,7 @@ function Pagination({
     if (swiper.pagination.bullets && swiper.pagination.bullets.removeClass) swiper.pagination.bullets.removeClass(params.bulletActiveClass);
 
     if (params.clickable) {
-      $el.off('click', classesToSelector(params.bulletClass));
+      $el.off('click', classes_to_selector_classesToSelector(params.bulletClass));
     }
   }
 
@@ -7130,7 +7135,7 @@ function Pagination({
       $el
     } = swiper.pagination;
 
-    if (swiper.params.pagination.el && swiper.params.pagination.hideOnClick && $el && $el.length > 0 && !$(targetEl).hasClass(swiper.params.pagination.bulletClass)) {
+    if (swiper.params.pagination.el && swiper.params.pagination.hideOnClick && $el && $el.length > 0 && !dom(targetEl).hasClass(swiper.params.pagination.bulletClass)) {
       if (swiper.navigation && (swiper.navigation.nextEl && targetEl === swiper.navigation.nextEl || swiper.navigation.prevEl && targetEl === swiper.navigation.prevEl)) return;
       const isHidden = $el.hasClass(swiper.params.pagination.hiddenClass);
 
@@ -10084,187 +10089,6 @@ function freeMode({
     }
   });
 }
-;// CONCATENATED MODULE: ./node_modules/swiper/shared/effect-init.js
-function effect_init_effectInit(params) {
-  const {
-    effect,
-    swiper,
-    on,
-    setTranslate,
-    setTransition,
-    overwriteParams,
-    perspective,
-    recreateShadows,
-    getEffectParams
-  } = params;
-  on('beforeInit', () => {
-    if (swiper.params.effect !== effect) return;
-    swiper.classNames.push(`${swiper.params.containerModifierClass}${effect}`);
-
-    if (perspective && perspective()) {
-      swiper.classNames.push(`${swiper.params.containerModifierClass}3d`);
-    }
-
-    const overwriteParamsResult = overwriteParams ? overwriteParams() : {};
-    Object.assign(swiper.params, overwriteParamsResult);
-    Object.assign(swiper.originalParams, overwriteParamsResult);
-  });
-  on('setTranslate', () => {
-    if (swiper.params.effect !== effect) return;
-    setTranslate();
-  });
-  on('setTransition', (_s, duration) => {
-    if (swiper.params.effect !== effect) return;
-    setTransition(duration);
-  });
-  on('transitionEnd', () => {
-    if (swiper.params.effect !== effect) return;
-
-    if (recreateShadows) {
-      if (!getEffectParams || !getEffectParams().slideShadows) return; // remove shadows
-
-      swiper.slides.each(slideEl => {
-        const $slideEl = swiper.$(slideEl);
-        $slideEl.find('.swiper-slide-shadow-top, .swiper-slide-shadow-right, .swiper-slide-shadow-bottom, .swiper-slide-shadow-left').remove();
-      }); // create new one
-
-      recreateShadows();
-    }
-  });
-  let requireUpdateOnVirtual;
-  on('virtualUpdate', () => {
-    if (swiper.params.effect !== effect) return;
-
-    if (!swiper.slides.length) {
-      requireUpdateOnVirtual = true;
-    }
-
-    requestAnimationFrame(() => {
-      if (requireUpdateOnVirtual && swiper.slides && swiper.slides.length) {
-        setTranslate();
-        requireUpdateOnVirtual = false;
-      }
-    });
-  });
-}
-;// CONCATENATED MODULE: ./node_modules/swiper/shared/effect-target.js
-function effect_target_effectTarget(effectParams, $slideEl) {
-  if (effectParams.transformEl) {
-    return $slideEl.find(effectParams.transformEl).css({
-      'backface-visibility': 'hidden',
-      '-webkit-backface-visibility': 'hidden'
-    });
-  }
-
-  return $slideEl;
-}
-;// CONCATENATED MODULE: ./node_modules/swiper/shared/effect-virtual-transition-end.js
-function effect_virtual_transition_end_effectVirtualTransitionEnd({
-  swiper,
-  duration,
-  transformEl,
-  allSlides
-}) {
-  const {
-    slides,
-    activeIndex,
-    $wrapperEl
-  } = swiper;
-
-  if (swiper.params.virtualTranslate && duration !== 0) {
-    let eventTriggered = false;
-    let $transitionEndTarget;
-
-    if (allSlides) {
-      $transitionEndTarget = transformEl ? slides.find(transformEl) : slides;
-    } else {
-      $transitionEndTarget = transformEl ? slides.eq(activeIndex).find(transformEl) : slides.eq(activeIndex);
-    }
-
-    $transitionEndTarget.transitionEnd(() => {
-      if (eventTriggered) return;
-      if (!swiper || swiper.destroyed) return;
-      eventTriggered = true;
-      swiper.animating = false;
-      const triggerEvents = ['webkitTransitionEnd', 'transitionend'];
-
-      for (let i = 0; i < triggerEvents.length; i += 1) {
-        $wrapperEl.trigger(triggerEvents[i]);
-      }
-    });
-  }
-}
-;// CONCATENATED MODULE: ./node_modules/swiper/modules/effect-fade/effect-fade.js
-
-
-
-function EffectFade({
-  swiper,
-  extendParams,
-  on
-}) {
-  extendParams({
-    fadeEffect: {
-      crossFade: false,
-      transformEl: null
-    }
-  });
-
-  const setTranslate = () => {
-    const {
-      slides
-    } = swiper;
-    const params = swiper.params.fadeEffect;
-
-    for (let i = 0; i < slides.length; i += 1) {
-      const $slideEl = swiper.slides.eq(i);
-      const offset = $slideEl[0].swiperSlideOffset;
-      let tx = -offset;
-      if (!swiper.params.virtualTranslate) tx -= swiper.translate;
-      let ty = 0;
-
-      if (!swiper.isHorizontal()) {
-        ty = tx;
-        tx = 0;
-      }
-
-      const slideOpacity = swiper.params.fadeEffect.crossFade ? Math.max(1 - Math.abs($slideEl[0].progress), 0) : 1 + Math.min(Math.max($slideEl[0].progress, -1), 0);
-      const $targetEl = effect_target_effectTarget(params, $slideEl);
-      $targetEl.css({
-        opacity: slideOpacity
-      }).transform(`translate3d(${tx}px, ${ty}px, 0px)`);
-    }
-  };
-
-  const setTransition = duration => {
-    const {
-      transformEl
-    } = swiper.params.fadeEffect;
-    const $transitionElements = transformEl ? swiper.slides.find(transformEl) : swiper.slides;
-    $transitionElements.transition(duration);
-    effect_virtual_transition_end_effectVirtualTransitionEnd({
-      swiper,
-      duration,
-      transformEl,
-      allSlides: true
-    });
-  };
-
-  effect_init_effectInit({
-    effect: 'fade',
-    swiper,
-    on,
-    setTranslate,
-    setTransition,
-    overwriteParams: () => ({
-      slidesPerView: 1,
-      slidesPerGroup: 1,
-      watchSlidesProgress: true,
-      spaceBetween: 0,
-      virtualTranslate: !swiper.params.cssMode
-    })
-  });
-}
 ;// CONCATENATED MODULE: ./node_modules/swiper/modules/effect-cube/effect-cube.js
 
 
@@ -10469,7 +10293,7 @@ function create_shadow_createShadow(params, $slideEl, side) {
   let $shadowEl = $shadowContainer.children(`.${shadowClass}`);
 
   if (!$shadowEl.length) {
-    $shadowEl = $(`<div class="swiper-slide-shadow${side ? `-${side}` : ''}"></div>`);
+    $shadowEl = dom(`<div class="swiper-slide-shadow${side ? `-${side}` : ''}"></div>`);
     $shadowContainer.append($shadowEl);
   }
 
@@ -10599,6 +10423,80 @@ function EffectFlip({
     })
   });
 }
+;// CONCATENATED MODULE: ./node_modules/swiper/shared/effect-init.js
+function effect_init_effectInit(params) {
+  const {
+    effect,
+    swiper,
+    on,
+    setTranslate,
+    setTransition,
+    overwriteParams,
+    perspective,
+    recreateShadows,
+    getEffectParams
+  } = params;
+  on('beforeInit', () => {
+    if (swiper.params.effect !== effect) return;
+    swiper.classNames.push(`${swiper.params.containerModifierClass}${effect}`);
+
+    if (perspective && perspective()) {
+      swiper.classNames.push(`${swiper.params.containerModifierClass}3d`);
+    }
+
+    const overwriteParamsResult = overwriteParams ? overwriteParams() : {};
+    Object.assign(swiper.params, overwriteParamsResult);
+    Object.assign(swiper.originalParams, overwriteParamsResult);
+  });
+  on('setTranslate', () => {
+    if (swiper.params.effect !== effect) return;
+    setTranslate();
+  });
+  on('setTransition', (_s, duration) => {
+    if (swiper.params.effect !== effect) return;
+    setTransition(duration);
+  });
+  on('transitionEnd', () => {
+    if (swiper.params.effect !== effect) return;
+
+    if (recreateShadows) {
+      if (!getEffectParams || !getEffectParams().slideShadows) return; // remove shadows
+
+      swiper.slides.each(slideEl => {
+        const $slideEl = swiper.$(slideEl);
+        $slideEl.find('.swiper-slide-shadow-top, .swiper-slide-shadow-right, .swiper-slide-shadow-bottom, .swiper-slide-shadow-left').remove();
+      }); // create new one
+
+      recreateShadows();
+    }
+  });
+  let requireUpdateOnVirtual;
+  on('virtualUpdate', () => {
+    if (swiper.params.effect !== effect) return;
+
+    if (!swiper.slides.length) {
+      requireUpdateOnVirtual = true;
+    }
+
+    requestAnimationFrame(() => {
+      if (requireUpdateOnVirtual && swiper.slides && swiper.slides.length) {
+        setTranslate();
+        requireUpdateOnVirtual = false;
+      }
+    });
+  });
+}
+;// CONCATENATED MODULE: ./node_modules/swiper/shared/effect-target.js
+function effect_target_effectTarget(effectParams, $slideEl) {
+  if (effectParams.transformEl) {
+    return $slideEl.find(effectParams.transformEl).css({
+      'backface-visibility': 'hidden',
+      '-webkit-backface-visibility': 'hidden'
+    });
+  }
+
+  return $slideEl;
+}
 ;// CONCATENATED MODULE: ./node_modules/swiper/modules/effect-coverflow/effect-coverflow.js
 
 
@@ -10661,7 +10559,7 @@ function EffectCoverflow({
       if (Math.abs(rotateX) < 0.001) rotateX = 0;
       if (Math.abs(scale) < 0.001) scale = 0;
       const slideTransform = `translate3d(${translateX}px,${translateY}px,${translateZ}px)  rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(${scale})`;
-      const $targetEl = effectTarget(params, $slideEl);
+      const $targetEl = effect_target_effectTarget(params, $slideEl);
       $targetEl.transform(slideTransform);
       $slideEl[0].style.zIndex = -Math.abs(Math.round(offsetMultiplier)) + 1;
 
@@ -10671,11 +10569,11 @@ function EffectCoverflow({
         let $shadowAfterEl = isHorizontal ? $slideEl.find('.swiper-slide-shadow-right') : $slideEl.find('.swiper-slide-shadow-bottom');
 
         if ($shadowBeforeEl.length === 0) {
-          $shadowBeforeEl = createShadow(params, $slideEl, isHorizontal ? 'left' : 'top');
+          $shadowBeforeEl = create_shadow_createShadow(params, $slideEl, isHorizontal ? 'left' : 'top');
         }
 
         if ($shadowAfterEl.length === 0) {
-          $shadowAfterEl = createShadow(params, $slideEl, isHorizontal ? 'right' : 'bottom');
+          $shadowAfterEl = create_shadow_createShadow(params, $slideEl, isHorizontal ? 'right' : 'bottom');
         }
 
         if ($shadowBeforeEl.length) $shadowBeforeEl[0].style.opacity = offsetMultiplier > 0 ? offsetMultiplier : 0;
@@ -10692,7 +10590,7 @@ function EffectCoverflow({
     $transitionElements.transition(duration).find('.swiper-slide-shadow-top, .swiper-slide-shadow-right, .swiper-slide-shadow-bottom, .swiper-slide-shadow-left').transition(duration);
   };
 
-  effectInit({
+  effect_init_effectInit({
     effect: 'coverflow',
     swiper,
     on,
@@ -11031,4 +10929,4 @@ function EffectCards({
 /***/ })
 
 }]);
-//# sourceMappingURL=vendors.14a5c1ce2a0206b22177.js.map
+//# sourceMappingURL=vendors.b33932c9dbeb60f48f05.js.map
