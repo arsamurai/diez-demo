@@ -37,6 +37,7 @@ var swipers = {
       autoplay: {
         delay: 4000
       },
+      disableOnInteraction: false,
       effect: 'coverflow',
       direction: 'vertical',
       modules: [swiper_esm/* EffectCoverflow */.lI, swiper_esm/* Autoplay */.pt],
@@ -97,8 +98,16 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
+var getModal = function getModal(name) {
+  var _document;
+  return (_document = document) === null || _document === void 0 ? void 0 : _document.querySelector("[data-modal-".concat(name, "]"));
+};
+var setModalState = function setModalState(modal, activate) {
+  var action = activate ? 'add' : 'remove';
+  modal === null || modal === void 0 || modal.classList[action]('active');
+};
 addEventListener('load', /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-  var headerContainer, callback, observer;
+  var headerContainer, callback, observer, termsOpenBtn, termsModal, termsCloseBtn;
   return _regeneratorRuntime().wrap(function _callee$(_context) {
     while (1) switch (_context.prev = _context.next) {
       case 0:
@@ -122,10 +131,26 @@ addEventListener('load', /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regenerat
         });
         observer.observe(document.getElementById('headerAnchor'));
 
+        // Terms
+        termsOpenBtn = document.querySelector('[data-terms-btn]');
+        termsModal = getModal('terms');
+        termsCloseBtn = document.querySelector('[data-terms-close]');
+        termsOpenBtn === null || termsOpenBtn === void 0 || termsOpenBtn.addEventListener('click', function () {
+          setModalState(termsModal, true);
+        });
+        termsCloseBtn === null || termsCloseBtn === void 0 || termsCloseBtn.addEventListener('click', function () {
+          setModalState(termsModal, false);
+        });
+        termsModal.addEventListener('click', function (e) {
+          if (e.target === termsModal) {
+            setModalState(termsModal, false);
+          }
+        });
+
         // Swipers
         swiper.downloadImagesSwiper();
         swiper.downloadItemsSwiper();
-      case 7:
+      case 13:
       case "end":
         return _context.stop();
     }
@@ -692,4 +717,4 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /******/ var __webpack_exports__ = __webpack_require__.O();
 /******/ }
 ]);
-//# sourceMappingURL=main.0a5d3c968c72b92e2388.js.map
+//# sourceMappingURL=main.57950c1edb182bdaa004.js.map
