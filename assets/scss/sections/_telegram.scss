@@ -1,0 +1,106 @@
+#telegram {
+	padding-bottom: 180px;
+	.telegram__inner {
+		padding: 150px 0 200px;
+		position: relative;
+	}
+	.plane, .trace {
+		position: absolute;
+		z-index: -1;
+	}
+	.plane {
+		width: 81px;
+		height: 60px;
+		opacity: 0;
+	}
+	.plane.animate {
+		animation: fadeIn .5s linear 2s forwards;
+	}
+	.trace {
+		stroke-dashoffset: -1500;
+		stroke-dasharray: 1500;
+	}
+	.trace.animate {
+		animation: animLine 1.5s linear .5s forwards;
+	}
+	.plane--1 {
+		bottom: 20px;
+		left: 30px;
+		transform: scale(-1, 1) rotate(30deg);
+	}
+	.trace--1 {
+		width: 245px;
+		height: 277px;
+		bottom: 83px;
+		left: 0;
+		transform: translateX(-40%) rotate(-25deg);
+	}
+	.plane--2 {
+		top: 0;
+		right: 25px;
+	}
+	.trace--2 {
+		width: 204px;
+		height: 268px;
+		top: 0;
+		right: 0;
+		transform: translateX(50%);
+	}
+	.telegram__main {
+		text-align: center;
+	}
+	.telegram__title {
+		max-width: 386px;
+		width: 100%;
+		margin: 0 auto;
+		margin-bottom: 32px;
+		span {
+			display: block;
+		}
+	}
+
+	@include table {
+		padding-bottom: 270px;
+		.telegram__inner {
+			padding: 215px 0 184px;
+		}
+		.telegram__title {
+			max-width: 560px;
+			margin-bottom: 40px;
+			span {
+				display: inline;
+			}
+		}
+		.plane {
+			width: 135px;
+			height: 99px;
+		}
+		.plane--1 {
+			bottom: 0;
+			left: 60px;
+			transform: scale(-1, 1) rotate(20deg);
+		}
+		.trace--1 {
+			width: 371px;
+			height: 487px;
+			bottom: 120px;
+			left: 0;
+			transform: translateX(0) rotate(0);
+		}
+		.plane--2 {
+			top: 70px;
+			right: 265px;
+		}
+		.trace--2 {
+			width: 411px;
+			height: 465px;
+			top: 110px;
+			right: 0;
+			transform: translateX(0);
+		}
+	}
+
+	@include desktop {
+		padding-bottom: 360px;
+	}
+}

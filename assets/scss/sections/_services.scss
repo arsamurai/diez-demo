@@ -1,0 +1,18 @@
+#services {
+	padding-bottom: 180px;
+	.services__inner {
+		padding: 294px 0 398px;
+		position: relative;
+	}
+	.cases__title {
+		text-align: center;
+	}
+
+	@include table {
+		padding-bottom: 280px;
+	}
+
+	@include desktop {
+		padding-bottom: 380px;
+	}
+}

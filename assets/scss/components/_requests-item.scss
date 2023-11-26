@@ -1,0 +1,52 @@
+.requests__item {
+	padding: 14px 26px 14px 18px;
+	position: relative;
+	@include flex(flex-start);
+	background-color: rgba(20, 20, 20, 1);
+	border-radius: 4px;
+	width: 90%;
+	margin-bottom: 22px;
+	&-img {
+		@include size(52px, 52px, 50%);
+	}
+	&-text {
+		padding-left: 14px;
+	}
+	&-subtract {
+		width: 22px;
+		height: 22px;
+		position: absolute;
+		top: -14.5px;
+		right: 19px;
+	}
+	&.right {
+		margin-left: auto;
+	}
+
+	@include table {
+		padding: 40px 100px 40px 20px;
+		margin-bottom: 46px;
+		&-img {
+			@include size(80px, 80px, 50%);
+		}
+		&-text {
+			padding-left: 42px;
+		}
+		&-subtract {
+			width: 40px;
+			height: 40px;
+			top: -26.5px;
+		}
+	}
+
+	@include desktop-sm {
+		max-width: 560px;
+		width: 100%;
+		&.right {
+			margin-left: 0;
+		}
+		&:not(:first-child) {
+			margin-left: 20px;
+		}
+	}
+}

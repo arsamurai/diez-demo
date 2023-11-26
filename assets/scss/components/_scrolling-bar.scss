@@ -1,0 +1,55 @@
+.scrolling-bar {
+	display: flex;
+	overflow: hidden;
+	.text {
+		font-family: $SF_Pro_Bold, sans-serif;
+		width: 245px;
+		font-size: 44px;
+		line-height: 48px;
+		margin-right: 50px;
+	}
+	&__inner {
+		height: 100%;
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		will-change: transform;
+		animation: scrollText 50s linear infinite -50s;
+
+		&:nth-child(2) {
+			animation: scrollTextNext 50s linear infinite -25s;
+		}
+	}
+
+	@include table {
+		.text {
+			width: auto;
+			white-space: nowrap;
+			font-size: 86px;
+			line-height: 100px;
+			margin-right: 100px;
+		}
+		&__inner {
+			animation: scrollText 100s linear infinite -100s;
+	
+			&:nth-child(2) {
+				animation: scrollTextNext 100s linear infinite -50s;
+			}
+		}
+	}
+
+	@include desktop {
+		.text {
+			font-size: 128px;
+			line-height: 150px;
+			margin-right: 150px;
+		}
+		&__inner {
+			animation: scrollText 150s linear infinite -150s;
+	
+			&:nth-child(2) {
+				animation: scrollTextNext 150s linear infinite -75s;
+			}
+		}
+	}
+}

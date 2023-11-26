@@ -1,0 +1,16 @@
+#video {
+	padding-bottom: 50px;
+	text-align: center;
+	.video__inner {
+		padding: 300px 0;
+	}
+
+	@include table {
+		padding-bottom: 100px;
+	}
+
+	@include desktop {
+		padding-bottom: 150px;
+	}
+
+}

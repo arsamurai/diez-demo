@@ -1,0 +1,120 @@
+html {
+	position: relative;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+body {
+	font-size: 16px;
+	line-height: 20px;
+	font-family: $SF_Pro_Regular, sans-serif;
+	color: $white;
+	background-color: $black;
+	overflow-x: hidden;
+	word-break: break-word;
+	letter-spacing: -0.02em;
+	@include table {
+		font-size: 18px;
+		line-height: 22px;
+	}
+	@include desktop {
+		font-size: 20px;
+		line-height: 24px;
+	}
+}
+
+h2,
+h3,
+h4,
+h5 {
+	font-family: $SF_Pro_Bold, sans-serif;
+	text-transform: lowercase;
+}
+
+h2 {
+	font-size: 32px;
+	line-height: 32px;
+	@include table {
+		font-size: 48px;
+		line-height: 48px;
+	}
+	@include desktop {
+		font-size: 64px;
+		line-height: 64px;
+	}
+}
+
+h3 {
+	font-size: 24px;
+	line-height: 32px;
+	@include table {
+		font-size: 28px;
+		line-height: 36px;
+	}
+	@include desktop {
+		font-size: 32px;
+		line-height: 40px;
+	}
+}
+
+section {
+	position: relative;
+	overflow: visible;
+}
+
+.container {
+	max-width: $container;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+img {
+	object-fit: cover;
+}
+
+button {
+	cursor: pointer;
+}
+
+.text-red {
+	color: $red;
+}
+
+.link {
+	font-family: $SF_Pro_Bold, sans-serif;
+	font-size: 20px;
+	line-height: 44px;
+	color: $red;
+	position: relative;
+	transition: $transition;
+	padding-right: 22px;
+	&::before {
+		content: "→";
+		position: absolute;
+		top: -9px;
+		right: 0;
+		color: $red;
+		transition: $transition;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: -1px;
+		left: 0;
+		height: 2px;
+		width: 100%;
+		background-color: $red;
+	}
+	&:hover::before {
+		transform: translateX(50%);
+	}
+
+	@include table {
+		font-size: 24px;
+		padding-right: 25px;
+		&::before {
+			top: -6px;
+		}
+	}
+}

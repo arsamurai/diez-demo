@@ -1,0 +1,117 @@
+#preview {
+	padding-bottom: 53px;
+	.preview__container {
+		max-width: 2000px;
+		padding: 0;
+	}
+	.preview__inner {
+		position: relative;
+	}
+	.preview__bg {
+		position: absolute;
+		z-index: -1;
+		animation: zoomAndRotate 3s linear forwards;
+	}
+	.preview__bg--mobile {
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		object-fit: fill;
+		max-width: 390px;
+	}
+	.preview__bg--desktop {
+		display: none;
+	}
+	.preview__baner {
+		position: relative;
+		z-index: -2;
+		width: 100%;
+	}
+	.preview__baner--mobile {
+		padding: 0 15px;
+		margin-top: 38px;
+	}
+	.preview__baner--desktop {
+		display: none;
+	}
+	.preview__main {
+		text-align: center;
+		padding: 221px 15px 0;
+	}
+	.preview__title {
+		font-family: $SF_Pro_Bold, sans-serif;
+		font-size: 44px;
+		line-height: 44px;
+		max-width: 540px;
+		width: 100%;
+		margin: 0 auto 24px;
+	}
+	.preview__text {
+		max-width: 186px;
+		width: 100%;
+		margin: 0 auto 24px;
+		color: rgba(255, 255, 255, 0.44);
+	}
+
+	@include table-sm {
+		.preview__bg--mobile {
+			display: none;
+		}
+		.preview__bg--desktop {
+			top: -20px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 100%;
+			min-width: 835px;
+			display: block;
+		}
+		.preview__baner--mobile {
+			display: none;
+		}
+		.preview__baner--desktop {
+			margin-top: 100px;
+			display: block;
+			padding: 0 32px;
+		}
+	}
+
+	@include table {
+		padding-bottom: 115px;
+		.preview__main {
+			padding: 25vh 15px 0;
+		}
+		.preview__title {
+			max-width: 846px;
+			font-size: 70px;
+			line-height: 70px;
+			margin-bottom: 55px;
+		}
+		.preview__text {
+			margin-bottom: 16px;
+		}
+		.preview__bg--desktop {
+			top: -120px;
+			min-width: 1135px;
+		}
+	}
+
+	@include desktop {
+		padding-bottom: 180px;
+		.preview__title {
+			font-size: 96px;
+			line-height: 96px;
+			margin-bottom: 93px;
+		}
+		.preview__bg--desktop {
+			min-width: 1800px;
+			top: -460px;
+		}
+	}
+
+	@media screen and (min-width: 1600px) {
+		.preview__bg--desktop {
+			min-width: 1950px;
+			top: -440px;
+		}
+	}
+}
