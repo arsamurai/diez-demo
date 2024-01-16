@@ -89,14 +89,27 @@
 			font-size: 12px;
 			line-height: 16px;
 		}
-		&--1, &--2 {
+		&--1 {
+			p {
+				font-size: 43px;
+				line-height: 40px;
+			}
+		} 
+		&--2 {
 			p {
 				max-width: 316px;
 				font-size: 40px;
 				line-height: 40px;
 			}
 		}
-		&--3, &--4 {
+		&--3 {
+			p {
+				max-width: 200px;
+				font-size: 28px;
+				line-height: 24px;
+			}
+		}
+		&--4 {
 			p {
 				max-width: 200px;
 				font-size: 24px;

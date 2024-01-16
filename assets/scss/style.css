@@ -713,12 +713,21 @@ button {
     font-size: 12px;
     line-height: 16px;
   }
-  .services__item--1 p, .services__item--2 p {
+  .services__item--1 p {
+    font-size: 43px;
+    line-height: 40px;
+  }
+  .services__item--2 p {
     max-width: 316px;
     font-size: 40px;
     line-height: 40px;
   }
-  .services__item--3 p, .services__item--4 p {
+  .services__item--3 p {
+    max-width: 200px;
+    font-size: 28px;
+    line-height: 24px;
+  }
+  .services__item--4 p {
     max-width: 200px;
     font-size: 24px;
     line-height: 24px;
@@ -763,6 +772,11 @@ button {
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: column;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+.about__item:hover {
+  transform: scale(1.03);
 }
 .about__item-title {
   font-size: 32px;
@@ -918,6 +932,7 @@ button {
   text-align: center;
 }
 #footer .footer__link {
+  font-family: "SF Pro Display Semibold", sans-serif;
   font-size: 20px;
   line-height: 24px;
   background-color: #FFFFFF;
@@ -1017,17 +1032,13 @@ button {
   position: absolute;
   z-index: -1;
   animation: zoomAndRotate 3s linear forwards;
-}
-#preview .preview__bg--mobile {
-  top: 0;
+  top: 15px;
   left: 50%;
   transform: translateX(-50%);
   -o-object-fit: fill;
      object-fit: fill;
-  max-width: 390px;
-}
-#preview .preview__bg--desktop {
-  display: none;
+  min-width: 835px;
+  width: 100%;
 }
 #preview .preview__baner {
   position: relative;
@@ -1060,16 +1071,9 @@ button {
   color: rgba(255, 255, 255, 0.44);
 }
 @media screen and (min-width: 576px) {
-  #preview .preview__bg--mobile {
-    display: none;
-  }
-  #preview .preview__bg--desktop {
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    min-width: 835px;
-    display: block;
+  #preview .preview__bg {
+    top: -50px;
+    min-width: 885px;
   }
   #preview .preview__baner--mobile {
     display: none;
@@ -1096,9 +1100,9 @@ button {
   #preview .preview__text {
     margin-bottom: 16px;
   }
-  #preview .preview__bg--desktop {
-    top: -120px;
-    min-width: 1135px;
+  #preview .preview__bg {
+    top: -115px;
+    min-width: 1450px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1110,15 +1114,15 @@ button {
     line-height: 96px;
     margin-bottom: 93px;
   }
-  #preview .preview__bg--desktop {
+  #preview .preview__bg {
+    top: -330px;
     min-width: 1800px;
-    top: -460px;
   }
 }
 @media screen and (min-width: 1600px) {
-  #preview .preview__bg--desktop {
+  #preview .preview__bg {
+    top: -360px;
     min-width: 1950px;
-    top: -440px;
   }
 }
 
@@ -1194,16 +1198,12 @@ button {
 }
 
 #video {
-  padding-bottom: 50px;
+  padding-bottom: 100px;
   text-align: center;
 }
-#video .video__inner {
-  padding: 300px 0;
-}
-@media screen and (min-width: 768px) {
-  #video {
-    padding-bottom: 100px;
-  }
+#video video {
+  max-height: 500px;
+  width: 100%;
 }
 @media screen and (min-width: 1200px) {
   #video {
@@ -1386,7 +1386,7 @@ button {
 }
 #cooperation .cooperation__items-block {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin-bottom: 38px;
 }
@@ -1399,13 +1399,6 @@ button {
   max-width: 140px;
   width: 26%;
   margin: 0 10px;
-}
-@media screen and (min-width: 576px) {
-  #cooperation .cooperation__items-block {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
 }
 @media screen and (min-width: 768px) {
   #cooperation {

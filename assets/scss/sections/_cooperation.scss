@@ -10,7 +10,7 @@
 		display: none;
 	}
 	.cooperation__items-block {
-		@include flex(space-between);
+		@include flex(space-around);
 		margin-bottom: 38px;
 	}
 	.cooperation__items-block:last-child {
@@ -20,12 +20,6 @@
 		max-width: 140px;
 		width: 26%;
 		margin: 0 10px;
-	}
-
-	@include table-sm {
-		.cooperation__items-block {
-			@include flex(space-around);
-		}
 	}
 
 	@include table {

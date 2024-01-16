@@ -11,16 +11,12 @@
 		position: absolute;
 		z-index: -1;
 		animation: zoomAndRotate 3s linear forwards;
-	}
-	.preview__bg--mobile {
-		top: 0;
+		top: 15px;
 		left: 50%;
 		transform: translateX(-50%);
 		object-fit: fill;
-		max-width: 390px;
-	}
-	.preview__bg--desktop {
-		display: none;
+		min-width: 835px;
+		width: 100%;
 	}
 	.preview__baner {
 		position: relative;
@@ -54,16 +50,9 @@
 	}
 
 	@include table-sm {
-		.preview__bg--mobile {
-			display: none;
-		}
-		.preview__bg--desktop {
-			top: -20px;
-			left: 50%;
-			transform: translateX(-50%);
-			width: 100%;
-			min-width: 835px;
-			display: block;
+		.preview__bg {
+			top: -50px;
+			min-width: 885px;
 		}
 		.preview__baner--mobile {
 			display: none;
@@ -89,9 +78,9 @@
 		.preview__text {
 			margin-bottom: 16px;
 		}
-		.preview__bg--desktop {
-			top: -120px;
-			min-width: 1135px;
+		.preview__bg {
+			top: -115px;
+			min-width: 1450px;
 		}
 	}
 
@@ -102,16 +91,16 @@
 			line-height: 96px;
 			margin-bottom: 93px;
 		}
-		.preview__bg--desktop {
+		.preview__bg {
+			top: -330px;
 			min-width: 1800px;
-			top: -460px;
 		}
 	}
 
 	@media screen and (min-width: 1600px) {
-		.preview__bg--desktop {
+		.preview__bg {
+			top: -360px;
 			min-width: 1950px;
-			top: -440px;
 		}
 	}
 }

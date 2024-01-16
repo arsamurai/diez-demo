@@ -4,6 +4,11 @@
 	margin-bottom: 8px;
 	@include flex(space-between, flex-start);
 	flex-direction: column;
+	cursor: pointer;
+	transition: $transition;
+	&:hover {
+		transform: scale(1.03);
+	}
 	&-title {
 		font-size: 32px;
 		line-height: 28px;
