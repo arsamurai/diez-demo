@@ -28,7 +28,6 @@
 		font-size: 16px;
 		line-height: 24px;
 		color: $black;
-		@include flex(space-between);
 		margin-bottom: 15px;
 	}
 	.footer__docs {
@@ -73,6 +72,9 @@
 		}
 		.footer__bottom {
 			@include flex(space-between);
+		}
+		.footer__socials {
+			text-align: left;
 		}
 		.footer__socials, .footer__docs {
 			margin: 0;
