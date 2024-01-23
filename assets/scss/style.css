@@ -1089,7 +1089,7 @@ button {
     padding-bottom: 115px;
   }
   #preview .preview__main {
-    padding: 25vh 15px 0;
+    padding: 240px 15px 0;
   }
   #preview .preview__title {
     max-width: 846px;
@@ -1120,6 +1120,9 @@ button {
   }
 }
 @media screen and (min-width: 1600px) {
+  #preview .preview__main {
+    padding: 270px 15px 0;
+  }
   #preview .preview__bg {
     min-width: 2100px;
   }
