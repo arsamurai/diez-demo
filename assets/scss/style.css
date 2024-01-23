@@ -1032,12 +1032,12 @@ button {
   position: absolute;
   z-index: -1;
   animation: zoomAndRotate 3s linear forwards;
-  top: 15px;
+  top: -50px;
   left: 50%;
   transform: translateX(-50%);
   -o-object-fit: fill;
      object-fit: fill;
-  min-width: 835px;
+  min-width: 900px;
   width: 100%;
 }
 #preview .preview__baner {
@@ -1072,8 +1072,8 @@ button {
 }
 @media screen and (min-width: 576px) {
   #preview .preview__bg {
-    top: -50px;
-    min-width: 885px;
+    top: -150px;
+    min-width: 1050px;
   }
   #preview .preview__baner--mobile {
     display: none;
@@ -1101,8 +1101,8 @@ button {
     margin-bottom: 16px;
   }
   #preview .preview__bg {
-    top: -115px;
-    min-width: 1450px;
+    top: -350px;
+    min-width: 1600px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1115,14 +1115,13 @@ button {
     margin-bottom: 93px;
   }
   #preview .preview__bg {
-    top: -330px;
-    min-width: 1800px;
+    top: -520px;
+    min-width: 2000px;
   }
 }
 @media screen and (min-width: 1600px) {
   #preview .preview__bg {
-    top: -360px;
-    min-width: 1950px;
+    min-width: 2100px;
   }
 }
 
@@ -1202,7 +1201,8 @@ button {
   text-align: center;
 }
 #video video {
-  max-height: 500px;
+  max-height: 100vh;
+  max-width: 1920px;
   width: 100%;
 }
 @media screen and (min-width: 1200px) {

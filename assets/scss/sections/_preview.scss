@@ -11,11 +11,11 @@
 		position: absolute;
 		z-index: -1;
 		animation: zoomAndRotate 3s linear forwards;
-		top: 15px;
+		top: -50px;
 		left: 50%;
 		transform: translateX(-50%);
 		object-fit: fill;
-		min-width: 835px;
+		min-width: 900px;
 		width: 100%;
 	}
 	.preview__baner {
@@ -51,8 +51,8 @@
 
 	@include table-sm {
 		.preview__bg {
-			top: -50px;
-			min-width: 885px;
+			top: -150px;
+			min-width: 1050px;
 		}
 		.preview__baner--mobile {
 			display: none;
@@ -79,8 +79,8 @@
 			margin-bottom: 16px;
 		}
 		.preview__bg {
-			top: -115px;
-			min-width: 1450px;
+			top: -350px;
+			min-width: 1600px;
 		}
 	}
 
@@ -92,15 +92,14 @@
 			margin-bottom: 93px;
 		}
 		.preview__bg {
-			top: -330px;
-			min-width: 1800px;
+			top: -520px;
+			min-width: 2000px;
 		}
 	}
 
 	@media screen and (min-width: 1600px) {
 		.preview__bg {
-			top: -360px;
-			min-width: 1950px;
+			min-width: 2100px;
 		}
 	}
 }
