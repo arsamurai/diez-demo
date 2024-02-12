@@ -40,6 +40,18 @@
 	}
 }
 
+@keyframes zoom {
+	0% {
+		transform: scale(.85) translateY(-50%) translateX(-50%);
+		transform-origin: left top;
+	}
+
+	100% {
+		transform: scale(1) translateY(-50%) translateX(-50%);
+		transform-origin: left top;
+	}
+}
+
 @keyframes scrollText {
 	0% {
 		transform: translate(-100%, 0);

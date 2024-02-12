@@ -95,10 +95,7 @@ addEventListener('load', async () => {
 	let w_top = window.scrollY || window.pageYOffset;
 	let w_height = window.innerHeight;
 
-	animateOnScroll('[data-plane-1]', w_top, w_height);
-	animateOnScroll('[data-plane-2]', w_top, w_height);
-	animateOnScroll('[data-trace-1]', w_top, w_height);
-	animateOnScroll('[data-trace-2]', w_top, w_height);
+	animateOnScroll('[data-telegram-img]', w_top, w_height);
 });
 
 addEventListener('scroll', (e) => {
@@ -111,10 +108,7 @@ addEventListener('scroll', (e) => {
 	let w_top = window.scrollY || window.pageYOffset;
 	let w_height = window.innerHeight;
 
-	animateOnScroll('[data-plane-1]', w_top, w_height);
-	animateOnScroll('[data-plane-2]', w_top, w_height);
-	animateOnScroll('[data-trace-1]', w_top, w_height);
-	animateOnScroll('[data-trace-2]', w_top, w_height);
+	animateOnScroll('[data-telegram-img]', w_top, w_height);
 
 	// Zoom on scroll
 	const services = document.querySelector('#services');
