@@ -1,31 +1,14 @@
 #header {
-	padding-top: 21px;
-	position: fixed;
+	padding-top: 13px;
+	position: absolute;
 	z-index: 999;
 	top: 0;
 	right: 0;
 	left: 0;
+	transform: translateY(-100%);
+	animation: transformStart 1s forwards;
 	transition: $transition;
-	&::before {
-		display: none;
-		content: '';
-		position: absolute;
-		top: 0;
-		right: 0;
-		left: 0;
-		bottom: 0;
-		z-index: -1;
-		backdrop-filter: blur(4px);
-		background-color: rgba($black, 0.3);
-	}
-	&.active {
-		position: fixed;
-		padding-top: 10px;
-		padding-bottom: 10px;
-		&::before {
-			display: block;
-		}
-	}
+
 	.header__inner {
 		@include flex(space-between);
     position: relative;
@@ -39,6 +22,7 @@
 	}
 	.logo__subtitle {
     font-family: $SF_Pro_Medium, sans-serif;
+		color:rgba(25, 25, 25, 1);
 		font-size: 12px;
 		line-height: 12px;
 		padding-left: 17px;
@@ -46,7 +30,7 @@
 	}
 
   @include desktop-sm {
-    padding-top: 33px;
+    padding-top: 28px;
     .logo {
       width: 128px;
 			height: 44px;

@@ -23,6 +23,7 @@ body {
 	}
 }
 
+h1,
 h2,
 h3,
 h4,
@@ -67,7 +68,6 @@ section {
 	width: 100%;
 	margin: 0 auto;
 	padding: 0 15px;
-
 }
 
 img {
@@ -83,39 +83,35 @@ button {
 }
 
 .link {
-	font-family: $SF_Pro_Bold, sans-serif;
-	font-size: 20px;
+	display: inline-block;
+	font-size: 16px;
 	line-height: 44px;
-	color: $red;
-	position: relative;
+	font-family: $SF_Pro_Bold, sans-serif;
+	padding: 5px 37px;
+	background-color: $red;
+	border-radius: 333px;
 	transition: $transition;
-	padding-right: 22px;
-	&::before {
-		content: "→";
-		position: absolute;
-		top: -9px;
-		right: 0;
-		color: $red;
-		transition: $transition;
+	height: 60px;
+	white-space: nowrap;
+	&:hover {
+		animation: 0.3s ease-in bounceOut;
 	}
-	&::after {
-		content: "";
-		position: absolute;
-		bottom: -1px;
-		left: 0;
-		height: 2px;
-		width: 100%;
-		background-color: $red;
-	}
-	&:hover::before {
-		transform: translateX(50%);
+
+	&.link-white {
+		font-size: 20px;
+		height: 54px;
+		padding: 5px 37px;
+		color: rgba(20, 20, 20, 1);
+		background-color: $white;
 	}
 
 	@include table {
-		font-size: 24px;
-		padding-right: 25px;
-		&::before {
-			top: -6px;
+		font-size: 20px;
+		padding: 10px 48px 14px 46px;
+		height: 68px;
+		&.link-white {
+			padding: 10px 85px 14px 87px;
+			height: 68px;
 		}
 	}
 }

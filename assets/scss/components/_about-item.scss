@@ -1,39 +1,71 @@
 .about__item {
-	padding: 40px 37px 36px 57px;
-	background-color: $red;
-	margin-bottom: 8px;
-	@include flex(space-between, flex-start);
-	flex-direction: column;
-	cursor: pointer;
-	transition: $transition;
-	&:hover {
-		transform: scale(1.03);
-	}
-	&-title {
-		font-size: 32px;
-		line-height: 28px;
-		position: relative;
-		margin-bottom: 44px;
-	}
-	&-title span {
-		position: absolute;
-		top: -5px;
-		left: -2px;
-		transform: translateX(-100%);
+	margin: 0 auto 60px;
+	@include flex(flex-start, flex-start);
+	&-num {
 		font-family: $SF_Pro_Regular, sans-serif;
-		color: rgba(255, 255, 255, 0.44);
 		font-size: 12px;
 		line-height: 16px;
+		color: rgba(255, 255, 255, 0.44);
+		margin-top: -13px;
+		white-space: nowrap;
+	}
+	&-content {
+		position: relative;
+	}
+	&-title {
+		font-family: $SF_Pro_Medium, sans-serif;
+		font-size: 64px;
+		line-height: 64px;
+		letter-spacing: -0.05em;
+		margin-bottom: 4px;
+		white-space: nowrap;
+	}
+	&-text {
+		max-width: 208px;
+		width: 100%;
+	}
+	&-subtext {
+		font-family: $NazarroHandExt, sans-serif;
+		font-size: 26.56px;
+		line-height: 12.68px;
+		letter-spacing: -0.1em;
+		width: 152px;
+		text-align: center;
+		transform: rotate($rotate);
+		position: absolute;
+		right: -39px;
+		bottom: -24px;
+	}
+	&-text:nth-child(2) {
+		max-width: 190px;
+	}
+
+	@include table-sm {
+		justify-content: center;
+	}
+
+	@include table {
+		justify-content: flex-start;
 	}
 
 	@include desktop-sm {
 		margin-bottom: 0;
 		&-title {
-			margin-bottom: 78px;
+			font-size: 128px;
+			line-height: 90px;
+			margin-bottom: 17px;
 		}
-		&-text {
-			max-width: 300px;
-			width: 100%;
+		&-text,
+		&-text:nth-child(2) {
+			max-width: 228px;
+		}
+		&-subtext {
+			font-size: 44px;
+			line-height: 21px;
+			width: 251px;
+			text-align: right;
+			right: -54px;
+			bottom: -38px;
 		}
 	}
 }

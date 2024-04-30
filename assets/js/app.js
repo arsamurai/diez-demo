@@ -1,126 +1,123 @@
-const animateOnScroll = (selector, w_top, w_height) => {
-	const block = document.querySelector(selector);
-	const blockRect = block.getBoundingClientRect();
-	const blockHeight = blockRect.top + window.scrollY;
-	const blockOuterHeight = blockRect.height;
-
-	if (w_top + w_height > blockHeight && w_top < blockHeight + blockOuterHeight) {
-		block.classList.add('animate');
-	}
+const emailSettings = {
+	serviceId: 'service_cowbya3',
+	userId: 'ovd9ndVXRUWmPC_9D',
+	templatePaymentId: 'template_5uquied',
 };
 
-function zoomOnScroll(block, difference) {
-	let scaleFactor = 0.5 + (difference / 100).toFixed(1) * 0.1;
-	let opacityFactor = (difference / 100).toFixed(1) * 0.33;
+const getModal = (modalName) => {
+	return document?.querySelector(`[data-modal=${modalName}]`);
+};
 
-	block.style.transform = 'scale(' + scaleFactor + ')';
-	block.style.opacity = opacityFactor;
-}
+const setModalState = (modal, activate) => {
+	const action = activate ? 'add' : 'remove';
+	modal?.classList[action]('active');
+};
+
+const goTo = (sectionId) => {
+	const top = document.getElementById(sectionId)?.offsetTop - 100;
+	window.scrollTo({
+		top,
+		behavior: 'smooth',
+	});
+};
 
 addEventListener('load', async () => {
-	// Active header
-	const header = document.querySelector('[data-header]');
-
-	const setHeaderActive = (entries) => {
-		entries.forEach((entry) => {
-			if (!entry.isIntersecting) {
-				header.classList.add('active');
-			} else {
-				header.classList.remove('active');
-			}
-		});
-	};
-
-	let observer = new IntersectionObserver(setHeaderActive, {
-		rootMargin: '0px',
-		threshold: 0,
-	});
-	observer.observe(document.querySelector('[header-anchor]'));
-
 	// Navigation
-	const burger = document.querySelector('[data-burger-btn]');
-	const menu = document.querySelector('[data-menu]');
 	const scrollLinks = document.querySelectorAll('[data-scroll-to]');
-	const body = document.body;
-
-	const goTo = (sectionId) => {
-		const top = document.getElementById(sectionId)?.offsetTop - 100;
-		window.scrollTo({
-			top,
-			behavior: 'smooth',
-		});
-	};
-
-	const setMenuState = (activate) => {
-		if (window.innerWidth < 992) {
-			if (activate) {
-				const scrollY =
-					document.documentElement.style.getPropertyValue('--scroll-y');
-				body.style.position = 'fixed';
-				body.style.top = `-${scrollY}`;
-			} else {
-				const scrollY = body.style.top;
-				body.style.position = '';
-				body.style.top = '';
-				window.scrollTo(0, parseInt(scrollY || '0') * -1);
-			}
-		}
-		const action = activate ? 'add' : 'remove';
-
-		burger?.classList[action]('active');
-		menu?.classList[action]('active');
-	};
-
-	burger.addEventListener('click', ({ currentTarget }) => {
-		const isActiveMenu = currentTarget.classList.contains('active');
-
-		if (isActiveMenu) {
-			setMenuState(false);
-		} else {
-			setMenuState(true);
-		}
-	});
 
 	scrollLinks.forEach((link) => {
 		link.addEventListener('click', ({ currentTarget }) => {
 			const sectionId = currentTarget
 				.getAttribute('data-scroll-to')
 				.replace('#', '');
-			setMenuState(false);
 			goTo(sectionId);
 		});
 	});
 
-	// Animation on scroll
-	let w_top = window.scrollY || window.pageYOffset;
-	let w_height = window.innerHeight;
-
-	animateOnScroll('[data-telegram-img]', w_top, w_height);
-});
-
-addEventListener('scroll', (e) => {
-	document.documentElement.style.setProperty(
-		'--scroll-y',
-		`${window.scrollY}px`
+	// Success modal
+	const successModal = getModal('success');
+	const successModalClose = successModal.querySelector('[data-modal-close]');
+	const successModalContent = successModal.querySelector(
+		'[data-modal-content]'
 	);
 
-	// Animation on scroll
-	let w_top = window.scrollY || window.pageYOffset;
-	let w_height = window.innerHeight;
+	successModalClose.addEventListener('click', () => {
+		setModalState(successModal, false);
+	});
 
-	animateOnScroll('[data-telegram-img]', w_top, w_height);
+	successModalContent.addEventListener('click', (e) => {
+		e.stopPropagation();
+	});
 
-	// Zoom on scroll
-	const services = document.querySelector('#services');
-	const servicesItems = document.querySelectorAll('[data-services-item]');
-	
-	const servicesDistanceToTop = services.offsetTop - 600;
-	const servicesHeight = services.offsetHeight / 2;
+	successModal.addEventListener('click', () => {
+		setModalState(successModal, false);
+	});
 
-	servicesItems.forEach((item) => {
-		if(window.scrollY > servicesDistanceToTop && window.scrollY < servicesDistanceToTop + servicesHeight) {
-			const difference = window.scrollY - servicesDistanceToTop;
-			zoomOnScroll(item, difference);
-		}
+	// Form modal
+	const formModal = getModal('form');
+	const fromModalBtn = document.querySelector('[data-form-modal-btn]');
+	const formModalClose = formModal.querySelector('[data-modal-close]');
+	const formModalContent = formModal.querySelector('[data-modal-content]');
+
+	fromModalBtn.addEventListener('click', () => {
+		setModalState(formModal, true);
+	});
+
+	formModalClose.addEventListener('click', () => {
+		setModalState(formModal, false);
+	});
+
+	formModalContent.addEventListener('click', (e) => {
+		e.stopPropagation();
+	});
+
+	formModal.addEventListener('click', () => {
+		setModalState(formModal, false);
+	});
+
+	// Order form
+	const orderForms = document.querySelectorAll('[data-order-form]');
+
+	orderForms.forEach((orderForm) => {
+		orderForm.addEventListener('submit', function (e) {
+			const form = this;
+			const service = emailSettings.serviceId;
+			const user = emailSettings.userId;
+			const submitBtn = form.querySelector('button[type=submit]');
+			const templateId = emailSettings.templatePaymentId;
+			e.preventDefault();
+
+			submitBtn.disabled = true;
+
+			emailjs.sendForm(service, templateId, e.target, user).then(
+				(res) => {
+					if (res.status === 200) {
+						submitBtn.disabled = false;
+						form.querySelectorAll('input').forEach((input) => {
+							input.value = '';
+						});
+						setModalState(formModal, false);
+
+						setTimeout(function () {
+							setModalState(successModal, true);
+						}, 500);
+					}
+				},
+				(err) => {
+					if (err) {
+						submitBtn.disabled = false;
+
+						form.insertAdjacentHTML(
+							'beforeend',
+							'<div class="form__error">Помилка при відправленні заявки! <br /> Спробуйте пізніше!</div>'
+						);
+
+						setTimeout(function () {
+							form.querySelector('.form__error').remove();
+						}, 2500);
+					}
+				}
+			);
+		});
 	});
 });

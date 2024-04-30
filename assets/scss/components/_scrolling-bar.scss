@@ -1,6 +1,7 @@
 .scrolling-bar {
 	display: flex;
 	overflow: hidden;
+	text-align: center;
 	.text {
 		font-family: $SF_Pro_Bold, sans-serif;
 		width: 245px;

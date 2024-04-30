@@ -1,0 +1,88 @@
+.team__item {
+	margin-bottom: 65px;
+	margin-right: 20px;
+	&-name {
+		font-size: 20px;
+		line-height: 20px;
+		letter-spacing: -0.02em;
+		margin-bottom: 4px;
+	}
+	&-position {
+		font-size: 16px;
+		line-height: 20px;
+		color: rgba(112, 112, 112, 1);
+	}
+	&-imgtitle {
+		font-size: 10px;
+		line-height: 20px;
+		position: absolute;
+		left: 70px;
+		top: 0;
+	}
+	&-img {
+		width: 199px;
+		position: relative;
+		margin-bottom: 16px;
+	}
+	&-img__cover {
+		width: 100%;
+		height: 294px;
+	}
+	&-img__person {
+		width: 100%;
+		height: 265px;
+		position: absolute;
+		top: 23px;
+		left: 0;
+	}
+	&.third {
+		margin-top: 109px;
+	}
+
+	@include table {
+		margin-bottom: 0;
+		margin-right: 0;
+		&-name {
+			font-size: 24px;
+			margin-bottom: 8px;
+		}
+		&-imgtitle {
+			font-size: 12px;
+			left: 84px;
+			top: 2px;
+		}
+		&-img {
+			width: 230px;
+			margin-bottom: 20px;
+		}
+		&-img__cover {
+			height: 348px;
+		}
+		&-img__person {
+			height: 320px;
+		}
+		&.second {
+			margin-top: 123px;
+		}
+		&.third {
+			margin-top: 42px;
+		}
+	}
+	@include desktop-sm {
+		&-imgtitle {
+			top: 4px;
+			left: 100px;
+		}
+		&-img {
+			width: 270px;
+			margin-bottom: 20px;
+		}
+		&-img__cover {
+			height: 398px;
+		}
+		&-img__person {
+			height: 360px;
+			top: 29px;
+		}
+	}
+}

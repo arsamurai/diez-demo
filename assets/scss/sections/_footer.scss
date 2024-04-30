@@ -1,27 +1,14 @@
 #footer {
-	padding: 118px 0 25px;
+	display: none;
+	padding: 117px 0 25px;
 	border-radius: 60px 60px 0px 0px;
 	background-color: $red;
 	text-align: center;
-
-	.footer__link {
-		font-family: $SF_Pro_Bold, sans-serif;
-		font-size: 20px;
-		line-height: 24px;
-		background-color: $white;
-		@include size(180px, 180px, 50%);
-		margin: 62px auto 166px;
-		@include flex();
-		flex-direction: column;
-		transition: $transition;
-		span {
-			color: $red;
-			max-width: 90px;
-			width: 100%;
-		}
-		&:hover {
-			transform: scale(1.1);
-		}
+	.footer__inner {
+		margin-top: 81px;
+	}
+	.footer__form {
+		margin-bottom: 108px;
 	}
 	.footer__socials {
 		font-family: $SF_Pro_Bold, sans-serif;
@@ -42,9 +29,16 @@
 	.footer__copy {
 		color: rgba(0, 0, 0, 0.28);
 	}
-
+	
 	@include table {
+		display: block;
 		padding: 170px 0 20px;
+		.footer__inner {
+			margin-top: 121px;
+		}
+		.footer__form {
+			margin-bottom: 228px;
+		}
 		.footer__link {
 			margin: 88px auto 198px;
 		}
@@ -66,7 +60,7 @@
 	}
 
 	@include desktop {
-		padding: 233px 0 35px;
+		padding: 117px 0 35px;
 		.footer__link {
 			margin: 114px auto 230px;
 		}
@@ -76,7 +70,8 @@
 		.footer__socials {
 			text-align: left;
 		}
-		.footer__socials, .footer__docs {
+		.footer__socials,
+		.footer__docs {
 			margin: 0;
 		}
 	}

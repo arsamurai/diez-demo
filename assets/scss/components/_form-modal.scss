@@ -1,0 +1,22 @@
+.form-modal {
+	&__content {
+		background-color: $red;
+		border-radius: $borderRadius;
+		padding: 30px 10px;
+		text-align: center;
+		position: relative;
+	}
+	&__title {
+		font-size: 20px;
+		line-height: 24px;
+		max-width: 287px;
+		width: 100%;
+		margin: 0 auto 15px;
+	}
+
+	@include table-sm {
+		&__content {
+			padding: 30px 20px;
+		}
+	}
+}

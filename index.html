@@ -7,14 +7,76 @@
 			content="width=device-width, initial-scale=1.0, user-scalable=no"
 		/>
 		<meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1" />
-		<link rel="icon" href="assets/images/favicon/favicon-16x16.png" sizes="16x16" type="image/png">
-		<link rel="icon" href="assets/images/favicon/favicon-32x32.png" sizes="32x32" type="image/png">
-		<link rel="icon" href="assets/images/favicon/favicon.ico" sizes="48x48" type="image/x-icon">
-		<link rel="apple-touch-icon" href="assets/images/favicon/apple-touch-icon.png" sizes="180x180" type="image/png">
-		<link rel="icon" href="assets/images/favicon/android-chrome-192x192.png" sizes="192x192" type="image/png">
+		<link
+			rel="icon"
+			href="/assets/images/favicon/favicon-16x16.png"
+			sizes="16x16"
+			type="image/png"
+		/>
+		<link
+			rel="icon"
+			href="/assets/images/favicon/favicon-32x32.png"
+			sizes="32x32"
+			type="image/png"
+		/>
+		<link
+			rel="icon"
+			href="/assets/images/favicon/favicon.ico"
+			sizes="48x48"
+			type="image/x-icon"
+		/>
+		<link
+			rel="apple-touch-icon"
+			href="/assets/images/favicon/apple-touch-icon.png"
+			sizes="180x180"
+			type="image/png"
+		/>
+		<link
+			rel="icon"
+			href="/assets/images/favicon/android-chrome-192x192.png"
+			sizes="192x192"
+			type="image/png"
+		/>
 		<title>ALLSIDES</title>
 		<link rel="stylesheet" type="text/css" href="/assets/scss/style.css" />
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+		></script>
+		<script type="text/javascript">
+			(function () {
+				emailjs.init({
+					publicKey: 'ovd9ndVXRUWmPC_9D',
+				});
+			})();
+		</script>
 		<script src="/assets/js/app.js"></script>
+		<script>
+			(function (w, d, s, l, i) {
+				w[l] = w[l] || [];
+				w[l].push({ 'gtm.start': new Date().getTime(), t: 'gtm.js' });
+				var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s),
+					dl = l != 'dataLayer' ? '&l=' + l : '';
+				j.async = true;
+				j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+				f.parentNode.insertBefore(j, f);
+			})(window, document, 'script', 'dataLayer', 'GTM-PVRFJH7P');
+		</script>
+		<script type="text/javascript">
+			(function (c, l, a, r, i, t, y) {
+				c[a] =
+					c[a] ||
+					function () {
+						(c[a].q = c[a].q || []).push(arguments);
+					};
+				t = l.createElement(r);
+				t.async = 1;
+				t.src = 'https://www.clarity.ms/tag/' + i;
+				y = l.getElementsByTagName(r)[0];
+				y.parentNode.insertBefore(t, y);
+			})(window, document, 'clarity', 'script', 'l2mi2zdcio');
+		</script>
 	</head>
 	<body>
 		<!-- HEADER -->
@@ -25,21 +87,26 @@
 						<img src="/assets/images/logo.svg" alt="logo" class="logo__title" />
 						<p class="logo__subtitle">креативна перфоманс студія</p>
 					</div>
-					<div class="burger" data-burger-btn>
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
 					<nav class="menu" data-menu>
 						<div class="menu__inner">
 							<div class="menu__container">
 								<ul class="menu__links">
-									<li class="menu__link" data-scroll-to="#requests">запити</li>
-									<li class="menu__link" data-scroll-to="#video">відео</li>
-									<li class="menu__link" data-scroll-to="#cases">кейси</li>
-									<li class="menu__link" data-scroll-to="#services">послуги</li>
-									<li class="menu__link" data-scroll-to="#cooperation">проєкти</li>
+									<li class="menu__link" data-scroll-to="#cases">
+										<img
+											class="menu__link-img"
+											src="/assets/images/dir.png"
+											alt="dir"
+										/>
+										<span class="menu__link-title">portfolio</span>
+									</li>
+									<li class="menu__link" data-scroll-to="#footer">
+										<img
+											class="menu__link-img"
+											src="/assets/images/dir.png"
+											alt="dir"
+										/>
+										<span class="menu__link-title">contact us</span>
+									</li>
 								</ul>
 							</div>
 						</div>
@@ -51,94 +118,445 @@
 		<main>
 			<!-- PREVIEW -->
 			<section id="preview">
-				<div class="container preview__container">
+				<img
+					src="/assets/images/preview-bg.jpg"
+					alt="preview-img"
+					class="preview__bg"
+				/>
+				<div class="container">
 					<div class="preview__inner">
-						<img src="/assets/images/preview-desc.png" alt="crystals" class="preview__bg">
 						<div class="preview__main">
-							<h1 class="preview__title">створюємо креативні рішення, які рухають бізнес</h1>
-							<p class="preview__text">давайте розробимо рішення разом з вами</p>
-							<a href="https://forms.gle/Mmj9RWbQwgrnFHUaA" target="_blank" class="preview__link link" header-anchor>заповнюйте бриф</a>
+							<h1 class="preview__title">
+								створюємо креативні рішення, які рухають бізнес
+							</h1>
+							<p class="preview__subtitle text-red">
+								давайте розробимо рішення для вашого проєкту
+							</p>
+							<a
+								href="https://forms.gle/Mmj9RWbQwgrnFHUaA"
+								target="_blank"
+								class="preview__link preview__link--desktop link"
+								>запланувати зустріч →</a
+							>
+							<button
+								class="preview__link preview__link--mobile link"
+								data-form-modal-btn
+							>
+								безкоштовна косультація →
+							</button>
 						</div>
-						<img src="/assets/images/baner-desc.svg" alt="allsides" class="preview__baner preview__baner--desktop">
-						<img src="/assets/images/baner-mob.svg" alt="all" class="preview__baner preview__baner--mobile">
 					</div>
 				</div>
 			</section>
-			
+
+			<!-- ABOUT -->
+			<div id="about">
+				<div class="about__inner">
+					<div class="container">
+						<div class="about__top">
+							<h2 class="about__title text-red">хто ми такі?</h2>
+							<div class="about__block">
+								<p class="about__text">
+									<span class="text-red"
+										>ми — бутікова студія <br />
+										діджитал-маркетингу. <br />
+									</span>
+									ми надаємо послуги для бізнесів у складних нішах та тим
+									клієнтам, з якими нам цікаво працювати. 
+								</p>
+								<div class="about__specialization">
+									<div class="about__specialization-symbol text-red">[a]</div>
+									<div class="about__specialization-text">
+										ми сформували <br />
+										сильну експертизу <br />
+										в крипто, айті, едтек <br />
+										та є-коммерс проєктах <br />
+										і реалізовуємо ексклюзивні рішення, <br />
+										які приносять результати нашим клієнтам.
+									</div>
+								</div>
+							</div>
+							<div class="about__copy text-red">allsides.studio(c)2023</div>
+						</div>
+					</div>
+					<div class="container about__video-container">
+						<div class="about__video">
+							<video autoplay loop playsinline preload="auto" muted>
+								<source src="./assets/images/video.mp4" />
+							</video>
+						</div>
+					</div>
+					<div class="container">
+						<div class="about__bottom">
+							<ul class="about__items">
+								<li class="about__item">
+									<div class="about__item-num">(01)</div>
+									<div class="about__item-content">
+										<h5 class="about__item-title text-red">4.5</h5>
+										<p class="about__item-text">
+											роки – середній досвід наших спеціалістів у digital-сфері.
+										</p>
+									</div>
+								</li>
+								<li class="about__item">
+									<div class="about__item-num">(02)</div>
+									<div class="about__item-content">
+										<h5 class="about__item-title text-red">8</h5>
+										<p class="about__item-text">
+											місяців – середній ltv наших клієнтів.
+										</p>
+										<p class="about__item-subtext text-red">
+											сподіваємось, <br />
+											що ви з нами збільшите цей показник
+										</p>
+									</div>
+								</li>
+								<li class="about__item">
+									<div class="about__item-num">(03)</div>
+									<div class="about__item-content">
+										<h5 class="about__item-title text-red">1M+</h5>
+										<p class="about__item-text">
+											за час своєї робити ми відспендили на рекламу.
+										</p>
+										<p class="about__item-subtext text-red">
+											і знаємо, що витратили ці гроші ефективно. 
+										</p>
+									</div>
+								</li>
+								<li class="about__item">
+									<div class="about__item-num">(04)</div>
+									<div class="about__item-content">
+										<h5 class="about__item-title text-red">100K+</h5>
+										<p class="about__item-text">
+											oдиниць контенту створили за час своєї роботи
+										</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
 			<!-- REQUESTS -->
 			<div id="requests">
 				<div class="container">
 					<div class="requests__inner">
-						<h2 class="requests__title">які запити ми чуємо найчастіше?</h2>
+						<div class="requests__title-wrapper">
+							<div class="requests__title">
+								<span>які запити ми чуємо?</span>
+								<span class="requests__subtitle text-red">найчастіше</span>
+							</div>
+						</div>
 						<div class="requests__items">
-							<div class="requests__items-block">
-								<div class="requests__item">
-									<img src="/assets/images/requests/request-1.png" alt="requests-img" class="requests__item-img">
-									<p class="requests__item-text">хочемо такі соцмережі, щоб ми дивились на них і такі “вах, оце я розумію, клас”</p>
-									<svg class="requests__item-subtract" width="38" height="32" viewBox="0 0 38 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path fill-rule="evenodd" clip-rule="evenodd" d="M21.8932 0.751413L1.10318 21.543C0.954029 21.6921 0.810257 21.8446 0.67186 22.0002H4.40769L23.7748 2.63385C24.2932 2.11464 24.2932 1.27142 23.7748 0.751413C23.2532 0.232202 22.4124 0.233002 21.8932 0.751413ZM26.8654 22.0002L33.7638 15.1021C35.8631 13.0029 35.8631 9.58439 33.7638 7.48595C31.6662 5.3867 28.2469 5.3875 26.1477 7.48675L9.25054 24.3839C8.20251 25.4335 8.20092 27.1383 9.25214 28.1888C10.2978 29.2368 12.0026 29.236 13.0522 28.1864L27.8421 13.3997C28.3621 12.8813 29.2029 12.8805 29.7237 13.4005C30.243 13.9197 30.243 14.7621 29.7237 15.2821L14.9355 30.0704C12.8498 32.1568 9.45294 32.1592 7.3673 30.0736C5.28086 27.9848 5.28086 24.5887 7.3673 22.5006L24.2636 5.60271C27.4021 2.46425 32.5094 2.46505 35.6471 5.60271C38.7839 8.74117 38.7839 13.8477 35.6455 16.9853L30.631 22.0002H26.8654Z" fill="#BC1010"/>
-									</svg>										
-								</div>
-								<div class="requests__item right">
-									<img src="/assets/images/requests/request-2.png" alt="requests-img" class="requests__item-img">
-									<p class="requests__item-text">хочемо щоб нас не тільки читали, а ще  й купляли в нас щось</p>
-									<svg class="requests__item-subtract" width="38" height="32" viewBox="0 0 38 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path fill-rule="evenodd" clip-rule="evenodd" d="M21.8932 0.751413L1.10318 21.543C0.954029 21.6921 0.810257 21.8446 0.67186 22.0002H4.40769L23.7748 2.63385C24.2932 2.11464 24.2932 1.27142 23.7748 0.751413C23.2532 0.232202 22.4124 0.233002 21.8932 0.751413ZM26.8654 22.0002L33.7638 15.1021C35.8631 13.0029 35.8631 9.58439 33.7638 7.48595C31.6662 5.3867 28.2469 5.3875 26.1477 7.48675L9.25054 24.3839C8.20251 25.4335 8.20092 27.1383 9.25214 28.1888C10.2978 29.2368 12.0026 29.236 13.0522 28.1864L27.8421 13.3997C28.3621 12.8813 29.2029 12.8805 29.7237 13.4005C30.243 13.9197 30.243 14.7621 29.7237 15.2821L14.9355 30.0704C12.8498 32.1568 9.45294 32.1592 7.3673 30.0736C5.28086 27.9848 5.28086 24.5887 7.3673 22.5006L24.2636 5.60271C27.4021 2.46425 32.5094 2.46505 35.6471 5.60271C38.7839 8.74117 38.7839 13.8477 35.6455 16.9853L30.631 22.0002H26.8654Z" fill="#BC1010"/>
-									</svg>										
-								</div>
+							<div class="requests__item">
+								<span>
+									хочемо такі соцмережі, щоб ми дивились на них і такі “вах, оце
+									я розумію, клас”
+								</span>
+								<svg
+									width="28"
+									height="26"
+									viewBox="0 0 28 26"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M28 15.2857L17.1613 0C17.1613 0 17.1613 11 11.5 16.5C6.86543 21.0025 0 26 0 26C0 26 10.9251 25.2272 17.1613 22.4286C21.7934 20.3498 28 15.2857 28 15.2857Z"
+										fill="#141414"
+									/>
+								</svg>
 							</div>
-							<div class="requests__items-block">
-								<div class="requests__item">
-									<img src="/assets/images/requests/request-3.png" alt="requests-img" class="requests__item-img">
-									<p class="requests__item-text">треба продукт запускати, а в мене й так роботи купа. і ще маркетинг я просто не вивезу…</p>
-									<svg class="requests__item-subtract" width="38" height="32" viewBox="0 0 38 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path fill-rule="evenodd" clip-rule="evenodd" d="M21.8932 0.751413L1.10318 21.543C0.954029 21.6921 0.810257 21.8446 0.67186 22.0002H4.40769L23.7748 2.63385C24.2932 2.11464 24.2932 1.27142 23.7748 0.751413C23.2532 0.232202 22.4124 0.233002 21.8932 0.751413ZM26.8654 22.0002L33.7638 15.1021C35.8631 13.0029 35.8631 9.58439 33.7638 7.48595C31.6662 5.3867 28.2469 5.3875 26.1477 7.48675L9.25054 24.3839C8.20251 25.4335 8.20092 27.1383 9.25214 28.1888C10.2978 29.2368 12.0026 29.236 13.0522 28.1864L27.8421 13.3997C28.3621 12.8813 29.2029 12.8805 29.7237 13.4005C30.243 13.9197 30.243 14.7621 29.7237 15.2821L14.9355 30.0704C12.8498 32.1568 9.45294 32.1592 7.3673 30.0736C5.28086 27.9848 5.28086 24.5887 7.3673 22.5006L24.2636 5.60271C27.4021 2.46425 32.5094 2.46505 35.6471 5.60271C38.7839 8.74117 38.7839 13.8477 35.6455 16.9853L30.631 22.0002H26.8654Z" fill="#BC1010"/>
-									</svg>										
-								</div>
-								<div class="requests__item right">
-									<img src="/assets/images/requests/request-4.png" alt="requests-img" class="requests__item-img">
-									<p class="requests__item-text">потрібна клієнтська база, яку ми сформуємо з інстаграму або телеграму</p>
-									<svg class="requests__item-subtract" width="38" height="32" viewBox="0 0 38 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path fill-rule="evenodd" clip-rule="evenodd" d="M21.8932 0.751413L1.10318 21.543C0.954029 21.6921 0.810257 21.8446 0.67186 22.0002H4.40769L23.7748 2.63385C24.2932 2.11464 24.2932 1.27142 23.7748 0.751413C23.2532 0.232202 22.4124 0.233002 21.8932 0.751413ZM26.8654 22.0002L33.7638 15.1021C35.8631 13.0029 35.8631 9.58439 33.7638 7.48595C31.6662 5.3867 28.2469 5.3875 26.1477 7.48675L9.25054 24.3839C8.20251 25.4335 8.20092 27.1383 9.25214 28.1888C10.2978 29.2368 12.0026 29.236 13.0522 28.1864L27.8421 13.3997C28.3621 12.8813 29.2029 12.8805 29.7237 13.4005C30.243 13.9197 30.243 14.7621 29.7237 15.2821L14.9355 30.0704C12.8498 32.1568 9.45294 32.1592 7.3673 30.0736C5.28086 27.9848 5.28086 24.5887 7.3673 22.5006L24.2636 5.60271C27.4021 2.46425 32.5094 2.46505 35.6471 5.60271C38.7839 8.74117 38.7839 13.8477 35.6455 16.9853L30.631 22.0002H26.8654Z" fill="#BC1010"/>
-									</svg>										
-								</div>
-								<div class="requests__item">
-									<img src="/assets/images/requests/request-5.png" alt="requests-img" class="requests__item-img">
-									<p class="requests__item-text">короче, треба такий класний ролик,  щоб всі просто рота повідкривали </p>
-									<svg class="requests__item-subtract" width="38" height="32" viewBox="0 0 38 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path fill-rule="evenodd" clip-rule="evenodd" d="M21.8932 0.751413L1.10318 21.543C0.954029 21.6921 0.810257 21.8446 0.67186 22.0002H4.40769L23.7748 2.63385C24.2932 2.11464 24.2932 1.27142 23.7748 0.751413C23.2532 0.232202 22.4124 0.233002 21.8932 0.751413ZM26.8654 22.0002L33.7638 15.1021C35.8631 13.0029 35.8631 9.58439 33.7638 7.48595C31.6662 5.3867 28.2469 5.3875 26.1477 7.48675L9.25054 24.3839C8.20251 25.4335 8.20092 27.1383 9.25214 28.1888C10.2978 29.2368 12.0026 29.236 13.0522 28.1864L27.8421 13.3997C28.3621 12.8813 29.2029 12.8805 29.7237 13.4005C30.243 13.9197 30.243 14.7621 29.7237 15.2821L14.9355 30.0704C12.8498 32.1568 9.45294 32.1592 7.3673 30.0736C5.28086 27.9848 5.28086 24.5887 7.3673 22.5006L24.2636 5.60271C27.4021 2.46425 32.5094 2.46505 35.6471 5.60271C38.7839 8.74117 38.7839 13.8477 35.6455 16.9853L30.631 22.0002H26.8654Z" fill="#BC1010"/>
-									</svg>										
-								</div>
+							<div class="requests__item">
+								<span>
+									хочемо щоб нас не тільки читали, а ще й купляли в нас щось
+								</span>
+								<svg
+									width="28"
+									height="26"
+									viewBox="0 0 28 26"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M28 15.2857L17.1613 0C17.1613 0 17.1613 11 11.5 16.5C6.86543 21.0025 0 26 0 26C0 26 10.9251 25.2272 17.1613 22.4286C21.7934 20.3498 28 15.2857 28 15.2857Z"
+										fill="#141414"
+									/>
+								</svg>
 							</div>
-							<div class="requests__items-block">
-								<div class="requests__item right">
-									<img src="/assets/images/requests/request-6.png" alt="requests-img" class="requests__item-img">
-									<p class="requests__item-text">в мене складний B2B продукт і я не знаю як його продавати, потрібна допомога</p>
-									<svg class="requests__item-subtract" width="38" height="32" viewBox="0 0 38 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path fill-rule="evenodd" clip-rule="evenodd" d="M21.8932 0.751413L1.10318 21.543C0.954029 21.6921 0.810257 21.8446 0.67186 22.0002H4.40769L23.7748 2.63385C24.2932 2.11464 24.2932 1.27142 23.7748 0.751413C23.2532 0.232202 22.4124 0.233002 21.8932 0.751413ZM26.8654 22.0002L33.7638 15.1021C35.8631 13.0029 35.8631 9.58439 33.7638 7.48595C31.6662 5.3867 28.2469 5.3875 26.1477 7.48675L9.25054 24.3839C8.20251 25.4335 8.20092 27.1383 9.25214 28.1888C10.2978 29.2368 12.0026 29.236 13.0522 28.1864L27.8421 13.3997C28.3621 12.8813 29.2029 12.8805 29.7237 13.4005C30.243 13.9197 30.243 14.7621 29.7237 15.2821L14.9355 30.0704C12.8498 32.1568 9.45294 32.1592 7.3673 30.0736C5.28086 27.9848 5.28086 24.5887 7.3673 22.5006L24.2636 5.60271C27.4021 2.46425 32.5094 2.46505 35.6471 5.60271C38.7839 8.74117 38.7839 13.8477 35.6455 16.9853L30.631 22.0002H26.8654Z" fill="#BC1010"/>
-									</svg>										
-								</div>
-								<div class="requests__item">
-									<img src="/assets/images/requests/request-7.png" alt="requests-img" class="requests__item-img">
-									<p class="requests__item-text">мені ліди потрібні. але якісні, і такі щоб  через воронку проходили, і купляли щось</p>
-									<svg class="requests__item-subtract" width="38" height="32" viewBox="0 0 38 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path fill-rule="evenodd" clip-rule="evenodd" d="M21.8932 0.751413L1.10318 21.543C0.954029 21.6921 0.810257 21.8446 0.67186 22.0002H4.40769L23.7748 2.63385C24.2932 2.11464 24.2932 1.27142 23.7748 0.751413C23.2532 0.232202 22.4124 0.233002 21.8932 0.751413ZM26.8654 22.0002L33.7638 15.1021C35.8631 13.0029 35.8631 9.58439 33.7638 7.48595C31.6662 5.3867 28.2469 5.3875 26.1477 7.48675L9.25054 24.3839C8.20251 25.4335 8.20092 27.1383 9.25214 28.1888C10.2978 29.2368 12.0026 29.236 13.0522 28.1864L27.8421 13.3997C28.3621 12.8813 29.2029 12.8805 29.7237 13.4005C30.243 13.9197 30.243 14.7621 29.7237 15.2821L14.9355 30.0704C12.8498 32.1568 9.45294 32.1592 7.3673 30.0736C5.28086 27.9848 5.28086 24.5887 7.3673 22.5006L24.2636 5.60271C27.4021 2.46425 32.5094 2.46505 35.6471 5.60271C38.7839 8.74117 38.7839 13.8477 35.6455 16.9853L30.631 22.0002H26.8654Z" fill="#BC1010"/>
-									</svg>										
-								</div>
+							<div class="requests__item">
+								<span>
+									треба продукт запускати, а в мене й так роботи купа. і ще
+									маркетинг я просто не вивезу…
+								</span>
+								<svg
+									width="28"
+									height="26"
+									viewBox="0 0 28 26"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M28 15.2857L17.1613 0C17.1613 0 17.1613 11 11.5 16.5C6.86543 21.0025 0 26 0 26C0 26 10.9251 25.2272 17.1613 22.4286C21.7934 20.3498 28 15.2857 28 15.2857Z"
+										fill="#141414"
+									/>
+								</svg>
+							</div>
+							<div class="requests__item">
+								<span>
+									потрібна клієнтська база, яку ми сформуємо з інстаграму або
+									телеграму
+								</span>
+								<svg
+									width="28"
+									height="26"
+									viewBox="0 0 28 26"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M28 15.2857L17.1613 0C17.1613 0 17.1613 11 11.5 16.5C6.86543 21.0025 0 26 0 26C0 26 10.9251 25.2272 17.1613 22.4286C21.7934 20.3498 28 15.2857 28 15.2857Z"
+										fill="#141414"
+									/>
+								</svg>
+							</div>
+							<div class="requests__item">
+								<span>
+									короче, треба такий класний ролик, щоб всі просто рота
+									повідкривали
+								</span>
+							</div>
+							<div class="requests__item">
+								<span>
+									в мене складний B2B продукт і я не знаю як його продавати,
+									потрібна допомога
+								</span>
+							</div>
+							<div class="requests__item">
+								<span>
+									мені ліди потрібні. але якісні, і такі щоб  через воронку
+									проходили, і купляли щось
+								</span>
+							</div>
+							<div class="requests__item">
+								<span>
+									мені ліди потрібні. але якісні, і такі щоб  через воронку
+									проходили, і купляли щось
+								</span>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<!-- VIDEO -->
-			<div id="video">
-				<div class="video__inner">
-					<video autoplay loop playsinline preload="auto" muted>
-						<source
-							src="./assets/images/video.mp4"
-						/>
-					</video>
+			<!--SERVICES -->
+			<div id="services">
+				<div class="container">
+					<div class="services__inner">
+						<div class="services__title text-red">послуги</div>
+						<ul class="services__items">
+							<li class="services__item">
+								<div class="services__item-text">
+									<p>комлексний smm</p>
+									<svg
+										width="26"
+										height="14"
+										viewBox="0 0 26 14"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M0 6.76905C0 4.0568 0.710902 1.88546 2.25634 2.28882e-05H3.98723C2.85906 1.31365 1.97816 4.20362 1.97816 6.76132C1.97816 9.31902 2.86679 12.2167 3.98723 13.5381H2.25634C0.710902 11.6449 0 9.46584 0 6.76905Z"
+											fill="#BC1010"
+										/>
+										<path
+											d="M25.8231 6.76902C25.8231 10.0376 24.7954 12.0467 23.5668 13.538H21.8359C22.6704 12.549 23.8449 9.98354 23.8449 6.7613C23.8449 3.53906 22.6704 0.973627 21.8359 0H23.5668C24.7877 1.48362 25.8231 3.48497 25.8231 6.76902Z"
+											fill="#BC1010"
+										/>
+										<path
+											d="M7.28654 3.37525L6.04319 4.61861L13.1925 11.7679L20.3424 4.61831L19.099 3.37496L13.1926 9.28134L7.28654 3.37525Z"
+											fill="#BC1010"
+										/>
+									</svg>
+								</div>
+							</li>
+							<li class="services__item">
+								<div class="services__item-text">
+									<p>facebook targeting</p>
+									<svg
+										width="26"
+										height="14"
+										viewBox="0 0 26 14"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M0 6.76905C0 4.0568 0.710902 1.88546 2.25634 2.28882e-05H3.98723C2.85906 1.31365 1.97816 4.20362 1.97816 6.76132C1.97816 9.31902 2.86679 12.2167 3.98723 13.5381H2.25634C0.710902 11.6449 0 9.46584 0 6.76905Z"
+											fill="#BC1010"
+										/>
+										<path
+											d="M25.8231 6.76902C25.8231 10.0376 24.7954 12.0467 23.5668 13.538H21.8359C22.6704 12.549 23.8449 9.98354 23.8449 6.7613C23.8449 3.53906 22.6704 0.973627 21.8359 0H23.5668C24.7877 1.48362 25.8231 3.48497 25.8231 6.76902Z"
+											fill="#BC1010"
+										/>
+										<path
+											d="M7.28654 3.37525L6.04319 4.61861L13.1925 11.7679L20.3424 4.61831L19.099 3.37496L13.1926 9.28134L7.28654 3.37525Z"
+											fill="#BC1010"
+										/>
+									</svg>
+								</div>
+							</li>
+							<li class="services__item">
+								<div class="services__item-text">
+									<p>smm-стратегія</p>
+									<svg
+										width="26"
+										height="14"
+										viewBox="0 0 26 14"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M0 6.76905C0 4.0568 0.710902 1.88546 2.25634 2.28882e-05H3.98723C2.85906 1.31365 1.97816 4.20362 1.97816 6.76132C1.97816 9.31902 2.86679 12.2167 3.98723 13.5381H2.25634C0.710902 11.6449 0 9.46584 0 6.76905Z"
+											fill="#BC1010"
+										/>
+										<path
+											d="M25.8231 6.76902C25.8231 10.0376 24.7954 12.0467 23.5668 13.538H21.8359C22.6704 12.549 23.8449 9.98354 23.8449 6.7613C23.8449 3.53906 22.6704 0.973627 21.8359 0H23.5668C24.7877 1.48362 25.8231 3.48497 25.8231 6.76902Z"
+											fill="#BC1010"
+										/>
+										<path
+											d="M7.28654 3.37525L6.04319 4.61861L13.1925 11.7679L20.3424 4.61831L19.099 3.37496L13.1926 9.28134L7.28654 3.37525Z"
+											fill="#BC1010"
+										/>
+									</svg>
+								</div>
+							</li>
+							<li class="services__item">
+								<div class="services__item-text">
+									<p>інфлюєнс-маркетинг</p>
+									<svg
+										width="26"
+										height="14"
+										viewBox="0 0 26 14"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M0 6.76905C0 4.0568 0.710902 1.88546 2.25634 2.28882e-05H3.98723C2.85906 1.31365 1.97816 4.20362 1.97816 6.76132C1.97816 9.31902 2.86679 12.2167 3.98723 13.5381H2.25634C0.710902 11.6449 0 9.46584 0 6.76905Z"
+											fill="#BC1010"
+										/>
+										<path
+											d="M25.8231 6.76902C25.8231 10.0376 24.7954 12.0467 23.5668 13.538H21.8359C22.6704 12.549 23.8449 9.98354 23.8449 6.7613C23.8449 3.53906 22.6704 0.973627 21.8359 0H23.5668C24.7877 1.48362 25.8231 3.48497 25.8231 6.76902Z"
+											fill="#BC1010"
+										/>
+										<path
+											d="M7.28654 3.37525L6.04319 4.61861L13.1925 11.7679L20.3424 4.61831L19.099 3.37496L13.1926 9.28134L7.28654 3.37525Z"
+											fill="#BC1010"
+										/>
+									</svg>
+								</div>
+							</li>
+							<li class="services__item">
+								<div class="services__item-text">
+									<p>веб-продакшн</p>
+									<svg
+										width="26"
+										height="14"
+										viewBox="0 0 26 14"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M0 6.76905C0 4.0568 0.710902 1.88546 2.25634 2.28882e-05H3.98723C2.85906 1.31365 1.97816 4.20362 1.97816 6.76132C1.97816 9.31902 2.86679 12.2167 3.98723 13.5381H2.25634C0.710902 11.6449 0 9.46584 0 6.76905Z"
+											fill="#BC1010"
+										/>
+										<path
+											d="M25.8231 6.76902C25.8231 10.0376 24.7954 12.0467 23.5668 13.538H21.8359C22.6704 12.549 23.8449 9.98354 23.8449 6.7613C23.8449 3.53906 22.6704 0.973627 21.8359 0H23.5668C24.7877 1.48362 25.8231 3.48497 25.8231 6.76902Z"
+											fill="#BC1010"
+										/>
+										<path
+											d="M7.28654 3.37525L6.04319 4.61861L13.1925 11.7679L20.3424 4.61831L19.099 3.37496L13.1926 9.28134L7.28654 3.37525Z"
+											fill="#BC1010"
+										/>
+									</svg>
+								</div>
+							</li>
+							<li class="services__item">
+								<div class="services__item-text">
+									<p>дизайн</p>
+									<svg
+										width="26"
+										height="14"
+										viewBox="0 0 26 14"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M0 6.76905C0 4.0568 0.710902 1.88546 2.25634 2.28882e-05H3.98723C2.85906 1.31365 1.97816 4.20362 1.97816 6.76132C1.97816 9.31902 2.86679 12.2167 3.98723 13.5381H2.25634C0.710902 11.6449 0 9.46584 0 6.76905Z"
+											fill="#BC1010"
+										/>
+										<path
+											d="M25.8231 6.76902C25.8231 10.0376 24.7954 12.0467 23.5668 13.538H21.8359C22.6704 12.549 23.8449 9.98354 23.8449 6.7613C23.8449 3.53906 22.6704 0.973627 21.8359 0H23.5668C24.7877 1.48362 25.8231 3.48497 25.8231 6.76902Z"
+											fill="#BC1010"
+										/>
+										<path
+											d="M7.28654 3.37525L6.04319 4.61861L13.1925 11.7679L20.3424 4.61831L19.099 3.37496L13.1926 9.28134L7.28654 3.37525Z"
+											fill="#BC1010"
+										/>
+									</svg>
+								</div>
+							</li>
+							<li class="services__item spec spec--1">
+								<div class="services__item-text">
+									<p>продюсування та запуску</p>
+									<svg
+										width="26"
+										height="14"
+										viewBox="0 0 26 14"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M0 6.76905C0 4.0568 0.710902 1.88546 2.25634 2.28882e-05H3.98723C2.85906 1.31365 1.97816 4.20362 1.97816 6.76132C1.97816 9.31902 2.86679 12.2167 3.98723 13.5381H2.25634C0.710902 11.6449 0 9.46584 0 6.76905Z"
+											fill="#BC1010"
+										/>
+										<path
+											d="M25.8231 6.76902C25.8231 10.0376 24.7954 12.0467 23.5668 13.538H21.8359C22.6704 12.549 23.8449 9.98354 23.8449 6.7613C23.8449 3.53906 22.6704 0.973627 21.8359 0H23.5668C24.7877 1.48362 25.8231 3.48497 25.8231 6.76902Z"
+											fill="#BC1010"
+										/>
+										<path
+											d="M7.28654 3.37525L6.04319 4.61861L13.1925 11.7679L20.3424 4.61831L19.099 3.37496L13.1926 9.28134L7.28654 3.37525Z"
+											fill="#BC1010"
+										/>
+									</svg>
+								</div>
+							</li>
+							<li class="services__item spec spec--2">
+								<div class="services__item-text">
+									<p>створення особистого бренду</p>
+									<svg
+										width="26"
+										height="14"
+										viewBox="0 0 26 14"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M0 6.76905C0 4.0568 0.710902 1.88546 2.25634 2.28882e-05H3.98723C2.85906 1.31365 1.97816 4.20362 1.97816 6.76132C1.97816 9.31902 2.86679 12.2167 3.98723 13.5381H2.25634C0.710902 11.6449 0 9.46584 0 6.76905Z"
+											fill="#BC1010"
+										/>
+										<path
+											d="M25.8231 6.76902C25.8231 10.0376 24.7954 12.0467 23.5668 13.538H21.8359C22.6704 12.549 23.8449 9.98354 23.8449 6.7613C23.8449 3.53906 22.6704 0.973627 21.8359 0H23.5668C24.7877 1.48362 25.8231 3.48497 25.8231 6.76902Z"
+											fill="#BC1010"
+										/>
+										<path
+											d="M7.28654 3.37525L6.04319 4.61861L13.1925 11.7679L20.3424 4.61831L19.099 3.37496L13.1926 9.28134L7.28654 3.37525Z"
+											fill="#BC1010"
+										/>
+									</svg>
+								</div>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 
@@ -151,136 +569,110 @@
 							<div class="cases__items-block">
 								<div class="cases__item cases__item--1">
 									<div class="cases__item-img">
-										<iframe src="https://player.vimeo.com/video/905173446?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="width:100%;height:100%;" title="ezgif-1-d8ed376f71" muted preload></iframe>
+										<iframe
+											src="https://player.vimeo.com/video/905173446?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+											frameborder="0"
+											allow="autoplay; fullscreen; picture-in-picture"
+											style="width: 100%; height: 100%"
+											title="ezgif-1-d8ed376f71"
+											muted
+											preload
+										></iframe>
 									</div>
 									<h5 class="cases__item-title">smm + target</h5>
 									<p class="cases__item-text">wikipays [crypto exchange]</p>
 								</div>
 								<div class="cases__items-small">
 									<div class="cases__item cases__item--2 fit-changed">
-										<div class="cases__item-img"><iframe src="https://player.vimeo.com/video/905174123?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="width:100%;height:100%;" title="ezgif-1-d8ed376f71" muted preload></iframe></div>
+										<div class="cases__item-img">
+											<iframe
+												src="https://player.vimeo.com/video/905174123?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+												frameborder="0"
+												allow="autoplay; fullscreen; picture-in-picture"
+												style="width: 100%; height: 100%"
+												title="ezgif-1-d8ed376f71"
+												muted
+												preload
+											></iframe>
+										</div>
 										<h5 class="cases__item-title">smm + ppc (fb, google)</h5>
-										<p class="cases__item-text">milks agency [warsaw model studio]</p>
+										<p class="cases__item-text">
+											milks agency [warsaw model studio]
+										</p>
 									</div>
 									<div class="cases__item cases__item--3 small">
-										<div class="cases__item-img"><iframe src="https://player.vimeo.com/video/903262041?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="width:100%;height:100%;" title="ezgif-1-d8ed376f71" muted preload></iframe></div>
+										<div class="cases__item-img">
+											<iframe
+												src="https://player.vimeo.com/video/903262041?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+												frameborder="0"
+												allow="autoplay; fullscreen; picture-in-picture"
+												style="width: 100%; height: 100%"
+												title="ezgif-1-d8ed376f71"
+												muted
+												preload
+											></iframe>
+										</div>
 										<h5 class="cases__item-title">motion design/vfx</h5>
-										<p class="cases__item-text">alyona alyona feat. Jerry Heil [music album promo activity]</p>
+										<p class="cases__item-text">
+											alyona alyona feat. Jerry Heil [music album promo
+											activity]
+										</p>
 									</div>
 								</div>
 							</div>
 							<div class="cases__items-block">
 								<div class="cases__item cases__item--4">
-									<div class="cases__item-img"><iframe src="https://player.vimeo.com/video/903263658?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="width:100%;height:100%;" title="ezgif-1-d8ed376f71" muted preload></iframe></div>
+									<div class="cases__item-img">
+										<iframe
+											src="https://player.vimeo.com/video/903263658?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+											frameborder="0"
+											allow="autoplay; fullscreen; picture-in-picture"
+											style="width: 100%; height: 100%"
+											title="ezgif-1-d8ed376f71"
+											muted
+											preload
+										></iframe>
+									</div>
 									<h5 class="cases__item-title">content marketing</h5>
 									<p class="cases__item-text">a01k.crypto [crypto community]</p>
 								</div>
 								<div class="cases__items-small">
 									<div class="cases__item cases__item--5 fit-changed">
-										<div class="cases__item-img"><iframe src="https://player.vimeo.com/video/903264541?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="width:100%;height:100%;" title="ezgif-1-d8ed376f71" muted preload></iframe></div>
+										<div class="cases__item-img">
+											<iframe
+												src="https://player.vimeo.com/video/903264541?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+												frameborder="0"
+												allow="autoplay; fullscreen; picture-in-picture"
+												style="width: 100%; height: 100%"
+												title="ezgif-1-d8ed376f71"
+												muted
+												preload
+											></iframe>
+										</div>
 										<h5 class="cases__item-title">smm + target</h5>
-										<p class="cases__item-text">001k.exchange [crypto exchange]</p>
+										<p class="cases__item-text">
+											001k.exchange [crypto exchange]
+										</p>
 									</div>
 									<div class="cases__item cases__item--6 small">
-										<div class="cases__item-img"><iframe src="https://player.vimeo.com/video/905192326?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="width:100%;height:100%;" title="ezgif-1-d8ed376f71" muted preload></iframe></div>
+										<div class="cases__item-img">
+											<iframe
+												src="https://player.vimeo.com/video/905192326?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+												frameborder="0"
+												allow="autoplay; fullscreen; picture-in-picture"
+												style="width: 100%; height: 100%"
+												title="ezgif-1-d8ed376f71"
+												muted
+												preload
+											></iframe>
+										</div>
 										<h5 class="cases__item-title">motion design/vfx</h5>
-										<p class="cases__item-text">щедрий вівторок [charitable foundation]</p>
+										<p class="cases__item-text">
+											щедрий вівторок [charitable foundation]
+										</p>
 									</div>
 								</div>
 							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!--SERVICES -->
-			<div id="services">
-				<div class="container">
-					<div class="services__inner">
-						<h2 class="cases__title text-red">послуги</h2>
-						<ul class="services__items">
-							<li class="services__item services__item--1" data-services-item>
-								<span>(01)</span>
-								<p>smm</p>
-							</li>
-							<li class="services__item services__item--2" data-services-item>
-								<span>(02)</span>
-								<p>побудова стратегії проекту</p>
-							</li>
-							<li class="services__item services__item--3" data-services-item>
-								<span>(03)</span>
-								<p>ppc та медіабаїнг</p>
-							</li>
-							<li class="services__item services__item--4" data-services-item>
-								<span>(04)</span>
-								<p>створення особистого бренду</p>
-							</li>
-							<li class="services__item services__item--5" data-services-item>
-								<span>(05)</span>
-								<p>інфлюенс маркетинг</p>
-							</li>
-							<li class="services__item services__item--6" data-services-item>
-								<span>(06)</span>
-								<p>розробка концепції</p>
-							</li>
-							<li class="services__item services__item--7" data-services-item>
-								<span>(07)</span>
-								<p>продюсування та запуск продуктів</p>
-							</li>
-							<li class="services__item services__item--8" data-services-item>
-								<span>(08)</span>
-								<p>вебпродакшн</p>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-			<!-- ABOUT -->
-			<div id="about">
-				<div class="container">
-					<div class="about__inner">
-						<div class="about__top">
-							<h2 class="about__title text-red">про нас</h2>
-							<div class="about__block">
-								<p class="about__text"> <span class="text-red">ми — бутікова студія.</span> нам не цікаво мати 100 клієнтів одночасно. у нас небагато клієнтів, через це і робимо усім якісно та круто. </p>
-								<div class="about__specialization">
-									<div class="about__specialization-symbol text-red">[a]</div>
-									<div class="about__specialization-text">наша ключова спеціалізація: крипто, айті, едтек та є-коммерс проєкти.</div>
-								</div>
-							</div>
-							<div class="about__copy text-red">allsides.studio(c)2023</div>
-						</div>
-						<div class="about__bottom">
-							<ul class="about__items">
-								<li class="about__item">
-										<h5 class="about__item-title">
-											<span>(01)</span>
-											<div>3,5 роки</div>
-										</h5>
-										<p class="about__item-text">
-											середній досвід наших спеціалістів у digital-сфері.
-										</p>
-								</li>
-								<li class="about__item">
-										<h5 class="about__item-title">
-											<span>(02)</span>
-											<div>8 місяців</div>
-										</h5>
-										<p class="about__item-text">
-											середній ltv наших клієнтів. сподіваємось,що ви з нами збільшите цей показник
-										</p>
-								</li>
-								<li class="about__item">
-										<h5 class="about__item-title">
-											<span>(03)</span>
-											<div>більше $1,000,000</div>
-										</h5>
-										<p class="about__item-text">
-											за час своєї робити ми відспендили на рекламу. і знаємо, що витратили  ці гроші ефективно.
-										</p>
-								</li>
-							</ul>
 						</div>
 					</div>
 				</div>
@@ -290,49 +682,267 @@
 			<div id="cooperation">
 				<div class="container">
 					<div class="cooperation__inner">
-						<h3 class="cooperation__title text-red">експозиція проєктів, <br /> з якими у нас склався метч</h3>
+						<h3 class="cooperation__title text-red">
+							експозиція проєктів, <br />
+							з якими у нас склався метч
+						</h3>
 						<div class="cooperation__items cooperation__items--desktop">
 							<div class="cooperation__items-block">
-								<img src="/assets/images/cooperation/cooperation-1.svg" alt="cooperation-img" class="cooperation__item">
-								<img src="/assets/images/cooperation/cooperation-4.svg" alt="cooperation-img" class="cooperation__item">
-								<img src="/assets/images/cooperation/cooperation-5.svg" alt="cooperation-img" class="cooperation__item">
-								<img src="/assets/images/cooperation/cooperation-6.svg" alt="cooperation-img" class="cooperation__item">
+								<img
+									src="/assets/images/cooperation/cooperation-1.svg"
+									alt="cooperation-img"
+									class="cooperation__item"
+								/>
+								<img
+									src="/assets/images/cooperation/cooperation-4.svg"
+									alt="cooperation-img"
+									class="cooperation__item"
+								/>
+								<img
+									src="/assets/images/cooperation/cooperation-5.svg"
+									alt="cooperation-img"
+									class="cooperation__item"
+								/>
+								<img
+									src="/assets/images/cooperation/cooperation-6.svg"
+									alt="cooperation-img"
+									class="cooperation__item"
+								/>
 							</div>
 							<div class="cooperation__items-block">
-								<img src="/assets/images/cooperation/cooperation-7.svg" alt="cooperation-img" class="cooperation__item">
-								<img src="/assets/images/cooperation/cooperation-8.svg" alt="cooperation-img" class="cooperation__item">
-								<img src="/assets/images/cooperation/cooperation-9.svg" alt="cooperation-img" class="cooperation__item">
+								<img
+									src="/assets/images/cooperation/cooperation-7.svg"
+									alt="cooperation-img"
+									class="cooperation__item"
+								/>
+								<img
+									src="/assets/images/cooperation/cooperation-8.svg"
+									alt="cooperation-img"
+									class="cooperation__item"
+								/>
+								<img
+									src="/assets/images/cooperation/cooperation-9.svg"
+									alt="cooperation-img"
+									class="cooperation__item"
+								/>
 							</div>
 							<div class="cooperation__items-block">
-								<img src="/assets/images/cooperation/cooperation-10.svg" alt="cooperation-img" class="cooperation__item">
-								<img src="/assets/images/cooperation/cooperation-11.svg" alt="cooperation-img" class="cooperation__item">
-								<img src="/assets/images/cooperation/cooperation-12.svg" alt="cooperation-img" class="cooperation__item">
-								<img src="/assets/images/cooperation/cooperation-14.svg" alt="cooperation-img" class="cooperation__item">
+								<img
+									src="/assets/images/cooperation/cooperation-10.svg"
+									alt="cooperation-img"
+									class="cooperation__item"
+								/>
+								<img
+									src="/assets/images/cooperation/cooperation-11.svg"
+									alt="cooperation-img"
+									class="cooperation__item"
+								/>
+								<img
+									src="/assets/images/cooperation/cooperation-12.svg"
+									alt="cooperation-img"
+									class="cooperation__item"
+								/>
+								<img
+									src="/assets/images/cooperation/cooperation-14.svg"
+									alt="cooperation-img"
+									class="cooperation__item"
+								/>
 							</div>
 						</div>
 						<div class="cooperation__items cooperation__items--mobile">
 							<div class="cooperation__items-block">
-								<img src="/assets/images/cooperation/cooperation-1.svg" alt="cooperation-img" class="cooperation__item">
+								<img
+									src="/assets/images/cooperation/cooperation-1.svg"
+									alt="cooperation-img"
+									class="cooperation__item"
+								/>
 							</div>
 							<div class="cooperation__items-block">
-								<img src="/assets/images/cooperation/cooperation-4.svg" alt="cooperation-img" class="cooperation__item">
-								<img src="/assets/images/cooperation/cooperation-5.svg" alt="cooperation-img" class="cooperation__item">
-								<img src="/assets/images/cooperation/cooperation-6.svg" alt="cooperation-img" class="cooperation__item">
+								<img
+									src="/assets/images/cooperation/cooperation-4.svg"
+									alt="cooperation-img"
+									class="cooperation__item"
+								/>
+								<img
+									src="/assets/images/cooperation/cooperation-5.svg"
+									alt="cooperation-img"
+									class="cooperation__item"
+								/>
+								<img
+									src="/assets/images/cooperation/cooperation-6.svg"
+									alt="cooperation-img"
+									class="cooperation__item"
+								/>
 							</div>
 							<div class="cooperation__items-block">
-								<img src="/assets/images/cooperation/cooperation-7.svg" alt="cooperation-img" class="cooperation__item">
-								<img src="/assets/images/cooperation/cooperation-8.svg" alt="cooperation-img" class="cooperation__item">
-								<img src="/assets/images/cooperation/cooperation-9.svg" alt="cooperation-img" class="cooperation__item">
+								<img
+									src="/assets/images/cooperation/cooperation-7.svg"
+									alt="cooperation-img"
+									class="cooperation__item"
+								/>
+								<img
+									src="/assets/images/cooperation/cooperation-8.svg"
+									alt="cooperation-img"
+									class="cooperation__item"
+								/>
+								<img
+									src="/assets/images/cooperation/cooperation-9.svg"
+									alt="cooperation-img"
+									class="cooperation__item"
+								/>
 							</div>
 							<div class="cooperation__items-block">
-								<img src="/assets/images/cooperation/cooperation-10.svg" alt="cooperation-img" class="cooperation__item">
-								<img src="/assets/images/cooperation/cooperation-11.svg" alt="cooperation-img" class="cooperation__item">
-								<img src="/assets/images/cooperation/cooperation-12.svg" alt="cooperation-img" class="cooperation__item">
+								<img
+									src="/assets/images/cooperation/cooperation-10.svg"
+									alt="cooperation-img"
+									class="cooperation__item"
+								/>
+								<img
+									src="/assets/images/cooperation/cooperation-11.svg"
+									alt="cooperation-img"
+									class="cooperation__item"
+								/>
+								<img
+									src="/assets/images/cooperation/cooperation-12.svg"
+									alt="cooperation-img"
+									class="cooperation__item"
+								/>
 							</div>
 							<div class="cooperation__items-block">
-								<img src="/assets/images/cooperation/cooperation-14.svg" alt="cooperation-img" class="cooperation__item">
+								<img
+									src="/assets/images/cooperation/cooperation-14.svg"
+									alt="cooperation-img"
+									class="cooperation__item"
+								/>
 							</div>
 						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Team -->
+			<div id="team">
+				<img
+					class="team__bg team__bg--desktop"
+					src="/assets/images/allsides.svg"
+					alt="allsides"
+				/>
+				<img
+					class="team__bg team__bg--mobile"
+					src="/assets/images/allsides-mob.svg"
+					alt="allsides"
+				/>
+				<div class="container team__container">
+					<div class="team__inner">
+						<h2 class="team__title text-red">команда</h2>
+						<ul class="team__items team__items--mobile">
+							<div class="team__items-block">
+								<li class="team__item">
+									<div class="team__item-img">
+										<h6 class="team__item-imgtitle">oleksiy.allsides.jpg</h6>
+										<img
+											class="team__item-img__person"
+											src="/assets/images/team/team-1.png"
+											alt="team-person"
+										/>
+										<img
+											class="team__item-img__cover"
+											src="/assets/images/img-cover.png"
+											alt="team-person-cover"
+										/>
+									</div>
+									<h5 class="team__item-name">Леха</h5>
+									<p class="team__item-position">начальник та сео</p>
+								</li>
+								<li class="team__item second">
+									<div class="team__item-img">
+										<h6 class="team__item-imgtitle">danya.allsides.jpg</h6>
+										<img
+											class="team__item-img__person"
+											src="/assets/images/team/team-2.png"
+											alt="team-person"
+										/>
+										<img
+											class="team__item-img__cover"
+											src="/assets/images/img-cover.png"
+											alt="team-person-cover"
+										/>
+									</div>
+									<h5 class="team__item-name">Даня</h5>
+									<p class="team__item-position">начальник та смм хед</p>
+								</li>
+							</div>
+							<li class="team__item third">
+								<div class="team__item-img">
+									<h6 class="team__item-imgtitle">illya.allsides.jpg</h6>
+									<img
+										class="team__item-img__person"
+										src="/assets/images/team/team-3.png"
+										alt="team-person"
+									/>
+									<img
+										class="team__item-img__cover"
+										src="/assets/images/img-cover.png"
+										alt="team-person-cover"
+									/>
+								</div>
+								<h5 class="team__item-name">Ілля</h5>
+								<p class="team__item-position">начальник та смм хед</p>
+							</li>
+						</ul>
+						<ul class="team__items team__items--desktop">
+							<li class="team__item">
+								<div class="team__item-img">
+									<h6 class="team__item-imgtitle">oleksiy.allsides.jpg</h6>
+									<img
+										class="team__item-img__person"
+										src="/assets/images/team/team-1.png"
+										alt="team-person"
+									/>
+									<img
+										class="team__item-img__cover"
+										src="/assets/images/img-cover.png"
+										alt="team-person-cover"
+									/>
+								</div>
+								<h5 class="team__item-name">Леха</h5>
+								<p class="team__item-position">начальник та сео</p>
+							</li>
+							<li class="team__item second">
+								<div class="team__item-img">
+									<h6 class="team__item-imgtitle">danya.allsides.jpg</h6>
+									<img
+										class="team__item-img__person"
+										src="/assets/images/team/team-2.png"
+										alt="team-person"
+									/>
+									<img
+										class="team__item-img__cover"
+										src="/assets/images/img-cover.png"
+										alt="team-person-cover"
+									/>
+								</div>
+								<h5 class="team__item-name">Даня</h5>
+								<p class="team__item-position">начальник та смм хед</p>
+							</li>
+							<li class="team__item third">
+								<div class="team__item-img">
+									<h6 class="team__item-imgtitle">illya.allsides.jpg</h6>
+									<img
+										class="team__item-img__person"
+										src="/assets/images/team/team-3.png"
+										alt="team-person"
+									/>
+									<img
+										class="team__item-img__cover"
+										src="/assets/images/img-cover.png"
+										alt="team-person-cover"
+									/>
+								</div>
+								<h5 class="team__item-name">Ілля</h5>
+								<p class="team__item-position">начальник та смм хед</p>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -341,17 +951,25 @@
 			<div id="telegram">
 				<div class="container">
 					<div class="telegram__inner">
-						<img src="/assets/images/3D-cylinder.png" alt="3D-cylinder" class="telegram__img" data-telegram-img>																	
-						<div class="telegram__main">
-							<h3 class="telegram__title">
-								не любите зайвий раз заповнювати бриф? <br /> <span class="text-red">давайте одразу заплануємо зустріч, <br class="br-desktop" />де обговоримо <br class="br-mobile" /> ваш запит</span>
-							</h3>
-							<a href="https://t.me/westleyprod" target="_blank" class="telegram__link">запланувати зустріч →</a>
+						<div class="telegram__title-wrapper">
+							<h4 class="telegram__title">хочете розпочати,</h4>
+							<p class="telegram__subtitle text-red">але не знаєте з чого?</p>
 						</div>
+						<p class="telegram__text">
+							пропонуємо вам вийти на 30-хвилинний дзвінок, <br />
+							де ми обговоримо ваш запит і надамо безкоштовну консультацію,
+							<br />
+							яка допоможе краще зрозуміти поточну ситуацію в вашому бізнесі.
+						</p>
+						<a
+							href="https://calendly.com/allsides_digital/allsides-studio?month=2024-02"
+							target="_blank"
+							class="telegram__link link"
+							>запланувати зустріч →
+						</a>
 					</div>
 				</div>
 			</div>
-
 		</main>
 
 		<!-- FOOTER -->
@@ -384,18 +1002,36 @@
 			</div>
 			<div class="container">
 				<div class="footer__inner">
-					<a href="https://forms.gle/Mmj9RWbQwgrnFHUaA" target="_blank" class="footer__link">
-						<svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<rect x="9.5" y="0.220703" width="2.5" height="12" fill="#BC1010"/>
-							<path d="M12 0.220703L12 2.7207L-1.09278e-07 2.7207L0 0.220703L12 0.220703Z" fill="#BC1010"/>
-							<path d="M8.98523 1.2207L10.753 2.98847L2.26772 11.4738L0.499948 9.70598L8.98523 1.2207Z" fill="#BC1010"/>
-						</svg>
-						<span>заповнюйте бриф</span>
-					</a>
+					<form action="#" class="footer__form form" data-order-form>
+						<input
+							class="form__input"
+							name="name"
+							placeholder="ім'я"
+							required
+						/>
+						<input
+							class="form__input"
+							name="tel"
+							placeholder="номер телефону / @username telegram"
+							required
+						/>
+						<input
+							class="form__input"
+							name="company"
+							placeholder="назва вашої компанії / бренду"
+						/>
+						<button class="form__btn link link-white" type="submit">
+							відправити →
+						</button>
+					</form>
 					<div class="footer__bottom">
 						<ul class="footer__socials">
 							<li class="footer__social">
-								<a href="https://www.instagram.com/allsides.studio" target="_blank">Instagram</a>
+								<a
+									href="https://www.instagram.com/allsides.studio"
+									target="_blank"
+									>Instagram</a
+								>
 							</li>
 						</ul>
 						<ul class="footer__docs">
@@ -414,5 +1050,54 @@
 			</div>
 		</footer>
 
+		<!-- Success modal -->
+		<div class="success-modal modal" data-modal="success">
+			<div class="success-modal__content modal__content" data-modal-content>
+				<div class="success-modal__close modal__close" data-modal-close>
+					<span></span><span></span>
+				</div>
+				<h3 class="success-modal__title text-red">
+					Ваша заявка успішно відправлена!
+				</h3>
+			</div>
+		</div>
+
+		<!-- Form modal -->
+		<div class="form-modal modal" data-modal="form">
+			<div class="form-modal__content modal__content" data-modal-content>
+				<div class="form-modal__close modal__close" data-modal-close>
+					<span></span><span></span>
+				</div>
+				<h5 class="form-modal__title">
+					заповніть форму щоб отримати безкоштовну консультацію.
+				</h5>
+				<form action="#" class="form-modal__form form" data-order-form>
+					<input class="form__input" name="name" placeholder="ім'я" required />
+					<input
+						class="form__input"
+						name="tel"
+						placeholder="номер телефону / @username telegram"
+						required
+					/>
+					<input
+						class="form__input"
+						name="company"
+						placeholder="назва вашої компанії / бренду"
+					/>
+					<button class="form__btn link link-white" type="submit">
+						відправити →
+					</button>
+				</form>
+			</div>
+		</div>
 	</body>
+
+	<noscript>
+		<iframe
+			src="https://www.googletagmanager.com/ns.html?id=GTM-PVRFJH7P"
+			height="0"
+			width="0"
+			style="display: none; visibility: hidden"
+		></iframe>
+	</noscript>
 </html>

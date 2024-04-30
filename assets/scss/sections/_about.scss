@@ -1,5 +1,5 @@
 #about {
-	padding-bottom: 60px;
+	padding: 78px 0 132px;
 	.about__top {
 		@include flex(space-between, flex-start);
 		flex-wrap: wrap;
@@ -8,13 +8,15 @@
 		max-width: 725px;
 		width: 100%;
 		order: 1;
-		margin: 65px auto 66px;
+		margin: 65px auto 87px;
 	}
 	.about__text {
 		font-family: $SF_Pro_Bold, sans-serif;
 		font-size: 24px;
 		line-height: 28px;
 		margin-bottom: 32px;
+		max-width: 560px;
+		width: 100%;
 	}
 	.about__specialization {
 		@include flex(flex-start, flex-start);
@@ -39,49 +41,71 @@
 		line-height: 28px;
 		margin-top: 8px;
 	}
+	.about__video-container {
+		padding: 0;
+		max-width: calc($container - 30px);
+		margin-bottom: 132px;
+	}
+	video {
+		height: 658px;
+		width: 100%;
+		object-fit: cover;
+	}
 
-	@include table {
-		padding-bottom: 150px;
+	@include table {	
+		padding: 107px 0 260px;
 		.about__text {
-			font-size: 32px;
-			line-height: 40px;
+			font-size: 24px;
+			line-height: 28px;
 		}
 		.about__specialization-symbol {
 			font-size: 16px;
 		}
 		.about__specialization-text {
-			font-size: 32px;
-			line-height: 40px;
+			font-size: 24px;
+			line-height: 28px;
 			margin-left: 126px;
 		}
 		.about__copy {
 			font-size: 15px;
 			margin-top: 22px;
 		}
+		.about__video-container {
+			margin-bottom: 40px;
+		}
+		video {
+			height: 704px;
+		}
+		.about__items {
+			display: grid;
+			gap: 75px;
+			grid-template-columns: repeat(2, 1fr);
+		}
 	}
 
 	@include desktop-sm {
-		.about__items {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			gap: 20px;
-		}
 		.about__title {
 			width: 50%;
 		}
 	}
 
 	@media screen and (min-width: 1275px) {
-		padding-bottom: 200px;
+		padding: 107px 0 338px;
 		.about__title {
 			width: auto;
 		}
 		.about__top {
-			margin-bottom: 180px;
+			margin-bottom: 70px;
 		}
 		.about__block {
 			order: 0;
 			margin: 15px 70px 0;
+		}
+	}
+
+	@media screen and (min-width: 1440px) {
+		.about__items {
+			grid-template-columns: repeat(4, 1fr);
 		}
 	}
 }

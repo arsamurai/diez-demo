@@ -1,84 +1,45 @@
 #telegram {
-	padding-bottom: 180px;
+	padding: 257px 0;
 	.telegram__inner {
-		padding: 150px 0 200px;
-		position: relative;
-	}
-	.telegram__img {
-		min-width: 689px;
-		height: 758px;
-		top: 55%;
-		left: 50%;
-		transform: translateY(-50%) translateX(-50%);
-		position: absolute;
-		z-index: -1;
-		object-fit: contain;
-		&.animate {
-			animation: zoom 3s linear forwards;
-		}
-	}
-	.telegram__main {
-		text-align: center;
-	}
-	.telegram__title {
-		max-width: 368px;
+		max-width: 615px;
 		width: 100%;
 		margin: 0 auto;
-		margin-bottom: 24px;
-		span {
-			display: block;
-		}
-		.br-desktop {
-			display: none;
-		}
+		text-align: center;
 	}
-	.telegram__link {
+	.telegram__title-wrapper {
 		display: inline-block;
-		font-size: 16px;
-		line-height: 44px;
-		font-family: $SF_Pro_Medium, sans-serif;
-		padding: 3px 26px 5px 25px;
-		background-color: $red;
-		border-radius: 333px;
-		transition: $transition;
-		&:hover {
-			animation: 0.3s ease-in bounceOut;
-		}
+		position: relative;
+	}
+	.telegram__title {
+		font-family: $SF_Pro_Bold, sans-serif;
+		font-size: 40px;
+		line-height: 40px;
+		color: rgba(255, 251, 251, 1);
+		margin-bottom: 53px;
+	}
+	.telegram__subtitle {
+		font-family: $NazarroHandExt, sans-serif;
+		font-size: 64.33px;
+		line-height: 18.83px;
+		letter-spacing: -0.1em;
+		position: absolute;
+		left: -6px;
+		top: 34px;
+	}
+	.telegram__text {
+		margin-bottom: 121px;
 	}
 
 	@include table {
-		padding-bottom: 270px;
-		.telegram__link {
-			font-size: 24px;
-			padding: 10px 26px 14px 25px;
-		}
-		.telegram__img {
-			min-width: 870px;
-			height: 1000px;
-		}
-		.telegram__inner {
-			padding: 215px 0 184px;
-		}
-		.telegram__title {
-			max-width: 616px;
-			margin-bottom: 41px;
-			span {
-				display: inline;
-			}
-			.br-mobile {
-				display: none;
-			}
-			.br-desktop {
-				display: inline;
-			}
-		}
+		padding: 460px 0 360px;
 	}
 
-	@include desktop {
-		padding-bottom: 360px;
-		.telegram__img {
-			min-width: 1050px;
-			height: 1233px;
+	@media screen and (max-width: 375px) {
+		.telegram__title {
+			font-size: 33px;
+		}
+		.telegram__subtitle {
+			font-size: 54px;
 		}
 	}
 }

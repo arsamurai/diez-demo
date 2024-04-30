@@ -1,153 +1,54 @@
 .services__item {
-	position: absolute;
-	@include flex(flex-start, flex-start);
-	transform: scale(.7);
-	span {
-		font-size: 10px;
-		line-height: 12px;
-		color: rgba(255, 255, 255, 0.44);
-		margin-right: 5px;
-		word-break: normal;
+	border-bottom: 0.53px solid rgba(255, 255, 255, 0.22);
+	padding: 16px 0 18px;
+	&-text {
+		font-family: $SF_Pro_Bold, sans-serif;
+		font-size: 32px;
+		line-height: 32px;
+		letter-spacing: -0.02em;
+		position: relative;
+		display: inline-block;
 	}
-	p {
-		width: 100%;
-	}
-	&--1 {
-		opacity: 1 !important;
-		p {
-			font-size: 32px;
-			line-height: 30px;
-		}
-	}
-	&--2 {
-		opacity: 1 !important;
-		p {
-			max-width: 158px;
-			font-size: 20px;
-			line-height: 30px;
-		}
-	}
-	&--3, &--4 {
-		opacity: 1 !important;
-		p {
-			max-width: 132px;
-			font-size: 16px;
-			line-height: 16px;
-		}
-	}
-	&--5, &--6 {
-		opacity: 0;
-		p {
-			max-width: 105px;
-			font-size: 12px;
-			line-height: 24px;
-		}
-	}
-	&--7, &--8 {
-		opacity: 0;
-		p {
-			max-width: 105px;
-			font-size: 10px;
-			line-height: 10px;
-		}
-	}
-	&--1 {
-		left: 29%;
-		top: 29%;
-	}
-	&--2 {
-		right: 5%;
-		bottom: 20%;
-	}
-	&--3 {
-		right: 8%;
-		top: 10%;
-	}
-	&--4 {
-		left: 8%;
-		bottom: 35%;
-	}
-	&--5 {
-		left: 30%;
-		top: 0;
-	}
-	&--6 {
-		left: 35%;
-		bottom: 7%;
-	}
-	&--7 {
-		right: 0;
-		bottom: 48%;
-	}
-	&--8 {
-		left: 0;
-		top: 20%;
+	svg {
+		position: absolute;
+		top: 6px;
+		right: -20px;
+		width: 13.76px;
+		height: 7.21px;
 	}
 
 	@include table {
-		span {
-			font-size: 12px;
-			line-height: 16px;
+		padding: 30px 0 34px;
+		border-width: 1px;
+		&-text {
+			font-size: 50px;
+			line-height: 40px;
 		}
-		&--1 {
-			p {
-				font-size: 43px;
-				line-height: 40px;
-			}
-		} 
-		&--2 {
-			p {
-				max-width: 316px;
-				font-size: 40px;
-				line-height: 40px;
-			}
-		}
-		&--3 {
-			p {
-				max-width: 200px;
-				font-size: 28px;
-				line-height: 24px;
-			}
-		}
-		&--4 {
-			p {
-				max-width: 200px;
-				font-size: 24px;
-				line-height: 24px;
-			}
-		}
-		&--5, &--6, &--7, &--8 {
-			p {
-				max-width: 167px;
-				font-size: 16px;
-				line-height: 24px;
-			}
-		}
-		&--2 {
-			right: 5%;
-			bottom: 20%;
-		}
-		&--3 {
-			right: 20%;
-			top: 18%;
-		}
-		&--4 {
-			left: 8%;
-			bottom: 24%;
-		}
-		&--5 {
-			left: 45%;
-			top: 0;
-		}
-		&--6 {
-			left: 48%;
-			bottom: 0;
+		svg {
+			right: -35px;
+			width: 25.82px;
+			height: 13.54px;
 		}
 	}
 
 	@include desktop-sm {
-		&--2 {
-			right: 17%;
+		&-text {
+			font-size: 64px;
+			line-height: 40px;
+		}
+	}
+
+	@media screen and (max-width: 500px) {
+		&.spec &-text {
+			width: 300px;
+		}
+		&.spec.spec--1 svg {
+			right: 165px;
+			top: 41px;
+		}
+		&.spec.spec--2 svg {
+			right: 1px;
+			top: 41px;
 		}
 	}
 }
