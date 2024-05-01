@@ -1,6 +1,5 @@
 #requests {
-	display: none;
-	margin-bottom: 356px;
+	margin-bottom: 126px;
 
 	.requests__inner {
 		padding: 253px 0 296px;
@@ -11,9 +10,9 @@
 	}
 	.requests__title {
 		font-family: $SF_Pro_Bold, sans-serif;
-		font-size: 40px;
-		line-height: 36px;
-		max-width: 196px;
+		font-size: 32px;
+		line-height: 32px;
+		max-width: 166px;
 		width: 100%;
 		text-align: center;
 		position: relative;
@@ -29,7 +28,12 @@
 		right: 11px;
 	}
 
-	@include desktop {
-		display: block;
+	@include table {
+		margin-bottom: 356px;
+		.requests__title {
+			font-size: 40px;
+			line-height: 36px;
+			max-width: 196px;
+		}
 	}
 }

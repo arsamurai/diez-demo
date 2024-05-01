@@ -13,13 +13,18 @@
 		.services__title {
 			font-size: 40px;
 			line-height: 96px;
-			width: 23%;
 		}
 	}
 
 	@include desktop {
 		.services__inner {
 			@include flex(flex-start, flex-start);
+		}
+		.services__title {
+			width: 23%;
+		}
+		.services__items {
+			width: 60%;
 		}
 	}
 }

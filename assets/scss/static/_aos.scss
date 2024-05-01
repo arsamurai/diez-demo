@@ -1,0 +1,9 @@
+[data-aos="clip-right"] {
+	clip-path: inset(0% 100% -60% 0%);
+	transition-property: clip-path;
+
+	&.aos-animate {
+		clip-path: inset(0% -1% -60% 0%);
+		transition-property: clip-path;
+	}
+}

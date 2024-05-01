@@ -38,7 +38,16 @@
 			type="image/png"
 		/>
 		<title>ALLSIDES</title>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		/>
 		<link rel="stylesheet" type="text/css" href="/assets/scss/style.css" />
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<script type="module" src="/assets/js/app.js"></script>
 		<script
 			type="text/javascript"
 			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
@@ -50,7 +59,6 @@
 				});
 			})();
 		</script>
-		<script src="/assets/js/app.js"></script>
 		<script>
 			(function (w, d, s, l, i) {
 				w[l] = w[l] || [];
@@ -80,7 +88,7 @@
 	</head>
 	<body>
 		<!-- HEADER -->
-		<header id="header" data-header>
+		<header id="header" data-aos="fade-down" data-aos-delay="1200">
 			<div class="container">
 				<div class="header__inner">
 					<div class="logo">
@@ -126,20 +134,29 @@
 				<div class="container">
 					<div class="preview__inner">
 						<div class="preview__main">
-							<h1 class="preview__title">
+							<h1 class="preview__title" data-aos="fade">
 								створюємо креативні рішення, які рухають бізнес
 							</h1>
-							<p class="preview__subtitle text-red">
+							<p
+								class="preview__subtitle text-red"
+								data-aos="clip-right"
+								data-aos-delay="400"
+								data-aos-duration="1500"
+							>
 								давайте розробимо рішення для вашого проєкту
 							</p>
 							<a
 								href="https://forms.gle/Mmj9RWbQwgrnFHUaA"
 								target="_blank"
 								class="preview__link preview__link--desktop link"
+								data-aos="fade"
+								data-aos-delay="800"
 								>запланувати зустріч →</a
 							>
 							<button
 								class="preview__link preview__link--mobile link"
+								data-aos="fade"
+								data-aos-delay="800"
 								data-form-modal-btn
 							>
 								безкоштовна косультація →
@@ -166,13 +183,48 @@
 								</p>
 								<div class="about__specialization">
 									<div class="about__specialization-symbol text-red">[a]</div>
-									<div class="about__specialization-text">
-										ми сформували <br />
-										сильну експертизу <br />
-										в крипто, айті, едтек <br />
-										та є-коммерс проєктах <br />
-										і реалізовуємо ексклюзивні рішення, <br />
-										які приносять результати нашим клієнтам.
+									<div class="about__specialization-text" data-animation-word>
+										<span data-aos="fade-in" data-aos-delay="100">ми</span>
+										<span data-aos="fade-in" data-aos-delay="200"
+											>сформували</span
+										><br />
+										<span data-aos="fade-in" data-aos-delay="300">сильну</span>
+										<span data-aos="fade-in" data-aos-delay="400"
+											>експертизу</span
+										><br />
+										<span data-aos="fade-in" data-aos-delay="500">в</span>
+										<span data-aos="fade-in" data-aos-delay="600">крипто,</span>
+										<span data-aos="fade-in" data-aos-delay="700">айті,</span>
+										<span data-aos="fade-in" data-aos-delay="800">едтек</span
+										><br />
+										<span data-aos="fade-in" data-aos-delay="900">та</span>
+										<span data-aos="fade-in" data-aos-delay="1000"
+											>є-коммерс</span
+										>
+										<span data-aos="fade-in" data-aos-delay="1100"
+											>проєктах</span
+										><br />
+										<span data-aos="fade-in" data-aos-delay="1200">і</span>
+										<span data-aos="fade-in" data-aos-delay="1300"
+											>реалізовуємо</span
+										>
+										<span data-aos="fade-in" data-aos-delay="1400"
+											>ексклюзивні</span
+										>
+										<span data-aos="fade-in" data-aos-delay="1500"
+											>рішення,</span
+										><br />
+										<span data-aos="fade-in" data-aos-delay="1600">які,</span>
+										<span data-aos="fade-in" data-aos-delay="1700"
+											>приносять</span
+										>
+										<span data-aos="fade-in" data-aos-delay="1800"
+											>результати</span
+										>
+										<span data-aos="fade-in" data-aos-delay="1900">нашим</span>
+										<span data-aos="fade-in" data-aos-delay="2000"
+											>клієнтам.</span
+										>
 									</div>
 								</div>
 							</div>
@@ -205,7 +257,12 @@
 										<p class="about__item-text">
 											місяців – середній ltv наших клієнтів.
 										</p>
-										<p class="about__item-subtext text-red">
+										<p
+											class="about__item-subtext text-red"
+											data-aos="clip-right"
+											data-aos-delay="200"
+											data-aos-duration="1500"
+										>
 											сподіваємось, <br />
 											що ви з нами збільшите цей показник
 										</p>
@@ -218,7 +275,12 @@
 										<p class="about__item-text">
 											за час своєї робити ми відспендили на рекламу.
 										</p>
-										<p class="about__item-subtext text-red">
+										<p
+											class="about__item-subtext text-red"
+											data-aos="clip-right"
+											data-aos-delay="400"
+											data-aos-duration="1500"
+										>
 											і знаємо, що витратили ці гроші ефективно. 
 										</p>
 									</div>
@@ -245,11 +307,17 @@
 						<div class="requests__title-wrapper">
 							<div class="requests__title">
 								<span>які запити ми чуємо?</span>
-								<span class="requests__subtitle text-red">найчастіше</span>
+								<span
+									class="requests__subtitle text-red"
+									data-aos="clip-right"
+									data-aos-delay="200"
+									data-aos-duration="1500"
+									>найчастіше</span
+								>
 							</div>
 						</div>
 						<div class="requests__items">
-							<div class="requests__item">
+							<div class="requests__item requests__item--first-screen">
 								<span>
 									хочемо такі соцмережі, щоб ми дивились на них і такі “вах, оце
 									я розумію, клас”
@@ -267,7 +335,7 @@
 									/>
 								</svg>
 							</div>
-							<div class="requests__item">
+							<div class="requests__item requests__item--second-screen">
 								<span>
 									хочемо щоб нас не тільки читали, а ще й купляли в нас щось
 								</span>
@@ -284,7 +352,7 @@
 									/>
 								</svg>
 							</div>
-							<div class="requests__item">
+							<div class="requests__item requests__item--first-screen">
 								<span>
 									треба продукт запускати, а в мене й так роботи купа. і ще
 									маркетинг я просто не вивезу…
@@ -302,7 +370,7 @@
 									/>
 								</svg>
 							</div>
-							<div class="requests__item">
+							<div class="requests__item requests__item--second-screen">
 								<span>
 									потрібна клієнтська база, яку ми сформуємо з інстаграму або
 									телеграму
@@ -320,29 +388,81 @@
 									/>
 								</svg>
 							</div>
-							<div class="requests__item">
+							<div class="requests__item requests__item--first-screen">
 								<span>
 									короче, треба такий класний ролик, щоб всі просто рота
 									повідкривали
 								</span>
+								<svg
+									class="requests__item-svg"
+									width="28"
+									height="26"
+									viewBox="0 0 28 26"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M28 15.2857L17.1613 0C17.1613 0 17.1613 11 11.5 16.5C6.86543 21.0025 0 26 0 26C0 26 10.9251 25.2272 17.1613 22.4286C21.7934 20.3498 28 15.2857 28 15.2857Z"
+										fill="#141414"
+									/>
+								</svg>
 							</div>
-							<div class="requests__item">
+							<div class="requests__item requests__item--second-screen">
 								<span>
 									в мене складний B2B продукт і я не знаю як його продавати,
 									потрібна допомога
 								</span>
+								<svg
+									class="requests__item-svg"
+									width="28"
+									height="26"
+									viewBox="0 0 28 26"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M28 15.2857L17.1613 0C17.1613 0 17.1613 11 11.5 16.5C6.86543 21.0025 0 26 0 26C0 26 10.9251 25.2272 17.1613 22.4286C21.7934 20.3498 28 15.2857 28 15.2857Z"
+										fill="#141414"
+									/>
+								</svg>
 							</div>
-							<div class="requests__item">
+							<div class="requests__item requests__item--first-screen">
 								<span>
 									мені ліди потрібні. але якісні, і такі щоб  через воронку
 									проходили, і купляли щось
 								</span>
+								<svg
+									class="requests__item-svg"
+									width="28"
+									height="26"
+									viewBox="0 0 28 26"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M28 15.2857L17.1613 0C17.1613 0 17.1613 11 11.5 16.5C6.86543 21.0025 0 26 0 26C0 26 10.9251 25.2272 17.1613 22.4286C21.7934 20.3498 28 15.2857 28 15.2857Z"
+										fill="#141414"
+									/>
+								</svg>
 							</div>
-							<div class="requests__item">
+							<div class="requests__item requests__item--second-screen">
 								<span>
 									мені ліди потрібні. але якісні, і такі щоб  через воронку
 									проходили, і купляли щось
 								</span>
+								<svg
+									class="requests__item-svg"
+									width="28"
+									height="26"
+									viewBox="0 0 28 26"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M28 15.2857L17.1613 0C17.1613 0 17.1613 11 11.5 16.5C6.86543 21.0025 0 26 0 26C0 26 10.9251 25.2272 17.1613 22.4286C21.7934 20.3498 28 15.2857 28 15.2857Z"
+										fill="#141414"
+									/>
+								</svg>
 							</div>
 						</div>
 					</div>
@@ -354,205 +474,468 @@
 				<div class="container">
 					<div class="services__inner">
 						<div class="services__title text-red">послуги</div>
-						<ul class="services__items">
-							<li class="services__item">
-								<div class="services__item-text">
-									<p>комлексний smm</p>
-									<svg
-										width="26"
-										height="14"
-										viewBox="0 0 26 14"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
+						<ul class="services__items accordion" id="accordion">
+							<li class="services__item accordion-item">
+								<div class="accordion-header">
+									<button
+										class="services__item-btn accordion-btn collapsed"
+										data-toggle="collapse"
+										data-target="#collapse-1"
+										aria-expanded="true"
+										aria-controls="collapse-1"
 									>
-										<path
-											d="M0 6.76905C0 4.0568 0.710902 1.88546 2.25634 2.28882e-05H3.98723C2.85906 1.31365 1.97816 4.20362 1.97816 6.76132C1.97816 9.31902 2.86679 12.2167 3.98723 13.5381H2.25634C0.710902 11.6449 0 9.46584 0 6.76905Z"
-											fill="#BC1010"
-										/>
-										<path
-											d="M25.8231 6.76902C25.8231 10.0376 24.7954 12.0467 23.5668 13.538H21.8359C22.6704 12.549 23.8449 9.98354 23.8449 6.7613C23.8449 3.53906 22.6704 0.973627 21.8359 0H23.5668C24.7877 1.48362 25.8231 3.48497 25.8231 6.76902Z"
-											fill="#BC1010"
-										/>
-										<path
-											d="M7.28654 3.37525L6.04319 4.61861L13.1925 11.7679L20.3424 4.61831L19.099 3.37496L13.1926 9.28134L7.28654 3.37525Z"
-											fill="#BC1010"
-										/>
-									</svg>
+										<div class="services__item-title">
+											<p>комлексний smm</p>
+											<svg
+												width="26"
+												height="14"
+												viewBox="0 0 26 14"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M0 6.76905C0 4.0568 0.710902 1.88546 2.25634 2.28882e-05H3.98723C2.85906 1.31365 1.97816 4.20362 1.97816 6.76132C1.97816 9.31902 2.86679 12.2167 3.98723 13.5381H2.25634C0.710902 11.6449 0 9.46584 0 6.76905Z"
+													fill="#BC1010"
+												/>
+												<path
+													d="M25.8231 6.76902C25.8231 10.0376 24.7954 12.0467 23.5668 13.538H21.8359C22.6704 12.549 23.8449 9.98354 23.8449 6.7613C23.8449 3.53906 22.6704 0.973627 21.8359 0H23.5668C24.7877 1.48362 25.8231 3.48497 25.8231 6.76902Z"
+													fill="#BC1010"
+												/>
+												<path
+													d="M7.28654 3.37525L6.04319 4.61861L13.1925 11.7679L20.3424 4.61831L19.099 3.37496L13.1926 9.28134L7.28654 3.37525Z"
+													fill="#BC1010"
+												/>
+											</svg>
+										</div>
+									</button>
+								</div>
+								<div
+									id="collapse-1"
+									class="accordion-collapse collapse"
+									data-bs-parent="#accordion"
+								>
+									<div class="accordion-body">
+										<p>
+											— брифуємось, повністю поринаємо у ваш бізнес та нішу,
+											дізнаємось усі тонкощі продуктів.
+										</p>
+										<p>— створюємо контент-план для соцмереж під ваш запит.</p>
+										<p>
+											— займаємось створенням контентом: пишемо та дизайнимо
+											публікації, монтуємо рілзи, створюємо сторіз.
+										</p>
+										<p>
+											— комунікуємо з аудиторією: відповідаємо на коментарі,
+											заходимо в коментарі до інших інфлюєнсерів, щоб вас бачила
+											ваша аудиторія.
+										</p>
+										<p>
+											— ведемо повну звітність нашої роботи: аналізуємо
+											публікації та їх залученість, порівняльна характеристика з
+											минулими періодами.
+										</p>
+									</div>
 								</div>
 							</li>
-							<li class="services__item">
-								<div class="services__item-text">
-									<p>facebook targeting</p>
-									<svg
-										width="26"
-										height="14"
-										viewBox="0 0 26 14"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
+							<li class="services__item accordion-item">
+								<div class="accordion-header">
+									<button
+										class="services__item-btn accordion-btn collapsed"
+										data-toggle="collapse"
+										data-target="#collapse-2"
+										aria-expanded="true"
+										aria-controls="collapse-2"
 									>
-										<path
-											d="M0 6.76905C0 4.0568 0.710902 1.88546 2.25634 2.28882e-05H3.98723C2.85906 1.31365 1.97816 4.20362 1.97816 6.76132C1.97816 9.31902 2.86679 12.2167 3.98723 13.5381H2.25634C0.710902 11.6449 0 9.46584 0 6.76905Z"
-											fill="#BC1010"
-										/>
-										<path
-											d="M25.8231 6.76902C25.8231 10.0376 24.7954 12.0467 23.5668 13.538H21.8359C22.6704 12.549 23.8449 9.98354 23.8449 6.7613C23.8449 3.53906 22.6704 0.973627 21.8359 0H23.5668C24.7877 1.48362 25.8231 3.48497 25.8231 6.76902Z"
-											fill="#BC1010"
-										/>
-										<path
-											d="M7.28654 3.37525L6.04319 4.61861L13.1925 11.7679L20.3424 4.61831L19.099 3.37496L13.1926 9.28134L7.28654 3.37525Z"
-											fill="#BC1010"
-										/>
-									</svg>
+										<div class="services__item-title">
+											<p>facebook targeting</p>
+											<svg
+												width="26"
+												height="14"
+												viewBox="0 0 26 14"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M0 6.76905C0 4.0568 0.710902 1.88546 2.25634 2.28882e-05H3.98723C2.85906 1.31365 1.97816 4.20362 1.97816 6.76132C1.97816 9.31902 2.86679 12.2167 3.98723 13.5381H2.25634C0.710902 11.6449 0 9.46584 0 6.76905Z"
+													fill="#BC1010"
+												/>
+												<path
+													d="M25.8231 6.76902C25.8231 10.0376 24.7954 12.0467 23.5668 13.538H21.8359C22.6704 12.549 23.8449 9.98354 23.8449 6.7613C23.8449 3.53906 22.6704 0.973627 21.8359 0H23.5668C24.7877 1.48362 25.8231 3.48497 25.8231 6.76902Z"
+													fill="#BC1010"
+												/>
+												<path
+													d="M7.28654 3.37525L6.04319 4.61861L13.1925 11.7679L20.3424 4.61831L19.099 3.37496L13.1926 9.28134L7.28654 3.37525Z"
+													fill="#BC1010"
+												/>
+											</svg>
+										</div>
+									</button>
+								</div>
+								<div
+									id="collapse-2"
+									class="accordion-collapse collapse"
+									data-bs-parent="#accordion"
+								>
+									<div class="accordion-body">
+										<p>— створюємо стратегію просування для вашого проєкту.</p>
+										<p>
+											— аналізуємо конкурентів, виділяємо кращі зв’язки,
+											інтегруємо до вашого проєкту.
+										</p>
+										<p>— створюємо до 10 рекламних креативів на місяць.</p>
+										<p>
+											— налаштовуємо рекламні кампанії та тестуємо гіпотези.
+										</p>
+										<p>— масштабуємо ваші кампанії під ваш запит.</p>
+										<p>
+											— звітуємо кожного тижня та щомісяця по виконаній роботі.
+										</p>
+									</div>
 								</div>
 							</li>
-							<li class="services__item">
-								<div class="services__item-text">
-									<p>smm-стратегія</p>
-									<svg
-										width="26"
-										height="14"
-										viewBox="0 0 26 14"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
+							<li class="services__item accordion-item">
+								<div class="accordion-header">
+									<button
+										class="services__item-btn accordion-btn collapsed"
+										data-toggle="collapse"
+										data-target="#collapse-3"
+										aria-expanded="true"
+										aria-controls="collapse-3"
 									>
-										<path
-											d="M0 6.76905C0 4.0568 0.710902 1.88546 2.25634 2.28882e-05H3.98723C2.85906 1.31365 1.97816 4.20362 1.97816 6.76132C1.97816 9.31902 2.86679 12.2167 3.98723 13.5381H2.25634C0.710902 11.6449 0 9.46584 0 6.76905Z"
-											fill="#BC1010"
-										/>
-										<path
-											d="M25.8231 6.76902C25.8231 10.0376 24.7954 12.0467 23.5668 13.538H21.8359C22.6704 12.549 23.8449 9.98354 23.8449 6.7613C23.8449 3.53906 22.6704 0.973627 21.8359 0H23.5668C24.7877 1.48362 25.8231 3.48497 25.8231 6.76902Z"
-											fill="#BC1010"
-										/>
-										<path
-											d="M7.28654 3.37525L6.04319 4.61861L13.1925 11.7679L20.3424 4.61831L19.099 3.37496L13.1926 9.28134L7.28654 3.37525Z"
-											fill="#BC1010"
-										/>
-									</svg>
+										<div class="services__item-title">
+											<p>smm-стратегія</p>
+											<svg
+												width="26"
+												height="14"
+												viewBox="0 0 26 14"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M0 6.76905C0 4.0568 0.710902 1.88546 2.25634 2.28882e-05H3.98723C2.85906 1.31365 1.97816 4.20362 1.97816 6.76132C1.97816 9.31902 2.86679 12.2167 3.98723 13.5381H2.25634C0.710902 11.6449 0 9.46584 0 6.76905Z"
+													fill="#BC1010"
+												/>
+												<path
+													d="M25.8231 6.76902C25.8231 10.0376 24.7954 12.0467 23.5668 13.538H21.8359C22.6704 12.549 23.8449 9.98354 23.8449 6.7613C23.8449 3.53906 22.6704 0.973627 21.8359 0H23.5668C24.7877 1.48362 25.8231 3.48497 25.8231 6.76902Z"
+													fill="#BC1010"
+												/>
+												<path
+													d="M7.28654 3.37525L6.04319 4.61861L13.1925 11.7679L20.3424 4.61831L19.099 3.37496L13.1926 9.28134L7.28654 3.37525Z"
+													fill="#BC1010"
+												/>
+											</svg>
+										</div>
+									</button>
+								</div>
+								<div
+									id="collapse-3"
+									class="accordion-collapse collapse"
+									data-bs-parent="#accordion"
+								>
+									<div class="accordion-body">
+										<p>
+											— аналізуємо вашу нішу, збираємо конкурентів, розбираємо
+											їхні переваги та недоліки.
+										</p>
+										<p>
+											— за допомогою аналізу знаходимо точки росту ваших
+											соцмереж.
+										</p>
+										<p>
+											— створюємо декілька креативних концепцій ведення акаунту,
+											які виділять вас на ринку;
+										</p>
+										<p>
+											— продумаємо TOV вашого бренду в соцмережах та механіки
+											спілкування з аудиторією.
+										</p>
+										<p>
+											— створюємо рубрикатор та приблзний контент-план для ваших
+											соцмереж.
+										</p>
+										<p>
+											— підбираємо візуальну карту ваших соцмереж з урахуванням
+											наявного фірстилю.
+										</p>
+										<p>
+											— формуємо стратегію просування бізнесу в соцмережах.
+											вартість: $500 / 14 днів.
+										</p>
+									</div>
 								</div>
 							</li>
-							<li class="services__item">
-								<div class="services__item-text">
-									<p>інфлюєнс-маркетинг</p>
-									<svg
-										width="26"
-										height="14"
-										viewBox="0 0 26 14"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
+							<li class="services__item accordion-item">
+								<div class="accordion-header">
+									<button
+										class="services__item-btn accordion-btn collapsed"
+										data-toggle="collapse"
+										data-target="#collapse-4"
+										aria-expanded="true"
+										aria-controls="collapse-4"
 									>
-										<path
-											d="M0 6.76905C0 4.0568 0.710902 1.88546 2.25634 2.28882e-05H3.98723C2.85906 1.31365 1.97816 4.20362 1.97816 6.76132C1.97816 9.31902 2.86679 12.2167 3.98723 13.5381H2.25634C0.710902 11.6449 0 9.46584 0 6.76905Z"
-											fill="#BC1010"
-										/>
-										<path
-											d="M25.8231 6.76902C25.8231 10.0376 24.7954 12.0467 23.5668 13.538H21.8359C22.6704 12.549 23.8449 9.98354 23.8449 6.7613C23.8449 3.53906 22.6704 0.973627 21.8359 0H23.5668C24.7877 1.48362 25.8231 3.48497 25.8231 6.76902Z"
-											fill="#BC1010"
-										/>
-										<path
-											d="M7.28654 3.37525L6.04319 4.61861L13.1925 11.7679L20.3424 4.61831L19.099 3.37496L13.1926 9.28134L7.28654 3.37525Z"
-											fill="#BC1010"
-										/>
-									</svg>
+										<div class="services__item-title">
+											<p>інфлюєнс-маркетинг</p>
+											<svg
+												width="26"
+												height="14"
+												viewBox="0 0 26 14"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M0 6.76905C0 4.0568 0.710902 1.88546 2.25634 2.28882e-05H3.98723C2.85906 1.31365 1.97816 4.20362 1.97816 6.76132C1.97816 9.31902 2.86679 12.2167 3.98723 13.5381H2.25634C0.710902 11.6449 0 9.46584 0 6.76905Z"
+													fill="#BC1010"
+												/>
+												<path
+													d="M25.8231 6.76902C25.8231 10.0376 24.7954 12.0467 23.5668 13.538H21.8359C22.6704 12.549 23.8449 9.98354 23.8449 6.7613C23.8449 3.53906 22.6704 0.973627 21.8359 0H23.5668C24.7877 1.48362 25.8231 3.48497 25.8231 6.76902Z"
+													fill="#BC1010"
+												/>
+												<path
+													d="M7.28654 3.37525L6.04319 4.61861L13.1925 11.7679L20.3424 4.61831L19.099 3.37496L13.1926 9.28134L7.28654 3.37525Z"
+													fill="#BC1010"
+												/>
+											</svg>
+										</div>
+									</button>
+								</div>
+								<div
+									id="collapse-4"
+									class="accordion-collapse collapse"
+									data-bs-parent="#accordion"
+								>
+									<div class="accordion-body">
+										<p>
+											— брифуємось та відповідно з вашого запиту обираємо
+											майданчик для ефективних розміщень: instagram,telegram.
+										</p>
+										<p>
+											— створюємо медіаплан з каналів або блогерів та
+											затверджуємо разом з вами.
+										</p>
+										<p>
+											— створюємо рекламні креативи та технічні завдання для
+											блогерів, які мають донести суть кампанії.
+										</p>
+										<p>— домовляємось за розміщення на ексклюзивних умовах.</p>
+										<p>
+											— відслідковуємо розміщення в кожного блогера та в
+											каналах.
+										</p>
+										<p>— звітуємо по результатам нашої роботи.</p>
+									</div>
 								</div>
 							</li>
-							<li class="services__item">
-								<div class="services__item-text">
-									<p>веб-продакшн</p>
-									<svg
-										width="26"
-										height="14"
-										viewBox="0 0 26 14"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
+							<li class="services__item accordion-item">
+								<div class="accordion-header">
+									<button
+										class="services__item-btn accordion-btn collapsed"
+										data-toggle="collapse"
+										data-target="#collapse-5"
+										aria-expanded="true"
+										aria-controls="collapse-5"
 									>
-										<path
-											d="M0 6.76905C0 4.0568 0.710902 1.88546 2.25634 2.28882e-05H3.98723C2.85906 1.31365 1.97816 4.20362 1.97816 6.76132C1.97816 9.31902 2.86679 12.2167 3.98723 13.5381H2.25634C0.710902 11.6449 0 9.46584 0 6.76905Z"
-											fill="#BC1010"
-										/>
-										<path
-											d="M25.8231 6.76902C25.8231 10.0376 24.7954 12.0467 23.5668 13.538H21.8359C22.6704 12.549 23.8449 9.98354 23.8449 6.7613C23.8449 3.53906 22.6704 0.973627 21.8359 0H23.5668C24.7877 1.48362 25.8231 3.48497 25.8231 6.76902Z"
-											fill="#BC1010"
-										/>
-										<path
-											d="M7.28654 3.37525L6.04319 4.61861L13.1925 11.7679L20.3424 4.61831L19.099 3.37496L13.1926 9.28134L7.28654 3.37525Z"
-											fill="#BC1010"
-										/>
-									</svg>
+										<div class="services__item-title">
+											<p>веб-продакшн</p>
+											<svg
+												width="26"
+												height="14"
+												viewBox="0 0 26 14"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M0 6.76905C0 4.0568 0.710902 1.88546 2.25634 2.28882e-05H3.98723C2.85906 1.31365 1.97816 4.20362 1.97816 6.76132C1.97816 9.31902 2.86679 12.2167 3.98723 13.5381H2.25634C0.710902 11.6449 0 9.46584 0 6.76905Z"
+													fill="#BC1010"
+												/>
+												<path
+													d="M25.8231 6.76902C25.8231 10.0376 24.7954 12.0467 23.5668 13.538H21.8359C22.6704 12.549 23.8449 9.98354 23.8449 6.7613C23.8449 3.53906 22.6704 0.973627 21.8359 0H23.5668C24.7877 1.48362 25.8231 3.48497 25.8231 6.76902Z"
+													fill="#BC1010"
+												/>
+												<path
+													d="M7.28654 3.37525L6.04319 4.61861L13.1925 11.7679L20.3424 4.61831L19.099 3.37496L13.1926 9.28134L7.28654 3.37525Z"
+													fill="#BC1010"
+												/>
+											</svg>
+										</div>
+									</button>
+								</div>
+								<div
+									id="collapse-5"
+									class="accordion-collapse collapse"
+									data-bs-parent="#accordion"
+								>
+									<div class="accordion-body">
+										<p>— дизайн вебсайтів, лендингів та додатків</p>
+										<p>— аналіз</p>
+										<p>
+											— розробка *ми надаємо як повний комплекс послуг, так і
+											кожну окрему.
+										</p>
+									</div>
 								</div>
 							</li>
-							<li class="services__item">
-								<div class="services__item-text">
-									<p>дизайн</p>
-									<svg
-										width="26"
-										height="14"
-										viewBox="0 0 26 14"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
+							<li class="services__item accordion-item">
+								<div class="accordion-header">
+									<button
+										class="services__item-btn accordion-btn collapsed"
+										data-toggle="collapse"
+										data-target="#collapse-6"
+										aria-expanded="true"
+										aria-controls="collapse-6"
 									>
-										<path
-											d="M0 6.76905C0 4.0568 0.710902 1.88546 2.25634 2.28882e-05H3.98723C2.85906 1.31365 1.97816 4.20362 1.97816 6.76132C1.97816 9.31902 2.86679 12.2167 3.98723 13.5381H2.25634C0.710902 11.6449 0 9.46584 0 6.76905Z"
-											fill="#BC1010"
-										/>
-										<path
-											d="M25.8231 6.76902C25.8231 10.0376 24.7954 12.0467 23.5668 13.538H21.8359C22.6704 12.549 23.8449 9.98354 23.8449 6.7613C23.8449 3.53906 22.6704 0.973627 21.8359 0H23.5668C24.7877 1.48362 25.8231 3.48497 25.8231 6.76902Z"
-											fill="#BC1010"
-										/>
-										<path
-											d="M7.28654 3.37525L6.04319 4.61861L13.1925 11.7679L20.3424 4.61831L19.099 3.37496L13.1926 9.28134L7.28654 3.37525Z"
-											fill="#BC1010"
-										/>
-									</svg>
+										<div class="services__item-title">
+											<p>дизайн</p>
+											<svg
+												width="26"
+												height="14"
+												viewBox="0 0 26 14"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M0 6.76905C0 4.0568 0.710902 1.88546 2.25634 2.28882e-05H3.98723C2.85906 1.31365 1.97816 4.20362 1.97816 6.76132C1.97816 9.31902 2.86679 12.2167 3.98723 13.5381H2.25634C0.710902 11.6449 0 9.46584 0 6.76905Z"
+													fill="#BC1010"
+												/>
+												<path
+													d="M25.8231 6.76902C25.8231 10.0376 24.7954 12.0467 23.5668 13.538H21.8359C22.6704 12.549 23.8449 9.98354 23.8449 6.7613C23.8449 3.53906 22.6704 0.973627 21.8359 0H23.5668C24.7877 1.48362 25.8231 3.48497 25.8231 6.76902Z"
+													fill="#BC1010"
+												/>
+												<path
+													d="M7.28654 3.37525L6.04319 4.61861L13.1925 11.7679L20.3424 4.61831L19.099 3.37496L13.1926 9.28134L7.28654 3.37525Z"
+													fill="#BC1010"
+												/>
+											</svg>
+										</div>
+									</button>
+								</div>
+								<div
+									id="collapse-6"
+									class="accordion-collapse collapse"
+									data-bs-parent="#accordion"
+								>
+									<div class="accordion-body">
+										<p>— брендинг</p>
+										<p>— банери, постери, обкладинки youtube</p>
+										<p>— оформлення соціальних мереж, контенту</p>
+										<p>— поліграфія</p>
+									</div>
 								</div>
 							</li>
-							<li class="services__item spec spec--1">
-								<div class="services__item-text">
-									<p>продюсування та запуску</p>
-									<svg
-										width="26"
-										height="14"
-										viewBox="0 0 26 14"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
+							<li class="services__item accordion-item spec spec--1">
+								<div class="accordion-header">
+									<button
+										class="services__item-btn accordion-btn collapsed"
+										data-toggle="collapse"
+										data-target="#collapse-7"
+										aria-expanded="true"
+										aria-controls="collapse-7"
 									>
-										<path
-											d="M0 6.76905C0 4.0568 0.710902 1.88546 2.25634 2.28882e-05H3.98723C2.85906 1.31365 1.97816 4.20362 1.97816 6.76132C1.97816 9.31902 2.86679 12.2167 3.98723 13.5381H2.25634C0.710902 11.6449 0 9.46584 0 6.76905Z"
-											fill="#BC1010"
-										/>
-										<path
-											d="M25.8231 6.76902C25.8231 10.0376 24.7954 12.0467 23.5668 13.538H21.8359C22.6704 12.549 23.8449 9.98354 23.8449 6.7613C23.8449 3.53906 22.6704 0.973627 21.8359 0H23.5668C24.7877 1.48362 25.8231 3.48497 25.8231 6.76902Z"
-											fill="#BC1010"
-										/>
-										<path
-											d="M7.28654 3.37525L6.04319 4.61861L13.1925 11.7679L20.3424 4.61831L19.099 3.37496L13.1926 9.28134L7.28654 3.37525Z"
-											fill="#BC1010"
-										/>
-									</svg>
+										<div class="services__item-title">
+											<p>продюсування та запуску</p>
+											<svg
+												width="26"
+												height="14"
+												viewBox="0 0 26 14"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M0 6.76905C0 4.0568 0.710902 1.88546 2.25634 2.28882e-05H3.98723C2.85906 1.31365 1.97816 4.20362 1.97816 6.76132C1.97816 9.31902 2.86679 12.2167 3.98723 13.5381H2.25634C0.710902 11.6449 0 9.46584 0 6.76905Z"
+													fill="#BC1010"
+												/>
+												<path
+													d="M25.8231 6.76902C25.8231 10.0376 24.7954 12.0467 23.5668 13.538H21.8359C22.6704 12.549 23.8449 9.98354 23.8449 6.7613C23.8449 3.53906 22.6704 0.973627 21.8359 0H23.5668C24.7877 1.48362 25.8231 3.48497 25.8231 6.76902Z"
+													fill="#BC1010"
+												/>
+												<path
+													d="M7.28654 3.37525L6.04319 4.61861L13.1925 11.7679L20.3424 4.61831L19.099 3.37496L13.1926 9.28134L7.28654 3.37525Z"
+													fill="#BC1010"
+												/>
+											</svg>
+										</div>
+									</button>
+								</div>
+								<div
+									id="collapse-7"
+									class="accordion-collapse collapse"
+									data-bs-parent="#accordion"
+								>
+									<div class="accordion-body">
+										<p>— проводимо дослідження аудиторії.</p>
+										<p>— створюємо концепції продукту.</p>
+										<p>
+											— займаємось підготовкою до запуску продукту: план
+											прогріву, контент-план.
+										</p>
+										<p>
+											— організовуємо зйомки для навчальних програм та
+											пост-продакшн.
+										</p>
+										<p>— готуємо презентації та дизайн-матеріали.</p>
+										<p>— маркетинговий супровід впродовж запуску.</p>
+										<p>
+											— технічне супровід запуску: сайти, вебінари та інші
+											посадкові сторінки.
+										</p>
+									</div>
 								</div>
 							</li>
-							<li class="services__item spec spec--2">
-								<div class="services__item-text">
-									<p>створення особистого бренду</p>
-									<svg
-										width="26"
-										height="14"
-										viewBox="0 0 26 14"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
+							<li class="services__item accordion-item spec spec--2">
+								<div class="accordion-header">
+									<button
+										class="services__item-btn accordion-btn collapsed"
+										data-toggle="collapse"
+										data-target="#collapse-8"
+										aria-expanded="true"
+										aria-controls="collapse-8"
 									>
-										<path
-											d="M0 6.76905C0 4.0568 0.710902 1.88546 2.25634 2.28882e-05H3.98723C2.85906 1.31365 1.97816 4.20362 1.97816 6.76132C1.97816 9.31902 2.86679 12.2167 3.98723 13.5381H2.25634C0.710902 11.6449 0 9.46584 0 6.76905Z"
-											fill="#BC1010"
-										/>
-										<path
-											d="M25.8231 6.76902C25.8231 10.0376 24.7954 12.0467 23.5668 13.538H21.8359C22.6704 12.549 23.8449 9.98354 23.8449 6.7613C23.8449 3.53906 22.6704 0.973627 21.8359 0H23.5668C24.7877 1.48362 25.8231 3.48497 25.8231 6.76902Z"
-											fill="#BC1010"
-										/>
-										<path
-											d="M7.28654 3.37525L6.04319 4.61861L13.1925 11.7679L20.3424 4.61831L19.099 3.37496L13.1926 9.28134L7.28654 3.37525Z"
-											fill="#BC1010"
-										/>
-									</svg>
+										<div class="services__item-title">
+											<p>створення особистого бренду</p>
+											<svg
+												width="26"
+												height="14"
+												viewBox="0 0 26 14"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M0 6.76905C0 4.0568 0.710902 1.88546 2.25634 2.28882e-05H3.98723C2.85906 1.31365 1.97816 4.20362 1.97816 6.76132C1.97816 9.31902 2.86679 12.2167 3.98723 13.5381H2.25634C0.710902 11.6449 0 9.46584 0 6.76905Z"
+													fill="#BC1010"
+												/>
+												<path
+													d="M25.8231 6.76902C25.8231 10.0376 24.7954 12.0467 23.5668 13.538H21.8359C22.6704 12.549 23.8449 9.98354 23.8449 6.7613C23.8449 3.53906 22.6704 0.973627 21.8359 0H23.5668C24.7877 1.48362 25.8231 3.48497 25.8231 6.76902Z"
+													fill="#BC1010"
+												/>
+												<path
+													d="M7.28654 3.37525L6.04319 4.61861L13.1925 11.7679L20.3424 4.61831L19.099 3.37496L13.1926 9.28134L7.28654 3.37525Z"
+													fill="#BC1010"
+												/>
+											</svg>
+										</div>
+									</button>
+								</div>
+								<div
+									id="collapse-8"
+									class="accordion-collapse collapse"
+									data-bs-parent="#accordion"
+								>
+									<div class="accordion-body">
+										<p>
+											— створюємо концепцію особистого бренду: позиціонування,
+											рубрикатор, візуальний стиль.
+										</p>
+										<p>— формуємо контент-план під запит;</p>
+										<p>— організовуємо зйомки та пост-продакшн;</p>
+										<p>
+											— допомагаємо зі створенням контенту: дизайн історій,
+											монтаж рілзів та ін.
+										</p>
+										<p>— створюємо діджитал-продукти для воронок.</p>
+										<p>
+											— виділяємо спеціаліста, який особисто консультує вас з
+											усіх питань.
+										</p>
+									</div>
 								</div>
 							</li>
 						</ul>
@@ -953,7 +1336,14 @@
 					<div class="telegram__inner">
 						<div class="telegram__title-wrapper">
 							<h4 class="telegram__title">хочете розпочати,</h4>
-							<p class="telegram__subtitle text-red">але не знаєте з чого?</p>
+							<p
+								class="telegram__subtitle text-red"
+								data-aos="clip-right"
+								data-aos-delay="200"
+								data-aos-duration="1500"
+							>
+								але не знаєте з чого?
+							</p>
 						</div>
 						<p class="telegram__text">
 							пропонуємо вам вийти на 30-хвилинний дзвінок, <br />
@@ -1002,7 +1392,7 @@
 			</div>
 			<div class="container">
 				<div class="footer__inner">
-					<form action="#" class="footer__form form" data-order-form>
+					<form action="#" class="footer__form form" data-form>
 						<input
 							class="form__input"
 							name="name"
@@ -1071,7 +1461,7 @@
 				<h5 class="form-modal__title">
 					заповніть форму щоб отримати безкоштовну консультацію.
 				</h5>
-				<form action="#" class="form-modal__form form" data-order-form>
+				<form action="#" class="form-modal__form form" data-form>
 					<input class="form__input" name="name" placeholder="ім'я" required />
 					<input
 						class="form__input"
@@ -1091,7 +1481,6 @@
 			</div>
 		</div>
 	</body>
-
 	<noscript>
 		<iframe
 			src="https://www.googletagmanager.com/ns.html?id=GTM-PVRFJH7P"

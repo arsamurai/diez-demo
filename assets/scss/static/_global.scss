@@ -4,6 +4,30 @@ html {
 	overflow-x: hidden;
 }
 
+*::after,
+*::before,
+a,
+p,
+ul,
+li,
+ol,
+span,
+section,
+main,
+header,
+footer,
+svg,
+label,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	padding: 0;
+	margin: 0;
+}
+
 body {
 	font-size: 16px;
 	line-height: 20px;
@@ -76,6 +100,16 @@ img {
 
 button {
 	cursor: pointer;
+	outline: none !important;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	&:hover {
+		color: inherit;
+		text-decoration: none;
+	}
 }
 
 .text-red {
@@ -114,4 +148,14 @@ button {
 			height: 68px;
 		}
 	}
+}
+
+.text {
+	display: inline-block;
+	white-space: pre-line;
+}
+
+span.word-anim {
+	opacity: 0;
+	animation: fadeIn 0.5s forwards;
 }

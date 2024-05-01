@@ -1,56 +1,126 @@
 .requests__item {
-	padding: 28px 30px;
+	padding: 12px 23px 26px 20px;
 	position: relative;
 	@include flex(flex-start);
 	background-color: rgba(20, 20, 20, 1);
 	border-radius: $borderRadius;
 	position: absolute;
-	max-width: 391px;
+	max-width: 272px;
 	width: 100%;
+	opacity: 0;
+	animation: fadeInOut 10s infinite;
+
 	svg {
 		position: absolute;
 		bottom: 0;
-		right: -15px;
-		transform: scaleY(-1) rotate(180deg);
+		left: -15px;
+	}
+
+	&:nth-child(even) {
+		animation-delay: 5s;
 	}
 	&:nth-child(1) {
 		top: 0;
-		left: 10%;
+		left: 0;
 	}
 	&:nth-child(2) {
 		top: 0;
-		right: 10%;
-	}
-	&:nth-child(3) {
-		top: 169px;
-		left: 0;
-	}
-	&:nth-child(4) {
-		top: 169px;
 		right: 0;
 	}
+	&:nth-child(3) {
+		top: 119px;
+		right: 0;
+	}
+	&:nth-child(4) {
+		top: 119px;
+		left: 0;
+	}
 	&:nth-child(5) {
-		bottom: 154px;
+		bottom: 134px;
 		left: 0;
 	}
 	&:nth-child(6) {
-		bottom: 154px;
+		bottom: 134px;
 		right: 0;
 	}
 	&:nth-child(7) {
 		bottom: 0;
-		left: 10%;
+		right: 0;
 	}
 	&:nth-child(8) {
 		bottom: 0;
-		right: 10%;
+		left: 0;
 	}
 
-	&:nth-child(even) {
+	&:nth-child(2),
+	&:nth-child(3),
+	&:nth-child(6),
+	&:nth-child(7) {
 		svg {
-			right: auto;
-			left: -15px;
-			transform: scaleY(1) rotate(0);
+			left: auto;
+			right: -15px;
+			transform: scaleY(-1) rotate(180deg);
+		}
+	}
+
+	@include table {
+		padding: 28px 30px;
+		max-width: 391px;
+	}
+
+	@include desktop {
+		animation: none;
+		opacity: 1;
+		svg {
+			left: auto;
+			right: -15px;
+			transform: scaleY(-1) rotate(180deg);
+		}
+		&:nth-child(n + 4) {
+			.requests__item-svg {
+				display: none;
+			}
+		}
+		&:nth-child(1) {
+			top: 0;
+			left: 10%;
+		}
+		&:nth-child(2) {
+			top: 0;
+			right: 10%;
+		}
+		&:nth-child(3) {
+			top: 169px;
+			left: 0;
+		}
+		&:nth-child(4) {
+			top: 169px;
+			left: auto;
+			right: 0;
+		}
+		&:nth-child(5) {
+			bottom: 154px;
+			left: 0;
+		}
+		&:nth-child(6) {
+			bottom: 154px;
+			right: 0;
+		}
+		&:nth-child(7) {
+			bottom: 0;
+			left: 10%;
+		}
+		&:nth-child(8) {
+			bottom: 0;
+			left: auto;
+			right: 10%;
+		}
+		&:nth-child(even) {
+			svg {
+				right: auto;
+				left: -15px;
+				transform: scaleY(1) rotate(0);
+			}
 		}
 	}
 

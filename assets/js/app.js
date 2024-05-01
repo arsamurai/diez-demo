@@ -1,8 +1,5 @@
-const emailSettings = {
-	serviceId: 'service_cowbya3',
-	userId: 'ovd9ndVXRUWmPC_9D',
-	templatePaymentId: 'template_5uquied',
-};
+import emailSettings from './modules/email.js';
+import aosConfig from './modules/aosConfig.js';
 
 const getModal = (modalName) => {
 	return document?.querySelector(`[data-modal=${modalName}]`);
@@ -14,7 +11,7 @@ const setModalState = (modal, activate) => {
 };
 
 const goTo = (sectionId) => {
-	const top = document.getElementById(sectionId)?.offsetTop - 100;
+	const top = document.getElementById(sectionId)?.offsetTop;
 	window.scrollTo({
 		top,
 		behavior: 'smooth',
@@ -22,6 +19,9 @@ const goTo = (sectionId) => {
 };
 
 addEventListener('load', async () => {
+	// AOS
+	AOS.init(aosConfig);
+
 	// Navigation
 	const scrollLinks = document.querySelectorAll('[data-scroll-to]');
 
@@ -55,11 +55,11 @@ addEventListener('load', async () => {
 
 	// Form modal
 	const formModal = getModal('form');
-	const fromModalBtn = document.querySelector('[data-form-modal-btn]');
+	const fromModalOpenBtn = document.querySelector('[data-form-modal-btn]');
 	const formModalClose = formModal.querySelector('[data-modal-close]');
 	const formModalContent = formModal.querySelector('[data-modal-content]');
 
-	fromModalBtn.addEventListener('click', () => {
+	fromModalOpenBtn.addEventListener('click', () => {
 		setModalState(formModal, true);
 	});
 
@@ -76,7 +76,7 @@ addEventListener('load', async () => {
 	});
 
 	// Order form
-	const orderForms = document.querySelectorAll('[data-order-form]');
+	const orderForms = document.querySelectorAll('[data-form]');
 
 	orderForms.forEach((orderForm) => {
 		orderForm.addEventListener('submit', function (e) {
