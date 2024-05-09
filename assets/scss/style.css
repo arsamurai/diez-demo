@@ -777,12 +777,13 @@ a:hover {
   font-size: 24px;
   line-height: 32px;
   margin-bottom: 12px;
+  padding-right: 50px;
 }
 .services__item-text {
   color: rgba(255, 255, 255, 0.44);
   font-size: 12px;
   line-height: 14px;
-  max-width: 80%;
+  max-width: 75%;
 }
 .services__item-additional {
   font-family: "SF Pro Display Semibold", sans-serif;
@@ -804,6 +805,8 @@ a:hover {
   position: absolute;
   bottom: 27px;
   right: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 @media screen and (min-width: 768px) {
   .services__item {
