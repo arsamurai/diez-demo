@@ -39,14 +39,8 @@
 		/>
 		<title>ALLSIDES</title>
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-		<link
-			rel="stylesheet"
-			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-		/>
 		<link rel="stylesheet" type="text/css" href="/assets/scss/style.css" />
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 		<script type="module" src="/assets/js/app.js"></script>
 		<script
 			type="text/javascript"
@@ -145,14 +139,14 @@
 							>
 								давайте розробимо рішення для вашого проєкту
 							</p>
-							<a
-								href="https://forms.gle/Mmj9RWbQwgrnFHUaA"
-								target="_blank"
+							<button
 								class="preview__link preview__link--desktop link"
 								data-aos="fade"
 								data-aos-delay="800"
-								>запланувати зустріч →</a
+								data-form-modal-btn
 							>
+								запланувати зустріч →
+							</button>
 							<button
 								class="preview__link preview__link--mobile link"
 								data-aos="fade"
@@ -214,7 +208,7 @@
 										<span data-aos="fade-in" data-aos-delay="1500"
 											>рішення,</span
 										><br />
-										<span data-aos="fade-in" data-aos-delay="1600">які,</span>
+										<span data-aos="fade-in" data-aos-delay="1600">які</span>
 										<span data-aos="fade-in" data-aos-delay="1700"
 											>приносять</span
 										>
@@ -447,8 +441,8 @@
 							</div>
 							<div class="requests__item requests__item--second-screen">
 								<span>
-									мені ліди потрібні. але якісні, і такі щоб  через воронку
-									проходили, і купляли щось
+									нам потрібні стильні та клікабельні обкладинки на
+									YouTube-канал, зможете допомогти з цим?
 								</span>
 								<svg
 									class="requests__item-svg"
@@ -473,470 +467,110 @@
 			<div id="services">
 				<div class="container">
 					<div class="services__inner">
-						<div class="services__title text-red">послуги</div>
-						<ul class="services__items accordion" id="accordion">
-							<li class="services__item accordion-item">
-								<div class="accordion-header">
-									<button
-										class="services__item-btn accordion-btn collapsed"
-										data-toggle="collapse"
-										data-target="#collapse-1"
-										aria-expanded="true"
-										aria-controls="collapse-1"
-									>
-										<div class="services__item-title">
-											<p>комлексний smm</p>
-											<svg
-												width="26"
-												height="14"
-												viewBox="0 0 26 14"
-												fill="none"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<path
-													d="M0 6.76905C0 4.0568 0.710902 1.88546 2.25634 2.28882e-05H3.98723C2.85906 1.31365 1.97816 4.20362 1.97816 6.76132C1.97816 9.31902 2.86679 12.2167 3.98723 13.5381H2.25634C0.710902 11.6449 0 9.46584 0 6.76905Z"
-													fill="#BC1010"
-												/>
-												<path
-													d="M25.8231 6.76902C25.8231 10.0376 24.7954 12.0467 23.5668 13.538H21.8359C22.6704 12.549 23.8449 9.98354 23.8449 6.7613C23.8449 3.53906 22.6704 0.973627 21.8359 0H23.5668C24.7877 1.48362 25.8231 3.48497 25.8231 6.76902Z"
-													fill="#BC1010"
-												/>
-												<path
-													d="M7.28654 3.37525L6.04319 4.61861L13.1925 11.7679L20.3424 4.61831L19.099 3.37496L13.1926 9.28134L7.28654 3.37525Z"
-													fill="#BC1010"
-												/>
-											</svg>
-										</div>
-									</button>
-								</div>
-								<div
-									id="collapse-1"
-									class="accordion-collapse collapse"
-									data-bs-parent="#accordion"
-								>
-									<div class="accordion-body">
-										<p>
-											— брифуємось, повністю поринаємо у ваш бізнес та нішу,
-											дізнаємось усі тонкощі продуктів.
-										</p>
-										<p>— створюємо контент-план для соцмереж під ваш запит.</p>
-										<p>
-											— займаємось створенням контентом: пишемо та дизайнимо
-											публікації, монтуємо рілзи, створюємо сторіз.
-										</p>
-										<p>
-											— комунікуємо з аудиторією: відповідаємо на коментарі,
-											заходимо в коментарі до інших інфлюєнсерів, щоб вас бачила
-											ваша аудиторія.
-										</p>
-										<p>
-											— ведемо повну звітність нашої роботи: аналізуємо
-											публікації та їх залученість, порівняльна характеристика з
-											минулими періодами.
+						<div class="services__items--wrapper">
+							<div class="services__title text-red">послуги</div>
+							<ul class="services__items services__items--1">
+								<li class="services__item">
+									<span class="services__item-num">(01)</span>
+									<div class="services__item-main">
+										<h5 class="services__item-title title-big text-red">
+											комплексний smm
+										</h5>
+										<p class="services__item-text">
+											допоможемо вам досягти бізнес-цілей за допомогою
+											контент-маркетингу в соцмережах. і це не тільки про
+											впізнаваність бренду, це про результат, який можна
+											виміряти в грошах.
 										</p>
 									</div>
+									<div class="services__item-additional">
+										запуск таргету / постинг / стратегія / <br />
+										дизайн соціальних мереж та промо матеріалів
+									</div>
+									<img
+										src="/assets/images/services/services-1.svg"
+										alt="service-img"
+										class="services__item-img"
+										data-aos="clip-right"
+										data-aos-duration="1200"
+										data-aos-delay="200"
+									/>
+								</li>
+								<li class="services__item">
+									<span class="services__item-num">(02)</span>
+									<div class="services__item-main">
+										<h5 class="services__item-title text-red">
+											трафік з meta ads
+										</h5>
+										<p class="services__item-text">
+											допоможемо вам досягти бізнес-цілей за допомогою
+											контент-запускаємо ефективні рекламні кампанії на ніші
+											будь-якої складності  в meta ads. робимо креативи, які
+											показуватимуть кращий ctr%, ніж був до роботи з нами.
+										</p>
+									</div>
+									<div class="services__item-additional">
+										запуск таргету / воронка / аналіз/ліди
+									</div>
+									<img
+										src="/assets/images/services/services-2.svg"
+										alt="service-img"
+										class="services__item-img"
+										data-aos="clip-right"
+										data-aos-duration="1200"
+										data-aos-delay="400"
+									/>
+								</li>
+							</ul>
+						</div>
+						<ul class="services__items services__items--2">
+							<li class="services__item">
+								<span class="services__item-num">(03)</span>
+								<div class="services__item-main">
+									<h5 class="services__item-title text-red">
+										запуск особистих брендів
+									</h5>
+									<p class="services__item-text">
+										визначаємо цілі існування вашого бренду в соцмережах,
+										формуємо стратегію просування і «під ключ» запускаємо вас в
+										будь-якій соціальній мережі: instagram, telegram, linkedin,
+										youtube. усе залежитиме від ваших цілей.
+									</p>
 								</div>
+								<div class="services__item-additional">
+									запуск таргету / постинг / стратегія / <br />
+									промовідео та дизайн
+								</div>
+								<img
+									src="/assets/images/services/services-3.svg"
+									alt="service-img"
+									class="services__item-img"
+									data-aos="clip-right"
+									data-aos-duration="1200"
+									data-aos-delay="600"
+								/>
 							</li>
-							<li class="services__item accordion-item">
-								<div class="accordion-header">
-									<button
-										class="services__item-btn accordion-btn collapsed"
-										data-toggle="collapse"
-										data-target="#collapse-2"
-										aria-expanded="true"
-										aria-controls="collapse-2"
-									>
-										<div class="services__item-title">
-											<p>facebook targeting</p>
-											<svg
-												width="26"
-												height="14"
-												viewBox="0 0 26 14"
-												fill="none"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<path
-													d="M0 6.76905C0 4.0568 0.710902 1.88546 2.25634 2.28882e-05H3.98723C2.85906 1.31365 1.97816 4.20362 1.97816 6.76132C1.97816 9.31902 2.86679 12.2167 3.98723 13.5381H2.25634C0.710902 11.6449 0 9.46584 0 6.76905Z"
-													fill="#BC1010"
-												/>
-												<path
-													d="M25.8231 6.76902C25.8231 10.0376 24.7954 12.0467 23.5668 13.538H21.8359C22.6704 12.549 23.8449 9.98354 23.8449 6.7613C23.8449 3.53906 22.6704 0.973627 21.8359 0H23.5668C24.7877 1.48362 25.8231 3.48497 25.8231 6.76902Z"
-													fill="#BC1010"
-												/>
-												<path
-													d="M7.28654 3.37525L6.04319 4.61861L13.1925 11.7679L20.3424 4.61831L19.099 3.37496L13.1926 9.28134L7.28654 3.37525Z"
-													fill="#BC1010"
-												/>
-											</svg>
-										</div>
-									</button>
+							<li class="services__item">
+								<span class="services__item-num">(04)</span>
+								<div class="services__item-main">
+									<h5 class="services__item-title title-big text-red">
+										створення сайтів
+									</h5>
+									<p class="services__item-text">
+										робимо як прості лендінги, так і складні продуктові сайти.
+										об’єднуємо нашу експертизу в маркетингу та дизайні, щоб сайт
+										був не лише красивий, але й закривав бізнес цілі.
+									</p>
 								</div>
-								<div
-									id="collapse-2"
-									class="accordion-collapse collapse"
-									data-bs-parent="#accordion"
-								>
-									<div class="accordion-body">
-										<p>— створюємо стратегію просування для вашого проєкту.</p>
-										<p>
-											— аналізуємо конкурентів, виділяємо кращі зв’язки,
-											інтегруємо до вашого проєкту.
-										</p>
-										<p>— створюємо до 10 рекламних креативів на місяць.</p>
-										<p>
-											— налаштовуємо рекламні кампанії та тестуємо гіпотези.
-										</p>
-										<p>— масштабуємо ваші кампанії під ваш запит.</p>
-										<p>
-											— звітуємо кожного тижня та щомісяця по виконаній роботі.
-										</p>
-									</div>
-								</div>
-							</li>
-							<li class="services__item accordion-item">
-								<div class="accordion-header">
-									<button
-										class="services__item-btn accordion-btn collapsed"
-										data-toggle="collapse"
-										data-target="#collapse-3"
-										aria-expanded="true"
-										aria-controls="collapse-3"
-									>
-										<div class="services__item-title">
-											<p>smm-стратегія</p>
-											<svg
-												width="26"
-												height="14"
-												viewBox="0 0 26 14"
-												fill="none"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<path
-													d="M0 6.76905C0 4.0568 0.710902 1.88546 2.25634 2.28882e-05H3.98723C2.85906 1.31365 1.97816 4.20362 1.97816 6.76132C1.97816 9.31902 2.86679 12.2167 3.98723 13.5381H2.25634C0.710902 11.6449 0 9.46584 0 6.76905Z"
-													fill="#BC1010"
-												/>
-												<path
-													d="M25.8231 6.76902C25.8231 10.0376 24.7954 12.0467 23.5668 13.538H21.8359C22.6704 12.549 23.8449 9.98354 23.8449 6.7613C23.8449 3.53906 22.6704 0.973627 21.8359 0H23.5668C24.7877 1.48362 25.8231 3.48497 25.8231 6.76902Z"
-													fill="#BC1010"
-												/>
-												<path
-													d="M7.28654 3.37525L6.04319 4.61861L13.1925 11.7679L20.3424 4.61831L19.099 3.37496L13.1926 9.28134L7.28654 3.37525Z"
-													fill="#BC1010"
-												/>
-											</svg>
-										</div>
-									</button>
-								</div>
-								<div
-									id="collapse-3"
-									class="accordion-collapse collapse"
-									data-bs-parent="#accordion"
-								>
-									<div class="accordion-body">
-										<p>
-											— аналізуємо вашу нішу, збираємо конкурентів, розбираємо
-											їхні переваги та недоліки.
-										</p>
-										<p>
-											— за допомогою аналізу знаходимо точки росту ваших
-											соцмереж.
-										</p>
-										<p>
-											— створюємо декілька креативних концепцій ведення акаунту,
-											які виділять вас на ринку;
-										</p>
-										<p>
-											— продумаємо TOV вашого бренду в соцмережах та механіки
-											спілкування з аудиторією.
-										</p>
-										<p>
-											— створюємо рубрикатор та приблзний контент-план для ваших
-											соцмереж.
-										</p>
-										<p>
-											— підбираємо візуальну карту ваших соцмереж з урахуванням
-											наявного фірстилю.
-										</p>
-										<p>
-											— формуємо стратегію просування бізнесу в соцмережах.
-											вартість: $500 / 14 днів.
-										</p>
-									</div>
-								</div>
-							</li>
-							<li class="services__item accordion-item">
-								<div class="accordion-header">
-									<button
-										class="services__item-btn accordion-btn collapsed"
-										data-toggle="collapse"
-										data-target="#collapse-4"
-										aria-expanded="true"
-										aria-controls="collapse-4"
-									>
-										<div class="services__item-title">
-											<p>інфлюєнс-маркетинг</p>
-											<svg
-												width="26"
-												height="14"
-												viewBox="0 0 26 14"
-												fill="none"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<path
-													d="M0 6.76905C0 4.0568 0.710902 1.88546 2.25634 2.28882e-05H3.98723C2.85906 1.31365 1.97816 4.20362 1.97816 6.76132C1.97816 9.31902 2.86679 12.2167 3.98723 13.5381H2.25634C0.710902 11.6449 0 9.46584 0 6.76905Z"
-													fill="#BC1010"
-												/>
-												<path
-													d="M25.8231 6.76902C25.8231 10.0376 24.7954 12.0467 23.5668 13.538H21.8359C22.6704 12.549 23.8449 9.98354 23.8449 6.7613C23.8449 3.53906 22.6704 0.973627 21.8359 0H23.5668C24.7877 1.48362 25.8231 3.48497 25.8231 6.76902Z"
-													fill="#BC1010"
-												/>
-												<path
-													d="M7.28654 3.37525L6.04319 4.61861L13.1925 11.7679L20.3424 4.61831L19.099 3.37496L13.1926 9.28134L7.28654 3.37525Z"
-													fill="#BC1010"
-												/>
-											</svg>
-										</div>
-									</button>
-								</div>
-								<div
-									id="collapse-4"
-									class="accordion-collapse collapse"
-									data-bs-parent="#accordion"
-								>
-									<div class="accordion-body">
-										<p>
-											— брифуємось та відповідно з вашого запиту обираємо
-											майданчик для ефективних розміщень: instagram,telegram.
-										</p>
-										<p>
-											— створюємо медіаплан з каналів або блогерів та
-											затверджуємо разом з вами.
-										</p>
-										<p>
-											— створюємо рекламні креативи та технічні завдання для
-											блогерів, які мають донести суть кампанії.
-										</p>
-										<p>— домовляємось за розміщення на ексклюзивних умовах.</p>
-										<p>
-											— відслідковуємо розміщення в кожного блогера та в
-											каналах.
-										</p>
-										<p>— звітуємо по результатам нашої роботи.</p>
-									</div>
-								</div>
-							</li>
-							<li class="services__item accordion-item">
-								<div class="accordion-header">
-									<button
-										class="services__item-btn accordion-btn collapsed"
-										data-toggle="collapse"
-										data-target="#collapse-5"
-										aria-expanded="true"
-										aria-controls="collapse-5"
-									>
-										<div class="services__item-title">
-											<p>веб-продакшн</p>
-											<svg
-												width="26"
-												height="14"
-												viewBox="0 0 26 14"
-												fill="none"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<path
-													d="M0 6.76905C0 4.0568 0.710902 1.88546 2.25634 2.28882e-05H3.98723C2.85906 1.31365 1.97816 4.20362 1.97816 6.76132C1.97816 9.31902 2.86679 12.2167 3.98723 13.5381H2.25634C0.710902 11.6449 0 9.46584 0 6.76905Z"
-													fill="#BC1010"
-												/>
-												<path
-													d="M25.8231 6.76902C25.8231 10.0376 24.7954 12.0467 23.5668 13.538H21.8359C22.6704 12.549 23.8449 9.98354 23.8449 6.7613C23.8449 3.53906 22.6704 0.973627 21.8359 0H23.5668C24.7877 1.48362 25.8231 3.48497 25.8231 6.76902Z"
-													fill="#BC1010"
-												/>
-												<path
-													d="M7.28654 3.37525L6.04319 4.61861L13.1925 11.7679L20.3424 4.61831L19.099 3.37496L13.1926 9.28134L7.28654 3.37525Z"
-													fill="#BC1010"
-												/>
-											</svg>
-										</div>
-									</button>
-								</div>
-								<div
-									id="collapse-5"
-									class="accordion-collapse collapse"
-									data-bs-parent="#accordion"
-								>
-									<div class="accordion-body">
-										<p>— дизайн вебсайтів, лендингів та додатків</p>
-										<p>— аналіз</p>
-										<p>
-											— розробка *ми надаємо як повний комплекс послуг, так і
-											кожну окрему.
-										</p>
-									</div>
-								</div>
-							</li>
-							<li class="services__item accordion-item">
-								<div class="accordion-header">
-									<button
-										class="services__item-btn accordion-btn collapsed"
-										data-toggle="collapse"
-										data-target="#collapse-6"
-										aria-expanded="true"
-										aria-controls="collapse-6"
-									>
-										<div class="services__item-title">
-											<p>дизайн</p>
-											<svg
-												width="26"
-												height="14"
-												viewBox="0 0 26 14"
-												fill="none"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<path
-													d="M0 6.76905C0 4.0568 0.710902 1.88546 2.25634 2.28882e-05H3.98723C2.85906 1.31365 1.97816 4.20362 1.97816 6.76132C1.97816 9.31902 2.86679 12.2167 3.98723 13.5381H2.25634C0.710902 11.6449 0 9.46584 0 6.76905Z"
-													fill="#BC1010"
-												/>
-												<path
-													d="M25.8231 6.76902C25.8231 10.0376 24.7954 12.0467 23.5668 13.538H21.8359C22.6704 12.549 23.8449 9.98354 23.8449 6.7613C23.8449 3.53906 22.6704 0.973627 21.8359 0H23.5668C24.7877 1.48362 25.8231 3.48497 25.8231 6.76902Z"
-													fill="#BC1010"
-												/>
-												<path
-													d="M7.28654 3.37525L6.04319 4.61861L13.1925 11.7679L20.3424 4.61831L19.099 3.37496L13.1926 9.28134L7.28654 3.37525Z"
-													fill="#BC1010"
-												/>
-											</svg>
-										</div>
-									</button>
-								</div>
-								<div
-									id="collapse-6"
-									class="accordion-collapse collapse"
-									data-bs-parent="#accordion"
-								>
-									<div class="accordion-body">
-										<p>— брендинг</p>
-										<p>— банери, постери, обкладинки youtube</p>
-										<p>— оформлення соціальних мереж, контенту</p>
-										<p>— поліграфія</p>
-									</div>
-								</div>
-							</li>
-							<li class="services__item accordion-item spec spec--1">
-								<div class="accordion-header">
-									<button
-										class="services__item-btn accordion-btn collapsed"
-										data-toggle="collapse"
-										data-target="#collapse-7"
-										aria-expanded="true"
-										aria-controls="collapse-7"
-									>
-										<div class="services__item-title">
-											<p>продюсування та запуску</p>
-											<svg
-												width="26"
-												height="14"
-												viewBox="0 0 26 14"
-												fill="none"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<path
-													d="M0 6.76905C0 4.0568 0.710902 1.88546 2.25634 2.28882e-05H3.98723C2.85906 1.31365 1.97816 4.20362 1.97816 6.76132C1.97816 9.31902 2.86679 12.2167 3.98723 13.5381H2.25634C0.710902 11.6449 0 9.46584 0 6.76905Z"
-													fill="#BC1010"
-												/>
-												<path
-													d="M25.8231 6.76902C25.8231 10.0376 24.7954 12.0467 23.5668 13.538H21.8359C22.6704 12.549 23.8449 9.98354 23.8449 6.7613C23.8449 3.53906 22.6704 0.973627 21.8359 0H23.5668C24.7877 1.48362 25.8231 3.48497 25.8231 6.76902Z"
-													fill="#BC1010"
-												/>
-												<path
-													d="M7.28654 3.37525L6.04319 4.61861L13.1925 11.7679L20.3424 4.61831L19.099 3.37496L13.1926 9.28134L7.28654 3.37525Z"
-													fill="#BC1010"
-												/>
-											</svg>
-										</div>
-									</button>
-								</div>
-								<div
-									id="collapse-7"
-									class="accordion-collapse collapse"
-									data-bs-parent="#accordion"
-								>
-									<div class="accordion-body">
-										<p>— проводимо дослідження аудиторії.</p>
-										<p>— створюємо концепції продукту.</p>
-										<p>
-											— займаємось підготовкою до запуску продукту: план
-											прогріву, контент-план.
-										</p>
-										<p>
-											— організовуємо зйомки для навчальних програм та
-											пост-продакшн.
-										</p>
-										<p>— готуємо презентації та дизайн-матеріали.</p>
-										<p>— маркетинговий супровід впродовж запуску.</p>
-										<p>
-											— технічне супровід запуску: сайти, вебінари та інші
-											посадкові сторінки.
-										</p>
-									</div>
-								</div>
-							</li>
-							<li class="services__item accordion-item spec spec--2">
-								<div class="accordion-header">
-									<button
-										class="services__item-btn accordion-btn collapsed"
-										data-toggle="collapse"
-										data-target="#collapse-8"
-										aria-expanded="true"
-										aria-controls="collapse-8"
-									>
-										<div class="services__item-title">
-											<p>створення особистого бренду</p>
-											<svg
-												width="26"
-												height="14"
-												viewBox="0 0 26 14"
-												fill="none"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<path
-													d="M0 6.76905C0 4.0568 0.710902 1.88546 2.25634 2.28882e-05H3.98723C2.85906 1.31365 1.97816 4.20362 1.97816 6.76132C1.97816 9.31902 2.86679 12.2167 3.98723 13.5381H2.25634C0.710902 11.6449 0 9.46584 0 6.76905Z"
-													fill="#BC1010"
-												/>
-												<path
-													d="M25.8231 6.76902C25.8231 10.0376 24.7954 12.0467 23.5668 13.538H21.8359C22.6704 12.549 23.8449 9.98354 23.8449 6.7613C23.8449 3.53906 22.6704 0.973627 21.8359 0H23.5668C24.7877 1.48362 25.8231 3.48497 25.8231 6.76902Z"
-													fill="#BC1010"
-												/>
-												<path
-													d="M7.28654 3.37525L6.04319 4.61861L13.1925 11.7679L20.3424 4.61831L19.099 3.37496L13.1926 9.28134L7.28654 3.37525Z"
-													fill="#BC1010"
-												/>
-											</svg>
-										</div>
-									</button>
-								</div>
-								<div
-									id="collapse-8"
-									class="accordion-collapse collapse"
-									data-bs-parent="#accordion"
-								>
-									<div class="accordion-body">
-										<p>
-											— створюємо концепцію особистого бренду: позиціонування,
-											рубрикатор, візуальний стиль.
-										</p>
-										<p>— формуємо контент-план під запит;</p>
-										<p>— організовуємо зйомки та пост-продакшн;</p>
-										<p>
-											— допомагаємо зі створенням контенту: дизайн історій,
-											монтаж рілзів та ін.
-										</p>
-										<p>— створюємо діджитал-продукти для воронок.</p>
-										<p>
-											— виділяємо спеціаліста, який особисто консультує вас з
-											усіх питань.
-										</p>
-									</div>
-								</div>
+								<p class="services__item-additional">дизайн / розробка</p>
+								<img
+									src="/assets/images/services/services-4.svg"
+									alt="service-img"
+									class="services__item-img"
+									data-aos="clip-right"
+									data-aos-duration="1200"
+									data-aos-delay="800"
+								/>
 							</li>
 						</ul>
 					</div>
@@ -1254,112 +888,164 @@
 				<div class="container team__container">
 					<div class="team__inner">
 						<h2 class="team__title text-red">команда</h2>
-						<ul class="team__items team__items--mobile">
-							<div class="team__items-block">
-								<li class="team__item">
+						<div class="team__items team__items--mobile">
+							<ul class="team__items-block">
+								<li class="team__item team__item--big second">
 									<div class="team__item-img">
 										<h6 class="team__item-img__title">oleksiy.allsides.jpg</h6>
+										<div class="team__item-img__person">
+											<img
+												src="/assets/images/team/team-2.png"
+												alt="team-person"
+											/>
+										</div>
+										<div class="team__item-img__cover">
+											<img
+												src="/assets/images/img-cover.png"
+												alt="person-cover"
+											/>
+										</div>
+									</div>
+									<h5 class="team__item-name">Олексій</h5>
+									<p class="team__item-position">ceo & product manager</p>
+								</li>
+								<li class="team__item team__item--small first">
+									<div class="team__item-img">
+										<h6 class="team__item-img__title">illya.allsides.jpg</h6>
+										<div class="team__item-img__person">
+											<img
+												src="/assets/images/team/team-1.png"
+												alt="team-person"
+											/>
+										</div>
+										<div class="team__item-img__cover">
+											<img
+												src="/assets/images/img-cover.png"
+												alt="person-cover"
+											/>
+										</div>
+									</div>
+									<h5 class="team__item-name">Ілля</h5>
+									<p class="team__item-position">lead designer</p>
+								</li>
+							</ul>
+							<ul class="team__items-block">
+								<li class="team__item team__item--small fourth">
+									<div class="team__item-img">
+										<h6 class="team__item-img__title">timur.allsides.jpg</h6>
+										<div class="team__item-img__person">
+											<img
+												src="/assets/images/team/team-4.png"
+												alt="team-person"
+											/>
+										</div>
+										<div class="team__item-img__cover">
+											<img
+												src="/assets/images/img-cover.png"
+												alt="person-cover"
+											/>
+										</div>
+									</div>
+									<h5 class="team__item-name">Тимур</h5>
+									<p class="team__item-position">videoproduction head</p>
+								</li>
+								<li class="team__item team__item--big third">
+									<div class="team__item-img">
+										<h6 class="team__item-img__title">danya.allsides.jpg</h6>
+										<div class="team__item-img__person">
+											<img
+												src="/assets/images/team/team-3.png"
+												alt="team-person"
+											/>
+										</div>
+										<div class="team__item-img__cover">
+											<img
+												src="/assets/images/img-cover.png"
+												alt="person-cover"
+											/>
+										</div>
+									</div>
+									<h5 class="team__item-name">Данило</h5>
+									<p class="team__item-position">smm head & strategiest</p>
+								</li>
+							</ul>
+						</div>
+						<ul class="team__items team__items--desktop">
+							<li class="team__item team__item--small first">
+								<div class="team__item-img">
+									<h6 class="team__item-img__title">illya.allsides.jpg</h6>
+									<div class="team__item-img__person">
 										<img
-											class="team__item-img__person"
 											src="/assets/images/team/team-1.png"
 											alt="team-person"
 										/>
+									</div>
+									<div class="team__item-img__cover">
 										<img
-											class="team__item-img__cover"
 											src="/assets/images/img-cover.png"
 											alt="person-cover"
 										/>
 									</div>
-									<h5 class="team__item-name">Леха</h5>
-									<p class="team__item-position">начальник та сео</p>
-								</li>
-								<li class="team__item second">
-									<div class="team__item-img">
-										<h6 class="team__item-img__title">danya.allsides.jpg</h6>
+								</div>
+								<h5 class="team__item-name">Ілля</h5>
+								<p class="team__item-position">lead designer</p>
+							</li>
+							<li class="team__item team__item--big second">
+								<div class="team__item-img">
+									<h6 class="team__item-img__title">oleksiy.allsides.jpg</h6>
+									<div class="team__item-img__person">
 										<img
-											class="team__item-img__person"
 											src="/assets/images/team/team-2.png"
 											alt="team-person"
 										/>
+									</div>
+									<div class="team__item-img__cover">
 										<img
-											class="team__item-img__cover"
 											src="/assets/images/img-cover.png"
 											alt="person-cover"
 										/>
 									</div>
-									<h5 class="team__item-name">Даня</h5>
-									<p class="team__item-position">начальник та смм хед</p>
-								</li>
-							</div>
-							<li class="team__item third">
-								<div class="team__item-img">
-									<h6 class="team__item-img__title">illya.allsides.jpg</h6>
-									<img
-										class="team__item-img__person"
-										src="/assets/images/team/team-3.png"
-										alt="team-person"
-									/>
-									<img
-										class="team__item-img__cover"
-										src="/assets/images/img-cover.png"
-										alt="person-cover"
-									/>
 								</div>
-								<h5 class="team__item-name">Ілля</h5>
-								<p class="team__item-position">начальник та смм хед</p>
+								<h5 class="team__item-name">Олексій</h5>
+								<p class="team__item-position">ceo & product manager</p>
 							</li>
-						</ul>
-						<ul class="team__items team__items--desktop">
-							<li class="team__item">
-								<div class="team__item-img">
-									<h6 class="team__item-img__title">oleksiy.allsides.jpg</h6>
-									<img
-										class="team__item-img__person"
-										src="/assets/images/team/team-1.png"
-										alt="team-person"
-									/>
-									<img
-										class="team__item-img__cover"
-										src="/assets/images/img-cover.png"
-										alt="person-cover"
-									/>
-								</div>
-								<h5 class="team__item-name">Леха</h5>
-								<p class="team__item-position">начальник та сео</p>
-							</li>
-							<li class="team__item second">
+							<li class="team__item team__item--big third">
 								<div class="team__item-img">
 									<h6 class="team__item-img__title">danya.allsides.jpg</h6>
-									<img
-										class="team__item-img__person"
-										src="/assets/images/team/team-2.png"
-										alt="team-person"
-									/>
-									<img
-										class="team__item-img__cover"
-										src="/assets/images/img-cover.png"
-										alt="person-cover"
-									/>
+									<div class="team__item-img__person">
+										<img
+											src="/assets/images/team/team-3.png"
+											alt="team-person"
+										/>
+									</div>
+									<div class="team__item-img__cover">
+										<img
+											src="/assets/images/img-cover.png"
+											alt="person-cover"
+										/>
+									</div>
 								</div>
-								<h5 class="team__item-name">Даня</h5>
-								<p class="team__item-position">начальник та смм хед</p>
+								<h5 class="team__item-name">Данило</h5>
+								<p class="team__item-position">smm head & strategiest</p>
 							</li>
-							<li class="team__item third">
+							<li class="team__item team__item--small fourth">
 								<div class="team__item-img">
-									<h6 class="team__item-img__title">illya.allsides.jpg</h6>
-									<img
-										class="team__item-img__person"
-										src="/assets/images/team/team-3.png"
-										alt="team-person"
-									/>
-									<img
-										class="team__item-img__cover"
-										src="/assets/images/img-cover.png"
-										alt="person-cover"
-									/>
+									<h6 class="team__item-img__title">timur.allsides.jpg</h6>
+									<div class="team__item-img__person">
+										<img
+											src="/assets/images/team/team-4.png"
+											alt="team-person"
+										/>
+									</div>
+									<div class="team__item-img__cover">
+										<img
+											src="/assets/images/img-cover.png"
+											alt="person-cover"
+										/>
+									</div>
 								</div>
-								<h5 class="team__item-name">Ілля</h5>
-								<p class="team__item-position">начальник та смм хед</p>
+								<h5 class="team__item-name">Тимур</h5>
+								<p class="team__item-position">videoproduction head</p>
 							</li>
 						</ul>
 					</div>
@@ -1368,6 +1054,16 @@
 
 			<!-- TELEGRAM -->
 			<div id="telegram">
+				<img
+					src="/assets/images/telegram/telegram-bg-desk.png"
+					alt="telegram-bg"
+					class="telegram__bg telegram__bg--desktop"
+				/>
+				<img
+					src="/assets/images/telegram/telegram-bg-mob.png"
+					alt="telegram-bg"
+					class="telegram__bg telegram__bg--mobile"
+				/>
 				<div class="container">
 					<div class="telegram__inner">
 						<div class="telegram__title-wrapper">

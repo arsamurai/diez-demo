@@ -55,12 +55,14 @@ addEventListener('load', async () => {
 
 	// Form modal
 	const formModal = getModal('form');
-	const fromModalOpenBtn = document.querySelector('[data-form-modal-btn]');
+	const fromModalOpenBtns = document.querySelectorAll('[data-form-modal-btn]');
 	const formModalClose = formModal.querySelector('[data-modal-close]');
 	const formModalContent = formModal.querySelector('[data-modal-content]');
 
-	fromModalOpenBtn.addEventListener('click', () => {
-		setModalState(formModal, true);
+	fromModalOpenBtns.forEach((btn) => {
+		btn.addEventListener('click', () => {
+			setModalState(formModal, true);
+		});
 	});
 
 	formModalClose.addEventListener('click', () => {

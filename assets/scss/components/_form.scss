@@ -8,15 +8,15 @@
 		border: 1px solid rgba(255, 255, 255, 1);
 		background: rgba(255, 255, 255, 0.13);
 		font-size: 16px;
-		line-height: 44px;
+		line-height: 20px;
 		width: 100%;
-		padding: 0 30px;
+		padding: 19px 16px 21px;
 		text-align: left;
 		border-radius: $borderRadius;
-		margin-bottom: 15px;
+		margin-bottom: 8px;
 	}
 	&__btn {
-		margin-top: 10px;
+		margin-top: 17px;
 	}
 	&__error {
 		font-family: $SF_Pro_Bold, sans-serif;

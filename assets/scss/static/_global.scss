@@ -132,9 +132,8 @@ a {
 	}
 
 	&.link-white {
-		font-size: 20px;
-		height: 54px;
-		padding: 5px 37px;
+		height: 58px;
+		padding: 7px 50px;
 		color: rgba(20, 20, 20, 1);
 		background-color: $white;
 	}
@@ -148,14 +147,4 @@ a {
 			height: 68px;
 		}
 	}
-}
-
-.text {
-	display: inline-block;
-	white-space: pre-line;
-}
-
-span.word-anim {
-	opacity: 0;
-	animation: fadeIn 0.5s forwards;
 }

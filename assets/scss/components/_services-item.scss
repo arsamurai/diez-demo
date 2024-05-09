@@ -1,68 +1,88 @@
 .services__item {
-	border-bottom: 0.53px solid rgba(255, 255, 255, 0.22);
-	padding: 16px 0 18px;
+	padding: 15px 20px 25px;
+	max-width: 707px;
+	width: 100%;
+	margin: 0 auto;
+	height: 256px;
+	background-color: rgba(20, 20, 20, 1);
+	border-radius: 10px;
+	position: relative;
+	margin-top: 12px;
+	@include flex(space-between, flex-start);
+	flex-direction: column;
+
 	&-title {
 		font-family: $SF_Pro_Bold, sans-serif;
-		font-size: 32px;
+		font-size: 24px;
 		line-height: 32px;
-		letter-spacing: -0.02em;
-		position: relative;
-		display: inline-block;
-		color: $white;
-		transition: $transition;
+		margin-bottom: 12px;
 	}
-	svg {
+
+	&-text {
+		color: rgba(255, 255, 255, 0.44);
+		font-size: 12px;
+		line-height: 14px;
+		max-width: 80%;
+	}
+
+	&-additional {
+		font-family: $SF_Pro_Bold, sans-serif;
+		font-size: 12px;
+		line-height: 14px;
+		max-width: 70%;
+	}
+
+	&-num {
 		position: absolute;
-		top: 6px;
-		right: -20px;
-		width: 13.76px;
-		height: 7.21px;
-		transition: $transition;
+		top: 12px;
+		right: 24px;
+		font-size: 12px;
+		line-height: 32px;
+		color: rgba(123, 123, 123, 1);
 	}
-	&-btn:not(.collapsed) {
-		.services__item-title {
-			color: $red;
-		}
-		svg {
-			transform: rotate(180deg);
-			path {
-				fill: $gray;
-			}
-		}
+
+	&-img {
+		width: 78px;
+		height: 78px;
+		position: absolute;
+		bottom: 27px;
+		right: 20px;
 	}
 
 	@include table {
-		padding: 30px 0 34px;
-		border-width: 1px;
-		&-title {
-			font-size: 50px;
-			line-height: 40px;
+		padding: 34px;
+		height: 325px;
+
+		&-additional {
+			font-size: 16px;
+			line-height: 21px;
 		}
-		svg {
-			right: -35px;
-			width: 25.82px;
-			height: 13.54px;
+
+		&-num {
+			font-size: 16px;
+			top: 33px;
+			right: 33px;
+		}
+
+		&-img {
+			width: 112px;
+			height: 112px;
 		}
 	}
 
 	@include desktop-sm {
-		&-text {
-			font-size: 64px;
-			line-height: 40px;
-		}
+		margin: 0;
+		margin-top: 0;
 	}
 
-	@media screen and (max-width: 500px) {
-		&.spec .services__item-title {
-			width: 300px;
+	@include desktop {
+		&-title.title-big {
+			font-size: 32px;
 		}
-		&.spec.spec--1 svg {
-			right: 165px;
-			top: 41px;
-		}
-		&.spec.spec--2 svg {
-			right: 1px;
-			top: 41px;
+
+		&-additional {
+			font-size: 20px;
+			line-height: 32px;
 		}
 	}
 }

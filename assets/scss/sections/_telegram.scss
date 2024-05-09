@@ -1,5 +1,22 @@
 #telegram {
 	padding: 257px 0;
+	position: relative;
+	.telegram__bg {
+		position: absolute;
+		z-index: -1;
+	}
+	.telegram__bg--mobile {
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		transform: scale(2.2);
+		mix-blend-mode: hard-light;
+		opacity: 0.44;
+	}
+	.telegram__bg--desktop {
+		display: none;
+	}
 	.telegram__inner {
 		max-width: 615px;
 		width: 100%;
@@ -32,6 +49,16 @@
 
 	@include table {
 		padding: 460px 0 360px;
+		.telegram__bg--mobile {
+			display: none;
+		}
+		.telegram__bg--desktop {
+			left: 50%;
+			transform: translateX(-50%);
+			display: block;
+			bottom: -78%;
+			min-width: 1920px;
+		}
 	}
 
 	@media screen and (max-width: 375px) {
