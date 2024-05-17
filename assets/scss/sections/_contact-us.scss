@@ -1,75 +1,75 @@
-#footer {
+#contact-us {
 	padding: 88px 0 25px;
 	border-radius: 60px 60px 0px 0px;
 	background-color: $red;
 	text-align: center;
-	.footer__inner {
+	.contact-us__inner {
 		margin-top: 38px;
 	}
-	.footer__form {
+	.contact-us__form {
 		margin-bottom: 125px;
 	}
-	.footer__socials {
+	.contact-us__socials {
 		font-family: $SF_Pro_Bold, sans-serif;
 		font-size: 16px;
 		line-height: 24px;
 		color: $black;
 		margin-bottom: 15px;
 	}
-	.footer__docs {
+	.contact-us__docs {
 		font-family: $SF_Pro_Bold, sans-serif;
 		font-size: 16px;
 		line-height: 24px;
 		color: $black;
 	}
-	.footer__doc {
+	.contact-us__doc {
 		display: none;
 	}
-	.footer__copy {
+	.contact-us__copy {
 		color: rgba(0, 0, 0, 0.28);
 	}
 	
 	@include table {
 		padding: 170px 0 20px;
-		.footer__inner {
+		.contact-us__inner {
 			margin-top: 121px;
 		}
-		.footer__form {
+		.contact-us__form {
 			margin-bottom: 228px;
 		}
-		.footer__link {
+		.contact-us__link {
 			margin: 88px auto 198px;
 		}
-		.footer__socials {
+		.contact-us__socials {
 			max-width: 371px;
 			width: 100%;
 			margin: 0 auto 20px;
 			font-size: 20px;
 		}
-		.footer__docs {
+		.contact-us__docs {
 			max-width: 561px;
 			width: 100%;
 			margin: 0 auto;
 			@include flex(space-between);
 		}
-		.footer__doc {
+		.contact-us__doc {
 			display: block;
 		}
 	}
 
 	@include desktop {
 		padding: 117px 0 35px;
-		.footer__link {
+		.contact-us__link {
 			margin: 114px auto 230px;
 		}
-		.footer__bottom {
+		.contact-us__bottom {
 			@include flex(space-between);
 		}
-		.footer__socials {
+		.contact-us__socials {
 			text-align: left;
 		}
-		.footer__socials,
-		.footer__docs {
+		.contact-us__socials,
+		.contact-us__docs {
 			margin: 0;
 		}
 	}

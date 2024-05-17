@@ -10,29 +10,9 @@ const setModalState = (modal, activate) => {
 	modal?.classList[action]('active');
 };
 
-const goTo = (sectionId) => {
-	const top = document.getElementById(sectionId)?.offsetTop;
-	window.scrollTo({
-		top,
-		behavior: 'smooth',
-	});
-};
-
 addEventListener('load', async () => {
 	// AOS
 	AOS.init(aosConfig);
-
-	// Navigation
-	const scrollLinks = document.querySelectorAll('[data-scroll-to]');
-
-	scrollLinks.forEach((link) => {
-		link.addEventListener('click', ({ currentTarget }) => {
-			const sectionId = currentTarget
-				.getAttribute('data-scroll-to')
-				.replace('#', '');
-			goTo(sectionId);
-		});
-	});
 
 	// Success modal
 	const successModal = getModal('success');

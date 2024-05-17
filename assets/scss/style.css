@@ -170,6 +170,7 @@ html {
   position: relative;
   height: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 *::after,
@@ -1295,57 +1296,57 @@ a:hover {
   }
 }
 
-#footer {
+#contact-us {
   padding: 88px 0 25px;
   border-radius: 60px 60px 0px 0px;
   background-color: rgb(188, 16, 16);
   text-align: center;
 }
-#footer .footer__inner {
+#contact-us .contact-us__inner {
   margin-top: 38px;
 }
-#footer .footer__form {
+#contact-us .contact-us__form {
   margin-bottom: 125px;
 }
-#footer .footer__socials {
+#contact-us .contact-us__socials {
   font-family: "SF Pro Display Semibold", sans-serif;
   font-size: 16px;
   line-height: 24px;
   color: #000000;
   margin-bottom: 15px;
 }
-#footer .footer__docs {
+#contact-us .contact-us__docs {
   font-family: "SF Pro Display Semibold", sans-serif;
   font-size: 16px;
   line-height: 24px;
   color: #000000;
 }
-#footer .footer__doc {
+#contact-us .contact-us__doc {
   display: none;
 }
-#footer .footer__copy {
+#contact-us .contact-us__copy {
   color: rgba(0, 0, 0, 0.28);
 }
 @media screen and (min-width: 768px) {
-  #footer {
+  #contact-us {
     padding: 170px 0 20px;
   }
-  #footer .footer__inner {
+  #contact-us .contact-us__inner {
     margin-top: 121px;
   }
-  #footer .footer__form {
+  #contact-us .contact-us__form {
     margin-bottom: 228px;
   }
-  #footer .footer__link {
+  #contact-us .contact-us__link {
     margin: 88px auto 198px;
   }
-  #footer .footer__socials {
+  #contact-us .contact-us__socials {
     max-width: 371px;
     width: 100%;
     margin: 0 auto 20px;
     font-size: 20px;
   }
-  #footer .footer__docs {
+  #contact-us .contact-us__docs {
     max-width: 561px;
     width: 100%;
     margin: 0 auto;
@@ -1353,27 +1354,27 @@ a:hover {
     justify-content: space-between;
     align-items: center;
   }
-  #footer .footer__doc {
+  #contact-us .contact-us__doc {
     display: block;
   }
 }
 @media screen and (min-width: 1200px) {
-  #footer {
+  #contact-us {
     padding: 117px 0 35px;
   }
-  #footer .footer__link {
+  #contact-us .contact-us__link {
     margin: 114px auto 230px;
   }
-  #footer .footer__bottom {
+  #contact-us .contact-us__bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  #footer .footer__socials {
+  #contact-us .contact-us__socials {
     text-align: left;
   }
-  #footer .footer__socials,
-  #footer .footer__docs {
+  #contact-us .contact-us__socials,
+  #contact-us .contact-us__docs {
     margin: 0;
   }
 }
